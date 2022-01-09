@@ -1,0 +1,10 @@
+.ambassadors, .brand {
+  height: 100vh;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 350px;
+  }
+}

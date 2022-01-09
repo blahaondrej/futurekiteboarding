@@ -1,0 +1,50 @@
+.btn {
+  border: $border;
+  width: 90%;
+  max-width: 320px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  &:hover {
+    background: $color-button;
+    color: $color-white;
+  }
+}
+
+.hexagon {
+  height: 440px;
+  width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  &:after {
+    content: '';
+    position: absolute;
+    background: #f7f7f7;
+    clip-path: $hexagon;
+    transform: $rotate;
+    display: block;
+    inset: 0;
+    pointer-events: none;
+  }
+  &--left {
+    position: absolute;
+    left: -200px;
+    bottom: 20%;
+  }
+
+  &--right {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+  }
+}

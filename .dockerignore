@@ -1,0 +1,5 @@
+/bitbucket-pipelines.yml
+/README.md
+/Dockerfile
+.git
+node_modules

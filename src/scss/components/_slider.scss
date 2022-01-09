@@ -1,0 +1,84 @@
+.product-swiper {
+  .swiper-slide {
+    @include animation();
+  }
+  .swiper-slide-prev, .swiper-slide-next {
+    transform: scale(.7);
+    padding-top: 100px;
+    .product__content {
+      display: none;
+    }
+    h2 {
+      display: none;
+    }
+  }
+  .swiper-slide-active {
+    transform: scale(1);
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  opacity: 0.3;
+  position: relative;
+  background: none;
+  margin: 0 2px !important;
+  &:after {
+    content: '';
+    position: absolute;
+    background: $color-black;
+    clip-path: $hexagon;
+    display: block;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  top: unset;
+  bottom: 100px;
+  background: none;
+  width: auto;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  color: $color-black;
+  padding: 0 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: $color-red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s transform;
+    @include animation();
+  }
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+  &:after {
+    content: none;
+  }
+}
+
+.swiper-button-next {
+  right: 25%;
+}
+
+.swiper-button-prev {
+  left: 25%;
+}

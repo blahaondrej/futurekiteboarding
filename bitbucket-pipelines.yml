@@ -1,0 +1,40 @@
+image: ableteam/bitbucket-pipelines-protractor
+
+pipelines:
+  custom:
+    deploy-testing:
+      - step:
+          name: Dependencies
+          caches:
+            - node
+          script:
+            - npm install
+      - step:
+          name: Build
+          services:
+            - docker
+          caches:
+            - node
+          artifacts:
+            - environment.txt
+          script:
+            - npm run build
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+            - declare -x VERSION=$(node -p "require('./package.json').version")
+            - export IMAGE_NAME=${TEAM_NAME}/${PROJECT_NAME}:${VERSION}
+            - docker build -t ${IMAGE_NAME} .
+            - docker push $IMAGE_NAME
+            - echo ${VERSION} > environment.txt
+      - step:
+          name: Deploy
+          deployment: test
+          image: atlassian/pipelines-kubectl:latest
+          script:
+            - declare -x VERSION=$(cat environment.txt)
+            - export IMAGE_NAME=${TEAM_NAME}/${PROJECT_NAME}:${VERSION}
+            - kubectl config set-cluster ${ABLEPROD_KUBE_CLUSTER_NAME} --server=${ABLEPROD_KUBE_CLUSTER_HOST} --insecure-skip-tls-verify
+            - kubectl config set-credentials ${ABLEPROD_KUBE_USER} --token=${ABLEPROD_KUBE_AUTH_TOKEN}
+            - kubectl config set-context ${ABLEPROD_KUBE_CLUSTER_NAME} --cluster=${ABLEPROD_KUBE_CLUSTER_NAME} --user=${ABLEPROD_KUBE_USER}
+            - kubectl config use-context ${ABLEPROD_KUBE_CLUSTER_NAME}
+            - kubectl set image deployment/${PROJECT_NAME}-test ${PROJECT_NAME}-test=${IMAGE_NAME} -n ${PROJECT_NAME}
+

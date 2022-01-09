@@ -1,0 +1,28 @@
+@import "scss/utilities/fonts";
+@import "scss/utilities/mixins";
+@import "scss/utilities/variables";
+
+@import "~bootstrap-4-grid";
+
+@import "~swiper/swiper.scss";
+@import "~swiper/modules/effect-fade/effect-fade";
+@import "~swiper/modules/pagination/pagination";
+@import "~swiper/modules/navigation/navigation";
+
+@import "scss/base/reset";
+@import "scss/base/base";
+
+@import "scss/layout/header";
+@import "scss/layout/footer";
+@import "scss/layout/intro";
+@import "scss/layout/background";
+@import "scss/layout/homepage";
+
+@import "scss/components/buttons";
+@import "scss/components/texts";
+@import "scss/components/products";
+@import "scss/components/slider";
+@import "scss/components/ambassadors";
+
+@import "scss/pages/homepage";
+

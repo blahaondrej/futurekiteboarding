@@ -1,0 +1,46 @@
+.background__image {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  @include tablet-portrait {
+    height: 100vh;
+  }
+}
+
+.homepage__slide1 {
+  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  @include phone {
+    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  }
+}
+
+.homepage__slide2 {
+  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  @include phone {
+    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  }
+}
+
+.homepage__slide3 {
+  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  @include phone {
+    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  }
+}
+
+.homepage__slide4 {
+  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  @include phone {
+    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  }
+}
+
+.homepage-swiper {
+  padding: 0 !important;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
