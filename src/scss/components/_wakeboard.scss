@@ -1,5 +1,5 @@
-.ambassadors, .brand {
-  height: 100vh;
+.wakeboard {
+  background: $color-black-background2;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -15,8 +15,5 @@
     .btn {
       margin-top: 50px;
     }
-  }
-  .title {
-    margin-bottom: 30px;
   }
 }

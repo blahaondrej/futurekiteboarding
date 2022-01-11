@@ -90,3 +90,14 @@ strong {
   height: 100%;
   position: relative;
 }
+
+section {
+  overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+

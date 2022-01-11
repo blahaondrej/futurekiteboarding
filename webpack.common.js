@@ -81,6 +81,78 @@ module.exports = {
             filename: 'intro.html', // Cilovy soubor
         }),
 
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/kiteboards.html', // Cesta k templatu
+            filename: 'kiteboards.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/ambassadors.html', // Cesta k templatu
+            filename: 'ambassadors.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/about-us.html', // Cesta k templatu
+            filename: 'about-us.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/contact.html', // Cesta k templatu
+            filename: 'contact.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/dealers.html', // Cesta k templatu
+            filename: 'dealers.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/detail.html', // Cesta k templatu
+            filename: 'detail.html', // Cilovy soubor
+        }),
+
         new MiniCssExtractPlugin({
             filename: "style.[contenthash].css"
         }),

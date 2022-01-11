@@ -1,0 +1,56 @@
+.follow {
+  padding: 80px 50px;
+  &__inner {
+    padding: 100px 50px;
+    &--right {
+      padding: 0;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+  }
+  &__icon {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: 0 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 20px;
+      width: auto;
+      z-index: 5;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: #f7f7f7;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    &--instagram {
+
+    }
+    &--facebook {
+      top: 30px;
+    }
+  }
+  &__image {
+    height: 350px;
+    width: 350px;
+    margin: 5px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

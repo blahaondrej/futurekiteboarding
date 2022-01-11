@@ -5,6 +5,16 @@
   letter-spacing: 0.96px;
   color: $color-button;
   text-transform: uppercase;
+  line-height: 50px;
+  &--white {
+    color: $color-white;
+  }
+  &--small {
+    font-size: 16px;
+  }
+  span {
+    font-weight: 300;
+  }
 }
 
 .subtitle {
@@ -15,6 +25,12 @@
   color: $color-button;
   text-transform: uppercase;
   margin-bottom: 30px;
+  &--white {
+    color: $color-white;
+  }
+  &--grey {
+    color: $color-grey-footer;
+  }
 }
 
 .text {
@@ -25,4 +41,7 @@
   line-height: 17px;
   color: $color-black;
   padding: 20px 0;
+  &--white {
+    color: $color-white;
+  }
 }
