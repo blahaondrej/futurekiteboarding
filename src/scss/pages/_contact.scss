@@ -1,0 +1,121 @@
+.contact {
+  padding: 100px 0 80px;
+  .subtitle {
+    margin-bottom: 15px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  &__address {
+    p {
+      color: $color-black2;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.37px;
+      line-height: 16px;
+      padding: 5px 0;
+    }
+  }
+  &__link {
+    border-bottom: 1px solid $color-black2;
+    text-transform: uppercase;
+    position: relative;
+    color: $color-black2;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 30px;
+    display: inline-block;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: $color-red;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.3s transform;
+    }
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &__form {
+    margin-top: 100px;
+    font-family: $font;
+    .title {
+      margin-bottom: 50px;
+      @include phone {
+        margin-bottom: 20px;
+      }
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid $color-black2;
+      text-transform: uppercase;
+      color: $color-black2;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.37px;
+      line-height: 30px;
+      width: 50%;
+      margin-right: 40px;
+      @include phone {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    textarea {
+      margin-top: 100px;
+      border: none;
+      border-bottom: 1px solid $color-black2;
+      text-transform: uppercase;
+      color: $color-black2;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.37px;
+      line-height: 30px;
+      width: 100%;
+      margin-right: 40px;
+      @include phone {
+        margin-right: 0;
+        margin-top: 50px;
+      }
+    }
+  }
+  &__submit {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: $border;
+      max-width: 320px;
+      height: 70px;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 0.48px;
+      color: $color-black;
+      background: none;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: $font;
+      @include animation();
+      &:hover {
+        color: $color-white;
+        background: $color-black;
+      }
+    }
+  }
+}

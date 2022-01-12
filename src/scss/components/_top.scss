@@ -1,0 +1,70 @@
+.detail-top {
+  height: 100vh;
+  position: relative;
+  &__wrapper {
+    top: 0;
+    position: absolute;
+    padding-top: 120px;
+    width: 100%;
+    height: 50vh;
+    z-index: 5;
+    background-color: $color-white;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__banner {
+    position: absolute;
+    bottom: -270px;
+    z-index: 5;
+    left: 10%;
+    height: 500px;
+    width: 500px;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: $color-white;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    p {
+      color: $color-black;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.01px;
+      line-height: 22px;
+      padding: 20px 0;
+      .name {
+        font-weight: 500;
+      }
+      .position {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &--contact {
+      background-image: url(./assets/images/contact_bg.jpg);
+      @include phone {
+        background-image: url(./assets/images/contact_bg.jpg);
+      }
+    }
+  }
+}

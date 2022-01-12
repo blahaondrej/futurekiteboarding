@@ -9,6 +9,15 @@
   &--white {
     color: $color-white;
   }
+  &--red {
+    color: $color-red2;
+  }
+  &--black {
+    color: $color-button;
+  }
+  &--medium {
+    font-size: 24px;
+  }
   &--small {
     font-size: 16px;
   }
@@ -28,8 +37,14 @@
   &--white {
     color: $color-white;
   }
+  &--red {
+    color: $color-red2;
+  }
   &--grey {
     color: $color-grey-footer;
+  }
+  &--black {
+    color: $color-button;
   }
 }
 
@@ -43,5 +58,11 @@
   padding: 20px 0;
   &--white {
     color: $color-white;
+  }
+  &--red {
+    color: $color-red2;
+  }
+  &--black {
+    color: $color-button;
   }
 }

@@ -20,7 +20,7 @@ body {
 
 input {
   width: 100%;
-
+  font-family: $font;
   &:active,
   &:focus,
   &:hover {
@@ -31,7 +31,7 @@ input {
 textarea {
   width: 100%;
   resize: none;
-
+  font-family: $font;
   &:active,
   &:focus,
   &:hover {
