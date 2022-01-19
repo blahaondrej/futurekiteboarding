@@ -25,10 +25,30 @@ if (hasTouch()) { // remove all :hover stylesheets
 }
 
 $(document).ready(function () {
-    var text = $('.header__open span').text();
+
+    setTimeout(function () {
+        $(".loader").addClass("loader--loaded");
+    }, 2000);
+
+
+/*    function preloader() {
+        setTimeout(function(){
+            $('body').addClass('loaded');
+        }, 2000);
+    }
+    if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
+        sessionStorage.setItem( 'doNotShow', true );
+        preloader();
+    } else {
+        $ ('.loader').hide();
+    }*/
+
+
     $(".header__open").click(function() {
+        var menuButtonText = $('.header__open span').text();
         $(".header__menu").toggleClass("active");
-        $('.header__open span').text(
-            text == "Menu" ? "Zavřít" : "Menu");
+        $('.header__open span').text(menuButtonText == 'Menu' ? 'Zavřít' : 'Menu');
     });
+
+
 });

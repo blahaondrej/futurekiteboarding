@@ -24,23 +24,36 @@
       height: 20px;
       width: auto;
       z-index: 5;
+      @include animation();
     }
     &:after {
       content: '';
       position: absolute;
-      background: #f7f7f7;
+      background: $color-grey-hexagon;
       clip-path: $hexagon;
       transform: $rotate;
       display: block;
       inset: 0;
       pointer-events: none;
       z-index: -1;
+      @include animation();
     }
     &--instagram {
 
     }
     &--facebook {
       top: 30px;
+    }
+    &:hover {
+      &:after {
+        background: $color-black-background2;
+      }
+      svg {
+        fill: $color-white;
+        g {
+          fill: $color-white;
+        }
+      }
     }
   }
   &__image {

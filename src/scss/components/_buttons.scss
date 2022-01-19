@@ -55,4 +55,18 @@
     right: 0;
     bottom: 20%;
   }
+  &--outline {
+    position: absolute;
+    left: 50px;
+    top: 10%;
+    &:after {
+      content: none;
+    }
+    svg {
+      transform: $rotate;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
 }

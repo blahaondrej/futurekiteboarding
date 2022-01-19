@@ -1,22 +1,114 @@
-.ambassadors, .brand {
-  height: 100vh;
-  &__inner {
+.ambassadors {
+  padding: 70px 0;
+  &__block {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    max-width: 350px;
-    &--right {
-      margin-left: 150px;
-      @include phone {
-        margin-left: 0;
-      }
-    }
-    .btn {
-      margin-top: 50px;
+    align-items: center;
+    margin: 3px 0;
+    &:nth-child(even) {
+      margin: 3px 0 150px;
     }
   }
-  .title {
-    margin-bottom: 30px;
+  &__inner {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    &--name {
+      @include phone {
+        order: 1;
+      }
+    }
+    &--text {
+      @include phone {
+        order: 2;
+      }
+    }
+    &--photo {
+      @include phone {
+        order: 3;
+      }
+    }
+  }
+  &__state {
+    max-width: 220px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.37px;
+    line-height: 37px;
+    text-transform: uppercase;
+  }
+  &__name {
+    color: $color-button;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 37px;
+    max-width: 220px;
+    text-transform: uppercase;
+  }
+  &__socials {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__icon {
+    height: 34px;
+    width: 34px;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 15px;
+      width: auto;
+      z-index: 5;
+      fill: $color-white;
+      @include animation();
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: $color-black;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      @include animation();
+    }
+    &:hover {
+      &:after {
+        background: $color-white;
+      }
+      svg {
+        fill: $color-black;
+        g {
+          fill: $color-black;
+        }
+      }
+    }
+  }
+  &__text {
+    p {
+      color: $color-black2;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.37px;
+      line-height: 17px;
+      padding: 10px 0;
+    }
+  }
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
