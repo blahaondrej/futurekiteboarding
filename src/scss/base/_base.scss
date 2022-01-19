@@ -2,14 +2,39 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  font-size: 100%;
+  font-family: $font;
+  scroll-behavior: smooth;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   font-size: 100%;
   font-family: $font;
   scroll-behavior: smooth;
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
-
+  &:after {
+    opacity: 0;
+    visibility: hidden;
+    @include animation();
+  }
+  &.active {
+    overflow: hidden;
+    &:after {
+      content: '';
+      z-index: 50;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      background-color: rgba(28, 28, 28, .97);
+    }
+  }
 }
 
 // Placeholder
