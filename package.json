@@ -54,7 +54,7 @@
     "webpack-pwa-manifest": "^4.1.1"
   },
   "dependencies": {
-    "@lhci/cli": "^0.3.7",
+    "@lhci/cli": "^0.8.2",
     "bootstrap-4-grid": "^3.4.0",
     "jquery": "^3.4.1",
     "scrollreveal": "^4.0.9",

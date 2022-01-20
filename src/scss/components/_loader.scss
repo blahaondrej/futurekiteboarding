@@ -40,20 +40,12 @@
   &--loaded {
     transform: translate3d(0, -100%, 0);
     visibility: hidden !important;
-
-    & img {
-      opacity: 0;
-    }
   }
 }
 
 .loaded .loader {
   transform: translate3d(0, -100%, 0);
   visibility: hidden !important;
-
-  & img {
-    opacity: 0;
-  }
 }
 
 .loader__wrapper {
