@@ -64,11 +64,14 @@
     align-items: center;
     justify-content: center;
     svg {
-      height: 15px;
-      width: auto;
+      width: 15px;
+      height: auto;
       z-index: 5;
       fill: $color-white;
       @include animation();
+      path {
+        fill: $color-white;
+      }
     }
     &:after {
       content: '';
@@ -84,11 +87,11 @@
     }
     &:hover {
       &:after {
-        background: $color-white;
+        background: $color-grey-hexagon;
       }
       svg {
         fill: $color-black;
-        g {
+        path {
           fill: $color-black;
         }
       }

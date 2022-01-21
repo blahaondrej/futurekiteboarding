@@ -69,4 +69,19 @@
       height: auto;
     }
   }
+  &--red {
+    position: absolute;
+    left: -200px;
+    bottom: 20%;
+    &:after {
+      content: '';
+      position: absolute;
+      background: #fff5f5;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+    }
+  }
 }
