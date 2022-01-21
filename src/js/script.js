@@ -27,8 +27,8 @@ if (hasTouch()) { // remove all :hover stylesheets
 $(document).ready(function () {
 
     setTimeout(function () {
-        $(".loader").addClass("loader--loaded");
-    }, 2000);
+        $("body").addClass("loaded");
+    }, 1000);
 
 
 /*    function preloader() {
