@@ -1,0 +1,74 @@
+.dealers {
+  &__block {
+    height: 450px;
+    width: 100%;
+    background-color: $color-white;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    &--grey {
+      background-color: $color-grey-dealers;
+    }
+  }
+
+  &__title {
+    color: $color-red2;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.56px;
+    line-height: 66px;
+    text-transform: uppercase;
+  }
+
+  &__state {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.37px;
+    line-height: 37px;
+    color: $color-button;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 37px;
+    color: $color-button;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  a {
+    color: $color-black2;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 27px;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 0;
+    border-bottom: 1px solid $color-black2;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: $color-red;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.3s transform;
+    }
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
