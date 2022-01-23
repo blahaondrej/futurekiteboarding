@@ -8,6 +8,14 @@ var slideUp = {
     delay: 100
 };
 
+var slideUp = {
+    distance: '50%',
+    origin: 'bottom',
+    duration: 1000,
+    opacity: 0,
+    delay: 200
+};
+
 var slideLeft = {
     distance: '50%',
     origin: 'left',
@@ -25,5 +33,6 @@ var slideRight = {
 };
 
 ScrollReveal().reveal('.reveal-up', slideUp);
+ScrollReveal().reveal('.reveal-up200', slideUp);
 ScrollReveal().reveal('.reveal-left', slideLeft);
 ScrollReveal().reveal('.reveal-right', slideRight);

@@ -8,6 +8,7 @@
 @import "~swiper/modules/effect-fade/effect-fade";
 @import "~swiper/modules/pagination/pagination";
 @import "~swiper/modules/navigation/navigation";
+@import "~swiper/modules/thumbs/thumbs";
 
 @import "scss/base/reset";
 @import "scss/base/base";
@@ -28,9 +29,10 @@
 @import "scss/components/newsletter";
 @import "scss/components/top";
 @import "scss/components/loader";
+@import "scss/components/parameters";
 
 @import "scss/pages/homepage";
 @import "scss/pages/contact";
 @import "scss/pages/dealers";
 @import "scss/pages/about";
-
+@import "scss/pages/detail";

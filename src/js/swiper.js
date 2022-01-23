@@ -15,6 +15,65 @@ $(document).ready(function () {
         },
     });
 
+    var homepageSwiper = new Swiper('.detail-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 2000
+        },
+        speed: 1000,
+        pagination: {
+            el: '.top-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
+    var ambassadorsSwiper = new Swiper('.ambassadors-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 2000
+        },
+        speed: 1000,
+        pagination: {
+            el: '.ambassadors-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
+    var brandSwiper = new Swiper('.brand-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 2000
+        },
+        speed: 1000,
+        pagination: {
+            el: '.brand-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+
     var productSwiper = new Swiper('.product-swiper', {
         loop: true,
         slidesPerView: 1,

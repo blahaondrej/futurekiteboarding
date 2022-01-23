@@ -113,8 +113,8 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
-            template: 'src/templates/about-us.html', // Cesta k templatu
-            filename: 'about-us.html', // Cilovy soubor
+            template: 'src/templates/brand-history.html', // Cesta k templatu
+            filename: 'brand-history.html', // Cilovy soubor
         }),
 
         new HtmlWebpackPlugin({
@@ -125,8 +125,8 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
-            template: 'src/templates/contact.html', // Cesta k templatu
-            filename: 'contact.html', // Cilovy soubor
+            template: 'src/templates/get-in-touch.html', // Cesta k templatu
+            filename: 'get-in-touch.html', // Cilovy soubor
         }),
 
         new HtmlWebpackPlugin({
@@ -137,8 +137,8 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
-            template: 'src/templates/dealers.html', // Cesta k templatu
-            filename: 'dealers.html', // Cilovy soubor
+            template: 'src/templates/where-to-buy.html', // Cesta k templatu
+            filename: 'where-to-buy.html', // Cilovy soubor
         }),
 
         new HtmlWebpackPlugin({

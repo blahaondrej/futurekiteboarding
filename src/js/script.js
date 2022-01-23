@@ -51,5 +51,4 @@ $(document).ready(function () {
         $('.header__open span').text(menuButtonText == 'Menu' ? 'Zavřít' : 'Menu');
     });
 
-
 });
