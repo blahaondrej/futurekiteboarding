@@ -104,4 +104,41 @@ $(document).ready(function () {
         },
         speed: 2000
     });
+
+    // swiper tech photo
+
+    var techSwiperText = new Swiper('.tech-text-swiper', {
+        // If we need pagination
+        effect: 'fade',
+        autoplay: {
+            delay: 20000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // swiper tech text
+
+    var techNames = ['01', '02', '03', '04'];
+    var techSwiper = new Swiper('.tech-swiper', {
+        // If we need pagination
+        effect: 'fade',
+        autoplay: {
+            delay: 20000,
+            disableOnInteraction: false,
+        },
+        paginationClickable: true,
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.tech-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="about__box--title ' + className + '"><span class="name">' + (techNames[index]) + '</span></div>';
+            },
+        },
+        on: {
+            slideChange: function () {
+                techSwiperText.slideTo(this.activeIndex);
+            }
+        }
+    });
 });

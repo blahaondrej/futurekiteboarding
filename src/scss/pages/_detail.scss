@@ -81,7 +81,7 @@
     }
   }
   &__desc {
-    padding: 30px 0;
+    padding-top: 30px;
     p {
       color: $color-black2;
       margin-bottom: 10px;
@@ -93,7 +93,7 @@
     }
   }
   &__colors {
-    margin: 20px 0;
+    margin: 30px 0;
     z-index: 10;
     display: flex;
     div {
@@ -170,4 +170,34 @@
 
 .detail-swiper {
   height: 100vh;
+}
+
+.detail-tech {
+  height: 100vh;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 450px;
+    &--right {
+      margin-left: 150px;
+      @include phone {
+        margin-left: 0;
+      }
+    }
+    .btn {
+      margin-top: 50px;
+    }
+    &--center {
+      margin: 0 auto;
+    }
+  }
+  .title {
+    margin-bottom: 30px;
+    sup {
+      vertical-align: super;
+      font-size: 18px;
+    }
+  }
 }
