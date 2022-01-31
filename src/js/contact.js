@@ -23,5 +23,24 @@ $(document).ready(function () {
         });
     });
 
+    // formulář footer
+
+    $('.js-request-form-contact').on('submit', function (e) {
+        e.preventDefault();
+
+        $.post('./contact.php', $(this).serialize(), function (response) {
+            if (response == 1) {
+                $('.form__wrapper--thankyou').show();
+                $(".submit__button").attr("disabled", true);
+                $('#contactForm-bottom')[0].reset();
+                clearForm();
+
+            } else {
+                $('.form__wrapper--error').show();
+            }
+
+        });
+    });
+
 
 });
