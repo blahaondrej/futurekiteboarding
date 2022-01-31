@@ -40,47 +40,48 @@
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
-
-.swiper-button-next, .swiper-button-prev {
-  top: unset;
-  bottom: 100px;
-  background: none;
-  width: auto;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: 0.48px;
-  color: $color-black;
-  padding: 0 20px;
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: $color-red;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: 0.3s transform;
-    @include animation();
-  }
-  &:hover {
+.products {
+  .swiper-button-next, .swiper-button-prev {
+    top: unset;
+    bottom: 100px;
+    background: none;
+    width: auto;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.48px;
+    color: $color-black;
+    padding: 0 20px;
     &:before {
-      transform: scaleX(1);
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: $color-red;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.3s transform;
+      @include animation();
+    }
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+    &:after {
+      content: none;
     }
   }
-  &:after {
-    content: none;
+
+  .swiper-button-next {
+    right: 25%;
   }
-}
 
-.swiper-button-next {
-  right: 25%;
-}
-
-.swiper-button-prev {
-  left: 25%;
+  .swiper-button-prev {
+    left: 25%;
+  }
 }
 
 .ambassadors-swiper, .brand-swiper {

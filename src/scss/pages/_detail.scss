@@ -3,60 +3,58 @@
 }
 
 .product-gallery {
+  overflow: hidden;
   @include phone {
     order: 2;
   }
-  img {
-    width: 50%;
+  .swiper-container {
+    width: 100%;
+    height: 300px;
     margin: 0 auto;
-    height: auto;
-    display: block;
   }
-  .swiper-slide {
+
+  .swiper-slide-container {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    max-width: 600px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: 500px;
+      width: auto;
     }
   }
 
-  .swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .myswiper2 {
-    height: 80%;
+  .gallery-top {
+    height: 500px;
     width: 100%;
   }
-
-  .myswiper {
-    height: 20%;
+  .gallery-thumbs {
+    height: 100px;
     box-sizing: border-box;
     padding: 10px 0;
   }
-
-  .myswiper .swiper-slide {
-    width: 25%;
+  .gallery-thumbs .swiper-slide {
+    width: 20%;
     height: 100%;
     opacity: 0.4;
   }
-
-  .myswiper .swiper-slide-thumb-active {
+  .gallery-thumbs .swiper-slide-active {
     opacity: 1;
   }
-
+  .swiper-button-next, .swiper-button-prev {
+    bottom: 50%;
+  }
+  .swiper-button-next {
+    right: 30px;
+  }
+  .swiper-button-prev {
+    left: 30px;
+  }
 }
 
 .product-description {

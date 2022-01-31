@@ -35,6 +35,119 @@
   }
 }
 
+.detail__slide1 {
+  background-image: url(./assets/images/detail/slider/slide1_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide1_large.jpg);
+  }
+}
+
+.detail__slide2 {
+  background-image: url(./assets/images/detail/slider/slide2_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide2_mobile.jpg);
+  }
+}
+
+.detail__slide3 {
+  background-image: url(./assets/images/detail/slider/slide3_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide3_mobile.jpg);
+  }
+}
+
+.detail__slide4 {
+  background-image: url(./assets/images/detail/slider/slide4_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide4_mobile.jpg);
+  }
+}
+
+.detail__slide5 {
+  background-image: url(./assets/images/detail/slider/slide5_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide5_mobile.jpg);
+  }
+}
+
+.detail__slide6 {
+  background-image: url(./assets/images/detail/slider/slide6_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide6_mobile.jpg);
+  }
+}
+
+.detail__slide7 {
+  background-image: url(./assets/images/detail/slider/slide7_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/slide7_mobile.jpg);
+  }
+}
+
+.tech__slide1 {
+  background-image: url(./assets/images/detail/tech/tech_1.jpg);
+}
+
+.tech__slide2 {
+  background-image: url(./assets/images/detail/tech/tech_2.jpg);
+}
+
+.tech__slide3 {
+  background-image: url(./assets/images/detail/tech/tech_3.jpg);
+}
+
+.tech__slide4 {
+  background-image: url(./assets/images/detail/tech/tech_4.jpg);
+}
+
+.tech__slide5 {
+  background-image: url(./assets/images/detail/tech/tech_5.jpg);
+}
+
+.tech__slide6 {
+  background-image: url(./assets/images/detail/tech/tech_6.jpg);
+}
+
+.tech__slide7 {
+  background-image: url(./assets/images/detail/tech/tech_7.jpg);
+}
+
+.tech__slide8 {
+  background-image: url(./assets/images/detail/tech/tech_8.jpg);
+}
+
+.tech__slide9 {
+  background-image: url(./assets/images/detail/tech/tech_9.jpg);
+}
+
+.tech__slide10 {
+  background-image: url(./assets/images/detail/tech/tech_10.jpg);
+}
+
+.vazani__slide1 {
+  background-image: url(./assets/images/detail/vazani/vazani_1.jpg);
+}
+
+.vazani__slide2 {
+  background-image: url(./assets/images/detail/vazani/vazani_2.jpg);
+}
+
+.vazani__slide3 {
+  background-image: url(./assets/images/detail/vazani/vazani_3.jpg);
+}
+
+.vazani__slide4 {
+  background-image: url(./assets/images/detail/vazani/vazani_4.jpg);
+}
+
+.vazani__slide5 {
+  background-image: url(./assets/images/detail/vazani/vazani_5.jpg);
+}
+
+.vazani__slide6 {
+  background-image: url(./assets/images/detail/vazani/vazani_6.jpg);
+}
+
 .about__1 {
   background-image: url(./assets/images/about/about_1.jpg);
 }
