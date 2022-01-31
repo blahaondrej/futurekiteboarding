@@ -51,4 +51,14 @@ $(document).ready(function () {
         $('.header__open span').text(menuButtonText == 'Menu' ? 'Zavřít' : 'Menu');
     });
 
+    if ($(window).width() > 599) {
+        $('.homepage-overlay__bottom').height($(window).height() - $('.homepage-overlay__motive svg').height() +20);
+    }
+
+});
+
+$( window ).resize(function() {
+    if ($(window).width() > 599) {
+        $('.homepage-overlay__bottom').height($(window).height() - $('.homepage-overlay__motive svg').height() +20);
+    }
 });

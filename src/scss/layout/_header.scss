@@ -13,8 +13,11 @@
   }
   &__logo {
     img {
-      width: 100px;
+      width: 150px;
       height: auto;
+      @include phone {
+        width: 120px;
+      }
     }
   }
   &__open {
