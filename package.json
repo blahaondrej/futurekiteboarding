@@ -10,7 +10,7 @@
     "lh": "lhci autorun"
   },
   "keywords": [],
-  "author": "Filip Svoboda",
+  "author": "Ondřej Blaha",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/core": "^7.7.7",
