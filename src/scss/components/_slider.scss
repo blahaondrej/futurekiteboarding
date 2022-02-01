@@ -1,19 +1,25 @@
 .product-swiper {
   .swiper-slide {
-    @include animation();
+    @include animation(.5s);
+    .product__hexagon, .product__inner {
+      display: none;
+    }
   }
   .swiper-slide-prev, .swiper-slide-next {
     transform: scale(.7);
     padding-top: 100px;
-    .product__content {
-      display: none;
-    }
-    h2 {
+    h2, .product__inner  {
       display: none;
     }
   }
   .swiper-slide-active {
     transform: scale(1);
+    .product__hexagon {
+      display: block;
+    }
+    .product__inner {
+      display: flex;
+    }
   }
 }
 
@@ -43,7 +49,7 @@
 .products {
   .swiper-button-next, .swiper-button-prev {
     top: unset;
-    bottom: 100px;
+    bottom: 35px;
     background: none;
     width: auto;
     font-size: 18px;

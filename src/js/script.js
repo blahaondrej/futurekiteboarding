@@ -48,7 +48,7 @@ $(document).ready(function () {
         var menuButtonText = $('.header__open span').text();
         $(".header__menu").toggleClass("active");
         $("body").toggleClass("active");
-        $('.header__open span').text(menuButtonText == 'Menu' ? 'Zavřít' : 'Menu');
+        $('.header__open span').text(menuButtonText == 'Menu' ? 'Close' : 'Menu');
     });
 
     if ($(window).width() > 599) {

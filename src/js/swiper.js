@@ -100,7 +100,7 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-            delay: 9999999
+            delay: 3000
         },
         speed: 2000
     });
