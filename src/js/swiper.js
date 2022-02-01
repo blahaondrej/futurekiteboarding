@@ -142,6 +142,7 @@ $(document).ready(function () {
         }
     });
 
+    let autostartTimeout = null;
     var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,
         navigation: {
@@ -149,7 +150,23 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
         loop: true,
-        loopedSlides: 4
+        loopedSlides: 4,
+        on: {
+            click: () => {
+                for (let x = 0; x < detailSwiper.length; x++) {
+                    detailSwiper[x].params.speed = 500;
+                }
+                if (autostartTimeout) {
+                    clearTimeout(autostartTimeout);
+                }
+                autostartTimeout = setTimeout(() => {
+                    for (let x = 0; x < detailSwiper.length; x++) {
+                        detailSwiper[x].params.speed = 4000;
+                        detailSwiper[x].autoplay.start();
+                    }
+                }, 1000);
+            }
+        }
     });
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,

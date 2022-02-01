@@ -2,6 +2,7 @@
 import "./style.scss";
 
 // js
+import "./js/gallery.js";
 import "./js/scrollreveal.js";
 import "./js/script.js";
 

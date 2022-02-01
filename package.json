@@ -57,6 +57,7 @@
     "@lhci/cli": "^0.8.2",
     "bootstrap-4-grid": "^3.4.0",
     "jquery": "^3.4.1",
+    "lightbox2": "^2.11.3",
     "scrollreveal": "^4.0.9",
     "swiper": "^7.4.1"
   }
