@@ -132,6 +132,11 @@ module.exports = merge(common, {
             to: '.'
         }]),
 
+        new CopyWebpackPlugin([{
+            from: './.htaccess',
+            to: '.'
+        }]),
+
 /*        new SitemapPlugin('https://mysite.com', paths, {
             filename: 'sitemap.xml',
             lastmod: true,

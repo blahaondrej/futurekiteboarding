@@ -19,7 +19,7 @@ $(document).ready(function () {
         loop: true,
         effect: 'fade',
         autoplay: {
-            delay: 2000
+            delay: 9999999
         },
         speed: 1000,
         pagination: {
@@ -100,7 +100,7 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-            delay: 2000
+            delay: 9999999
         },
         speed: 2000
     });

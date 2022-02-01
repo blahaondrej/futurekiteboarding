@@ -49,7 +49,7 @@
       position: absolute;
       z-index: 5;
       img {
-        width: 190px;
+        width: 150px;
         height: auto;
       }
     }
@@ -114,6 +114,11 @@
     &__yellow {
       &:after {
         background: $color-yellow;
+      }
+    }
+    &__green {
+      &:after {
+        background: $color-green;
       }
     }
     &__button {

@@ -38,7 +38,7 @@
 .detail__slide1 {
   background-image: url(./assets/images/detail/slider/slide1_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide1_large.jpg);
+    background-image: url(./assets/images/detail/slider/slide1_mobile.jpg);
   }
 }
 
@@ -149,7 +149,7 @@
 }
 
 .about__1 {
-  background-image: url(./assets/images/about/about_1.jpg);
+  background-image: url(./assets/images/detail/tech/tech_1.jpg);
 }
 
 .homepage-swiper {

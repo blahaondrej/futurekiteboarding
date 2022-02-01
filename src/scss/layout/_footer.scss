@@ -34,6 +34,10 @@
     max-width: 250px;
     text-transform: uppercase;
     position: relative;
+    sup {
+      vertical-align: super;
+      font-size: 10px;
+    }
     &:before {
       content: "";
       position: absolute;
