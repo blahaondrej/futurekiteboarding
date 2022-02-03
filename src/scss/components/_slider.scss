@@ -1,24 +1,34 @@
 .product-swiper {
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
   .swiper-slide {
-    @include animation(.5s);
+    @include animation(1s);
     .product__hexagon, .product__inner {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
   }
   .swiper-slide-prev, .swiper-slide-next {
-    transform: scale(.7);
-    padding-top: 100px;
+    transform: scale(.85);
+    @include animation(1s);
     h2, .product__inner  {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
   }
   .swiper-slide-active {
     transform: scale(1);
+    @include animation(1s);
+    animation-delay: 1s;
     .product__hexagon {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
-    .product__inner {
-      display: flex;
+    .product__inner, h2 {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
@@ -49,7 +59,7 @@
 .products {
   .swiper-button-next, .swiper-button-prev {
     top: unset;
-    bottom: 35px;
+    bottom: 65px;
     background: none;
     width: auto;
     font-size: 18px;

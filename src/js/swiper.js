@@ -120,7 +120,7 @@ $(document).ready(function () {
         autoplay: {
             delay: 3000
         },
-        speed: 2000
+        speed: 2500
     });
 
     // swiper tech photo
