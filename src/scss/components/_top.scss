@@ -55,6 +55,26 @@
         display: block;
       }
     }
+    a {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $color-red;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.3s transform;
+      }
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
   }
   &__bg {
     background-attachment: fixed;

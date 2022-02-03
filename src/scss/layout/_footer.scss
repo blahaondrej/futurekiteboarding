@@ -22,7 +22,7 @@
     }
   }
   &__link {
-    margin: 70px 0 100px;
+    margin-top: 70px;
     color: $color-white;
     font-size: 12px;
     font-style: italic;
@@ -34,10 +34,6 @@
     max-width: 250px;
     text-transform: uppercase;
     position: relative;
-    sup {
-      vertical-align: super;
-      font-size: 10px;
-    }
     &:before {
       content: "";
       position: absolute;
@@ -54,6 +50,10 @@
       &:before {
         transform: scaleX(1);
       }
+    }
+    &:last-child {
+      margin-top: 0;
+      margin-bottom: 100px;
     }
   }
   &__image {
@@ -84,6 +84,10 @@
         line-height: 20px;
         position: relative;
         display: inline-block;
+        sup {
+          vertical-align: super;
+          font-size: 10px;
+        }
         &:before {
           content: "";
           position: absolute;

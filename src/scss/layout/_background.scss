@@ -35,52 +35,129 @@
   }
 }
 
-.detail__slide1 {
-  background-image: url(./assets/images/detail/slider/slide1_large.jpg);
+.boss-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide1_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/boss/boss1_mobile.jpg);
   }
 }
 
-.detail__slide2 {
-  background-image: url(./assets/images/detail/slider/slide2_large.jpg);
+.boss-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/boss/boss2_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide2_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/boss/boss2_mobile.jpg);
   }
 }
 
-.detail__slide3 {
-  background-image: url(./assets/images/detail/slider/slide3_large.jpg);
+.boss-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/boss/boss3_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide3_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/boss/boss3_mobile.jpg);
   }
 }
 
-.detail__slide4 {
-  background-image: url(./assets/images/detail/slider/slide4_large.jpg);
+.boss-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/boss/boss4_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide4_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/boss/boss4_mobile.jpg);
   }
 }
 
-.detail__slide5 {
-  background-image: url(./assets/images/detail/slider/slide5_large.jpg);
+.boss-detail__slide5 {
+  background-image: url(./assets/images/detail/slider/boss/boss5_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide5_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/boss/boss5_mobile.jpg);
   }
 }
 
-.detail__slide6 {
-  background-image: url(./assets/images/detail/slider/slide6_large.jpg);
+.jiggy-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy1_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide6_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy1_mobile.jpg);
   }
 }
 
-.detail__slide7 {
-  background-image: url(./assets/images/detail/slider/slide7_large.jpg);
+.jiggy-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy2_large.jpg);
   @include phone {
-    background-image: url(./assets/images/detail/slider/slide7_mobile.jpg);
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy2_mobile.jpg);
+  }
+}
+
+.jiggy-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy3_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy3_mobile.jpg);
+  }
+}
+
+.jiggy-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy4_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy4_mobile.jpg);
+  }
+}
+
+.mucho-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho1_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/mucho/mucho1_mobile.jpg);
+  }
+}
+
+.mucho-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho2_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/mucho/mucho2_mobile.jpg);
+  }
+}
+
+.mucho-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho3_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/mucho/mucho3_mobile.jpg);
+  }
+}
+
+.mucho-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho4_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/mucho/mucho4_mobile.jpg);
+  }
+}
+
+.mucho-detail__slide5 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho5_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/mucho/mucho5_mobile.jpg);
+  }
+}
+
+.oraculum-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum1_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum1_mobile.jpg);
+  }
+}
+
+.oraculum-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum2_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum2_mobile.jpg);
+  }
+}
+
+.oraculum-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum3_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum3_mobile.jpg);
+  }
+}
+
+.oraculum-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum4_large.jpg);
+  @include phone {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum4_mobile.jpg);
   }
 }
 
