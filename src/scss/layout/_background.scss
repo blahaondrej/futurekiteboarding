@@ -7,6 +7,16 @@
   }
 }
 
+.homepage-swiper {
+  padding: 0 !important;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .homepage__slide1 {
   background-image: url(./assets/images/background/homepage_top_bg.jpg);
   @include phone {
@@ -229,13 +239,21 @@
   background-image: url(./assets/images/detail/tech/tech_1.jpg);
 }
 
-.homepage-swiper {
-  padding: 0 !important;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.wake__1 {
+  background-image: url(./assets/images/wake/wake_1.jpg);
 }
+
+.wake__2 {
+  background-image: url(./assets/images/wake/wake_2.jpg);
+}
+
+.wake__3 {
+  background-image: url(./assets/images/wake/wake_3.jpg);
+}
+
+.wake__4 {
+  background-image: url(./assets/images/wake/wake_4.jpg);
+}
+
+
 
