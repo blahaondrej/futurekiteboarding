@@ -57,6 +57,24 @@ $(document).ready(function () {
         },
     });
 
+    var facebookSwiper = new Swiper('.facebook-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 1500
+        },
+        speed: 1000,
+    });
+
+    var instagramSwiper = new Swiper('.instagram-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 1800
+        },
+        speed: 1000,
+    });
+
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 10,
         slidesPerView: 4,

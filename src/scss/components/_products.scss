@@ -117,22 +117,22 @@
     }
     &__red {
       &:after {
-        background: $color-red;
+        background: $color-red-hexagon;
       }
     }
     &__blue {
       &:after {
-        background: $color-blue;
+        background: $color-blue-hexagon;
       }
     }
     &__yellow {
       &:after {
-        background: $color-yellow;
+        background: $color-yellow-hexagon;
       }
     }
     &__green {
       &:after {
-        background: $color-green;
+        background: $color-green-hexagon;
       }
     }
     &__button {
