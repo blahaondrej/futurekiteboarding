@@ -159,42 +159,43 @@ $(document).ready(function () {
             }
         }
     });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            loopedSlides: 4
+        });
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
 
-    let autostartTimeout = null;
-    var galleryTop = new Swiper('.gallery-top', {
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            loop: true,
+            loopedSlides: 4
+        });
+
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
+
+
+/*    var swiper = new Swiper(".gallery-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".gallery-top", {
         spaceBetween: 10,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        loop: true,
-        loopedSlides: 4,
-        on: {
-            click: () => {
-                for (let x = 0; x < detailSwiper.length; x++) {
-                    detailSwiper[x].params.speed = 500;
-                }
-                if (autostartTimeout) {
-                    clearTimeout(autostartTimeout);
-                }
-                autostartTimeout = setTimeout(() => {
-                    for (let x = 0; x < detailSwiper.length; x++) {
-                        detailSwiper[x].params.speed = 4000;
-                        detailSwiper[x].autoplay.start();
-                    }
-                }, 1000);
-            }
-        }
-    });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 10,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true,
-        loop: true,
-        loopedSlides: 4
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+        thumbs: {
+            swiper: swiper,
+        },
+    });*/
 });

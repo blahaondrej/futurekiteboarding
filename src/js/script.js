@@ -64,6 +64,14 @@ $(document).ready(function () {
         $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
     });
 
+    // zmena obrazku podle tlacitka barvy - detail produktu
+    $('.product-description__colors div').on('click', function () {
+        $('.product-description__colors div').removeClass('active');
+        $(this).addClass('active');
+        $('.product-gallery__inner').removeClass('active');
+        $(`.product-gallery__inner[data-color=${$(this).data('color')}]`).addClass('active');
+    });
+
 });
 
 $( window ).resize(function() {
