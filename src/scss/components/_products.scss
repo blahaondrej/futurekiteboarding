@@ -74,6 +74,11 @@
       img {
         width: 130px;
         height: auto;
+        display: none;
+        @include animation();
+        &.active {
+          display: block;
+        }
       }
     }
     &__name {
@@ -83,7 +88,6 @@
       letter-spacing: 0.96px;
       text-transform: uppercase;
       z-index: 15;
-      @include animation(1s);
       sup {
         vertical-align: super;
         font-size: 24px;
@@ -91,7 +95,6 @@
     }
     &__size {
       padding: 10px 0;
-      @include animation(1s);
       span {
         font-size: 18px;
         font-style: italic;
@@ -107,13 +110,11 @@
       letter-spacing: 0.37px;
       line-height: 21px;
       color: $color-red;
-      @include animation(1s);
     }
     &__colors {
       margin: 20px 0;
       display: flex;
       z-index: 10;
-      @include animation(1s);
       div {
         height: 30px;
         width: 30px;
@@ -170,7 +171,6 @@
       text-transform: uppercase;
       position: absolute;
       bottom: 30px;
-      @include animation(1s);
       &:hover {
         background: $color-button;
         color: $color-white;

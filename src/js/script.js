@@ -55,6 +55,15 @@ $(document).ready(function () {
         $('.homepage-overlay__bottom').height($(window).height() - $('.homepage-overlay__motive svg').height() +20);
     }
 
+
+    // zmena obrazku podle tlacitka barvy
+    $('.product__colors div').on('mouseover', function () {
+        $('.product__colors div').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.product__content').find('.product__image img').removeClass('active');
+        $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
+    });
+
 });
 
 $( window ).resize(function() {
