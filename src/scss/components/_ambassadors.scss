@@ -1,11 +1,21 @@
 .ambassadors {
   padding: 70px 0;
+  @include phone {
+    padding: 20px 0;
+  }
   &__block {
     display: flex;
     align-items: center;
     margin: 3px 0;
     &:nth-child(even) {
       margin: 3px 0 150px;
+    }
+    @include phone {
+      flex-direction: column;
+      margin: 30px 0;
+      &:nth-child(even) {
+        margin: 30px 0;
+      }
     }
   }
   &__inner {
@@ -14,6 +24,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-right: 30px;
+    @include phone {
+      width: 100%;
+      padding-right: 0;
+    }
     &--name {
       @include phone {
         order: 1;
@@ -53,6 +67,9 @@
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    @include phone {
+      margin: 20px 0;
+    }
   }
   &__icon {
     height: 34px;

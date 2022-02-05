@@ -76,6 +76,22 @@
       pointer-events: none;
       z-index: -1;
     }
+    @include tablet-portrait {
+      height: 700px;
+      width: 700px;
+      top: -700px;
+      right: -700px;
+      padding: 150px;
+      &.active {
+        top: -100px;
+        right: -170px;
+      }
+    }
+    @include phone {
+      height: 750px;
+      width: 620px;
+      padding: 200px 100px 100px;
+    }
   }
   nav {
   }
@@ -83,7 +99,7 @@
     list-style-type: none;
     li {
       padding: 10px 0;
-      display: inline-block;
+      display: block;
       a {
         color: $color-grey;
         font-size: 36px;
@@ -120,6 +136,24 @@
           color: $color-white;
           &:before {
             transform: scaleX(1);
+          }
+        }
+      }
+    }
+    @include tablet-portrait {
+      li {
+        padding: 5px 0;
+        a {
+          font-size: 30px;
+          line-height: 34px;
+        }
+        &:last-child {
+          margin-top: 30px;
+          margin-bottom: 20px;
+          display: block;
+          a {
+            font-size: 16px;
+            letter-spacing: 0.48px;
           }
         }
       }

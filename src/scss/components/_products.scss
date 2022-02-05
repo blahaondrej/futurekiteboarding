@@ -2,6 +2,9 @@
   padding: 50px 0 70px;
   overflow: hidden;
   position: relative;
+  @include phone {
+    padding: 30px 0;
+  }
   .product {
     position: relative;
     text-align: center;
@@ -16,6 +19,12 @@
       display: flex;
       justify-content: center;
       @include animation(1s);
+      @include tablet-portrait {
+        padding-top: 50px;
+      }
+      @include phone {
+        padding-top: 0;
+      }
     }
     &__hexagon {
       position: absolute;
@@ -27,6 +36,10 @@
       opacity: 0;
       visibility: hidden;
       @include animation(1s);
+      @include tablet-portrait {
+        width: 300px;
+        height: 300px;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -51,6 +64,10 @@
       align-items: center;
       justify-content: center;
       @include animation();
+      @include tablet-portrait {
+        width: 300px;
+        height: 300px;
+      }
     }
     h2 {
       color: $color-red;
@@ -65,6 +82,11 @@
       visibility: hidden;
       display: block;
       @include animation(1s);
+      @include tablet-portrait {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 50px;
+      }
     }
     &__image {
       top: -180px;
@@ -76,6 +98,12 @@
         height: auto;
         display: none;
         @include animation();
+        @include tablet-portrait {
+          width: 100px;
+        }
+        @include phone {
+          width: 80px;
+        }
         &.active {
           display: block;
         }
@@ -91,6 +119,13 @@
       sup {
         vertical-align: super;
         font-size: 24px;
+      }
+      @include tablet-portrait {
+        font-size: 28px;
+        line-height: 34px;
+        sup {
+          font-size: 20px;
+        }
       }
     }
     &__size {
@@ -171,6 +206,11 @@
       text-transform: uppercase;
       position: absolute;
       bottom: 30px;
+      @include tablet-portrait {
+        height: 50px;
+        font-size: 15px;
+        max-width: 280px;
+      }
       &:hover {
         background: $color-button;
         color: $color-white;

@@ -13,6 +13,13 @@
     height: 500px;
     width: 500px;
     padding: 80px;
+    @include phone {
+      width: 350px;
+      height: 350px;
+      left: 0;
+      padding: 60px 40px;
+      bottom: -100px;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -31,6 +38,10 @@
       font-weight: 300;
       letter-spacing: 0.96px;
       line-height: 51px;
+      @include phone {
+        font-size: 28px;
+        line-height: 34px;
+      }
       span {
         font-weight: 500;
         display: block;
@@ -44,6 +55,10 @@
       letter-spacing: 0.01px;
       line-height: 22px;
       padding: 20px 0;
+      @include phone {
+        font-size: 16px;
+        padding: 10px 0;
+      }
     }
     .swiper-pagination {
       bottom: unset;
@@ -53,22 +68,44 @@
   }
 }
 
-.ambassadors-hp, .brand-hp {
-  height: 100vh;
+.two-column {
+  height: 750px;
+  margin: 50px 0;
+  @include tablet-portrait {
+    height: 500px;
+  }
+  @include phone {
+    height: 100%;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 700px;
     max-width: 350px;
+    @include tablet-portrait {
+      height: 500px;
+      margin-right: 25px;
+    }
+    @include phone {
+      height: 400px;
+    }
     &--right {
       margin-left: 150px;
+      margin-right: 0;
+      @include tablet-portrait {
+        margin-left: 25px;
+      }
       @include phone {
         margin-left: 0;
+        height: 400px;
       }
     }
     .btn {
       margin-top: 50px;
+      @include tablet-portrait {
+        margin-top: 30px;
+      }
     }
     &--center {
       margin: 0 auto;
@@ -76,5 +113,23 @@
   }
   .title {
     margin-bottom: 30px;
+    @include tablet-portrait {
+      margin-bottom: 20px;
+    }
+  }
+  .background__image {
+    @include phone {
+      height: 400px;
+    }
+  }
+  .order-mobile-1 {
+    @include phone {
+      order: 1;
+    }
+  }
+  .order-mobile-2 {
+    @include phone {
+      order: 2;
+    }
   }
 }

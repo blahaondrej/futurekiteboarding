@@ -27,6 +27,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @include phone {
+      width: 350px;
+      height: 350px;
+      left: 0;
+      padding: 60px 40px;
+      bottom: -220px;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -47,6 +54,11 @@
       line-height: 22px;
       padding: 20px 0;
       width: 100%;
+      @include phone {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 0;
+      }
       .name {
         font-weight: 500;
       }
@@ -84,9 +96,27 @@
     background-size: cover;
     height: 100vh;
     &--contact {
-      background-image: url(./assets/images/contact_bg.jpg);
+      background-image: url(./assets/images/contact/contact_top_large.jpg);
       @include phone {
-        background-image: url(./assets/images/contact_bg.jpg);
+        background-image: url(./assets/images/contact/contact_top_mobile.jpg);
+      }
+    }
+    &--ambassadors {
+      background-image: url(./assets/images/ambassadors/ambassadors_top_large.jpg);
+      @include phone {
+        background-image: url(./assets/images/ambassadors/ambassadors_top_mobile.jpg);
+      }
+    }
+    &--dealers {
+      background-image: url(./assets/images/dealers/dealers_top_large.jpg);
+      @include phone {
+        background-image: url(./assets/images/dealers/dealers_top_mobile.jpg);
+      }
+    }
+    &--history {
+      background-image: url(./assets/images/history/history_top_large.jpg);
+      @include phone {
+        background-image: url(./assets/images/history/history_top_mobile.jpg);
       }
     }
   }

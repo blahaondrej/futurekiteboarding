@@ -201,6 +201,12 @@
 
 .product-detail {
   padding: 100px 0;
+  &__description {
+    z-index: 2;
+    @include tablet-portrait {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .detail-swiper {

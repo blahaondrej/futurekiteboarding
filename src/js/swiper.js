@@ -15,6 +15,20 @@ $(document).ready(function () {
         },
     });
 
+    var wakeboardSwiper = new Swiper('.wakeboard-swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 2000
+        },
+        speed: 1000,
+        pagination: {
+            el: '.wakeboard-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
     var homepageSwiper = new Swiper('.detail-swiper', {
         loop: true,
         effect: 'fade',
@@ -23,7 +37,7 @@ $(document).ready(function () {
         },
         speed: 1000,
         pagination: {
-            el: '.top-pagination',
+            el: '.detail-pagination',
             type: 'bullets',
             clickable: true
         },
@@ -94,7 +108,7 @@ $(document).ready(function () {
 
     var productSwiper = new Swiper('.product-swiper', {
         loop: true,
-        slidesPerView: 1,
+        slidesPerView: 1.5,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -102,7 +116,7 @@ $(document).ready(function () {
         breakpoints: {
             // when window width is >= 480px
             768: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.8,
                 spaceBetween: 30
             },
             // when window width is >= 640px

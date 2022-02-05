@@ -1,21 +1,42 @@
 .wakeboard {
   background: $color-black-background2;
+  height: 750px;
+  padding: 50px 0;
+  @include tablet-portrait {
+    height: 500px;
+  }
+  @include phone {
+    height: 100%;
+    padding-top: 0;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 750px;
     max-width: 350px;
     position: relative;
     z-index: 0;
+    @include tablet-portrait {
+      height: 500px;
+    }
     &--right {
       margin-left: 150px;
+      @include tablet-portrait {
+        margin-left: 50px;
+      }
       @include phone {
         margin-left: 0;
+        height: 350px;
       }
     }
     .btn {
       margin-top: 50px;
+    }
+  }
+  .background__image {
+    @include phone {
+      height: 400px;
     }
   }
 }

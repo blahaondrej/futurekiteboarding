@@ -24,6 +24,16 @@
   span {
     font-weight: 300;
   }
+  @include tablet-portrait {
+    font-size: 28px;
+    line-height: 34px;
+    &--medium {
+      font-size: 20px;
+    }
+    &--small {
+      font-size: 14px;
+    }
+  }
 }
 
 .subtitle {
@@ -45,6 +55,15 @@
   }
   &--black {
     color: $color-button;
+  }
+  @include tablet-portrait {
+    font-size: 16px;
+    &--medium {
+      font-size: 20px;
+    }
+    &--small {
+      font-size: 14px;
+    }
   }
 }
 

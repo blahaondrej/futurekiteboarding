@@ -120,10 +120,22 @@ strong {
   position: relative;
 }
 
-section {
-  overflow: hidden;
+.position-fixed {
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
+section {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  background-color: $color-white;
+}
+
+.padding-0 {
+  padding: 0;
+}
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;

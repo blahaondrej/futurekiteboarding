@@ -2,9 +2,6 @@
   background-size: cover;
   background-position: center;
   height: 100%;
-  @include tablet-portrait {
-    height: 100vh;
-  }
 }
 
 .homepage-swiper {
@@ -18,30 +15,23 @@
 }
 
 .homepage__slide1 {
-  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  background-image: url(./assets/images/homepage/homepage_top1_large.jpg);
   @include phone {
-    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+    background-image: url(./assets/images/homepage/homepage_top1_mobile.jpg);
   }
 }
 
 .homepage__slide2 {
-  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  background-image: url(./assets/images/homepage/homepage_top2_large.jpg);
   @include phone {
-    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+    background-image: url(./assets/images/homepage/homepage_top2_mobile.jpg);
   }
 }
 
 .homepage__slide3 {
-  background-image: url(./assets/images/background/homepage_top_bg.jpg);
+  background-image: url(./assets/images/homepage/homepage_top3_large.jpg);
   @include phone {
-    background-image: url(./assets/images/background/homepage_top_bg.jpg);
-  }
-}
-
-.homepage__slide4 {
-  background-image: url(./assets/images/background/homepage_top_bg.jpg);
-  @include phone {
-    background-image: url(./assets/images/background/homepage_top_bg.jpg);
+    background-image: url(./assets/images/homepage/homepage_top3_large.jpg);
   }
 }
 
@@ -269,4 +259,68 @@
 
 .ambassadors__4 {
   background-image: url(./assets/images/ambassadors/ambassadors_4.jpg);
+}
+
+.brand__1 {
+  background-image: url(./assets/images/brand/brand_1.jpg);
+}
+
+.brand__2 {
+  background-image: url(./assets/images/brand/brand_2.jpg);
+}
+
+.history__2005 {
+  background-image: url(./assets/images/history/2005.jpg);
+}
+
+.history__2006 {
+  background-image: url(./assets/images/history/2006.jpg);
+}
+
+.history__2008-1 {
+  background-image: url(./assets/images/history/2008_1.jpg);
+}
+
+.history__2008-2 {
+  background-image: url(./assets/images/history/2008_2.jpg);
+}
+
+.history__2009 {
+  background-image: url(./assets/images/history/2009.jpg);
+}
+
+.history__2010 {
+  background-image: url(./assets/images/history/2010.jpg);
+}
+
+.history__2013-1 {
+  background-image: url(./assets/images/history/2013_1.jpg);
+}
+
+.history__2013-2 {
+  background-image: url(./assets/images/history/2013_2.jpg);
+}
+
+.history__2015 {
+  background-image: url(./assets/images/history/2015.jpg);
+}
+
+.history__2017 {
+  background-image: url(./assets/images/history/2017.jpg);
+}
+
+.history__2019 {
+  background-image: url(./assets/images/history/2019.jpg);
+}
+
+.history__2021 {
+  background-image: url(./assets/images/history/2021.jpg);
+}
+
+.kiteboards-1 {
+  background-image: url(./assets/images/kiteboards/kiteboards_1.jpg);
+}
+
+.kiteboards-2 {
+  background-image: url(./assets/images/kiteboards/kiteboards_2.jpg);
 }

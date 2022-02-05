@@ -1,15 +1,11 @@
 .about {
-  &__inner {
-    margin: 100px 0;
-  }
   &__block {
     position: relative;
     padding: 0 100px;
-    margin: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 600px;
+    height: 700px;
     @include phone {
       padding: 0 25px;
     }
@@ -20,21 +16,21 @@
     position: relative;
     &:before {
       content: '';
-      height: 150px;
+      height: 120px;
       position: absolute;
       width: 2px;
       background-color: $color-red;
       left: 0;
-      top: -150px;
+      top: -120px;
     }
     &:after {
       content: '';
-      height: 150px;
+      height: 120px;
       position: absolute;
       width: 2px;
       background-color: $color-red;
       left: 0;
-      bottom: -150px;
+      bottom: -120px;
     }
   }
   &__title {
