@@ -7,7 +7,7 @@
   }
   @include phone {
     height: 100%;
-    padding-top: 0;
+    padding: 0;
   }
   &__inner {
     display: flex;
@@ -28,6 +28,12 @@
       @include phone {
         margin-left: 0;
         height: 350px;
+      }
+    }
+    &--text {
+      @include phone {
+        height: 100%;
+        padding: 50px 0;
       }
     }
     .btn {

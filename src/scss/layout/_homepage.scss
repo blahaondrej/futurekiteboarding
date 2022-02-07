@@ -76,6 +76,7 @@
   }
   @include phone {
     height: 100%;
+    margin: 0;
   }
   &__inner {
     display: flex;
@@ -101,6 +102,12 @@
         height: 400px;
       }
     }
+    &--text {
+      @include phone {
+        height: 100%;
+        padding: 50px 0;
+      }
+    }
     .btn {
       margin-top: 50px;
       @include tablet-portrait {
@@ -109,6 +116,9 @@
     }
     &--center {
       margin: 0 auto;
+      @include phone {
+        margin: unset;
+      }
     }
   }
   .title {

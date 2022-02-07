@@ -17,7 +17,7 @@
     "block-no-empty": null,
     "block-closing-brace-empty-line-before": null,
     "block-closing-brace-newline-after": null,
-    "unit-whitelist": [ "px", "em", "rem", "%", "s", "deg", "vh", "vw" ],
+    "unit-whitelist": [ "px", "em", "rem", "%", "s", "deg", "vh", "vw", "fr" ],
     "declaration-no-important": null,
     "declaration-empty-line-before": "never",
     "declaration-colon-newline-after": "always-multi-line",

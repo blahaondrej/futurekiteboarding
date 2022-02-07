@@ -4,14 +4,12 @@
 
 .product-gallery {
   overflow: hidden;
+  display: none;
   @include phone {
     order: 2;
   }
-  &__inner {
-    display: none;
-    &.active {
-      display: block;
-    }
+  &.active {
+    display: block;
   }
   .swiper-container {
     width: 100%;
@@ -30,8 +28,16 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    a {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     img {
-      height: 500px;
+      height: 70%;
       width: auto;
     }
   }
@@ -49,12 +55,13 @@
     width: 20%;
     height: 100%;
     opacity: 0.4;
+    cursor: pointer;
     img {
       height: 100%;
       width: auto;
     }
   }
-  .gallery-thumbs .swiper-slide-active {
+  .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
   }
   .swiper-button-next, .swiper-button-prev {
@@ -77,6 +84,10 @@
     letter-spacing: 0.96px;
     line-height: 66px;
     margin-bottom: 20px;
+    @include phone {
+      font-size: 28px;
+      line-height: 50px;
+    }
   }
   &__name {
     color: $color-black2;
@@ -240,5 +251,65 @@
       vertical-align: super;
       font-size: 18px;
     }
+  }
+}
+
+.tech-pagination {
+  margin-bottom: 30px;
+  .swiper-pagination-bullet {
+    &:after {
+      content: none;
+    }
+  }
+  &__number {
+    color: $color-grey;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.37px;
+    line-height: 44px;
+    padding-right: 40px !important;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    width: 80px;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      height: 2px;
+      width: 35px;
+      background: $color-grey;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    &.swiper-pagination-bullet-active {
+      color: $color-red;
+      &:before {
+        transition: 10s transform;
+        background: $color-red;
+        transform: scaleX(1);
+      }
+    }
+    &:last-child {
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+.tech-text-swiper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .swiper-slide {
+    opacity: 0 !important;
+  }
+  .swiper-slide-active {
+    opacity: 1 !important;
   }
 }

@@ -16,147 +16,147 @@
 
 .homepage__slide1 {
   background-image: url(./assets/images/homepage/homepage_top1_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/homepage/homepage_top1_mobile.jpg);
   }
 }
 
 .homepage__slide2 {
   background-image: url(./assets/images/homepage/homepage_top2_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/homepage/homepage_top2_mobile.jpg);
   }
 }
 
 .homepage__slide3 {
   background-image: url(./assets/images/homepage/homepage_top3_large.jpg);
-  @include phone {
-    background-image: url(./assets/images/homepage/homepage_top3_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top3_mobile.jpg);
   }
 }
 
 .boss-detail__slide1 {
   background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss1_mobile.jpg);
   }
 }
 
 .boss-detail__slide2 {
   background-image: url(./assets/images/detail/slider/boss/boss2_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss2_mobile.jpg);
   }
 }
 
 .boss-detail__slide3 {
   background-image: url(./assets/images/detail/slider/boss/boss3_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss3_mobile.jpg);
   }
 }
 
 .boss-detail__slide4 {
   background-image: url(./assets/images/detail/slider/boss/boss4_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss4_mobile.jpg);
   }
 }
 
 .boss-detail__slide5 {
   background-image: url(./assets/images/detail/slider/boss/boss5_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss5_mobile.jpg);
   }
 }
 
 .jiggy-detail__slide1 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy1_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy1_mobile.jpg);
   }
 }
 
 .jiggy-detail__slide2 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy2_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy2_mobile.jpg);
   }
 }
 
 .jiggy-detail__slide3 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy3_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy3_mobile.jpg);
   }
 }
 
 .jiggy-detail__slide4 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy4_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy4_mobile.jpg);
   }
 }
 
 .mucho-detail__slide1 {
   background-image: url(./assets/images/detail/slider/mucho/mucho1_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho1_mobile.jpg);
   }
 }
 
 .mucho-detail__slide2 {
   background-image: url(./assets/images/detail/slider/mucho/mucho2_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho2_mobile.jpg);
   }
 }
 
 .mucho-detail__slide3 {
   background-image: url(./assets/images/detail/slider/mucho/mucho3_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho3_mobile.jpg);
   }
 }
 
 .mucho-detail__slide4 {
   background-image: url(./assets/images/detail/slider/mucho/mucho4_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho4_mobile.jpg);
   }
 }
 
 .mucho-detail__slide5 {
   background-image: url(./assets/images/detail/slider/mucho/mucho5_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho5_mobile.jpg);
   }
 }
 
 .oraculum-detail__slide1 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum1_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum1_mobile.jpg);
   }
 }
 
 .oraculum-detail__slide2 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum2_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum2_mobile.jpg);
   }
 }
 
 .oraculum-detail__slide3 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum3_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum3_mobile.jpg);
   }
 }
 
 .oraculum-detail__slide4 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum4_large.jpg);
-  @include phone {
+  @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum4_mobile.jpg);
   }
 }
@@ -323,4 +323,28 @@
 
 .kiteboards-2 {
   background-image: url(./assets/images/kiteboards/kiteboards_2.jpg);
+}
+
+.mucho-tech-fish-belly {
+  background-image: url(./assets/images/detail/tech/mucho/fish-belly.jpg);
+}
+
+.mucho-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/mucho/sword-technology.jpg);
+}
+
+.mucho-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/mucho/polyurethane-edges.jpg);
+}
+
+.mucho-tech-basalt {
+  background-image: url(./assets/images/detail/tech/mucho/basalt.jpg);
+}
+
+.mucho-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/mucho/cnc-shaped-wood-core.jpg);
+}
+
+.mucho-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/mucho/hardened-protective-foil.jpg);
 }

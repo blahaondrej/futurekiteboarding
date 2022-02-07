@@ -1,5 +1,31 @@
 .parameters {
   padding: 100px 0;
+  @include tablet-portrait {
+    padding: 50px 0;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    @include tablet-landscape {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include phone {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 15px;
+    }
+    &--style {
+      @include phone {
+        margin-top: 30px;
+      }
+    }
+  }
+  &__block {
+  }
   .title {
     margin-bottom: 50px;
     @include phone {
@@ -14,29 +40,16 @@
     letter-spacing: 0.48px;
     line-height: 22px;
     margin-bottom: 20px;
+    position: relative;
     &--other {
       position: relative;
-      height: 190px;
-      width: 190px;
       span {
         padding: 40px 0;
         display: block;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        background: $color-grey-hexagon;
-        clip-path: $hexagon;
-        transform: $rotate;
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: -30px;
-        height: 100%;
-        width: 100%;
-        pointer-events: none;
-        z-index: -1;
-        @include animation();
+        text-transform: uppercase;
+        @include phone {
+          padding: 0 0 20px 0;
+        }
       }
     }
   }
@@ -54,6 +67,9 @@
     margin-bottom: 100px;
     display: flex;
     flex-direction: row;
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
 
   &__icon {

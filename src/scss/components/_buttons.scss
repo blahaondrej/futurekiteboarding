@@ -62,6 +62,14 @@
     bottom: 20%;
   }
 
+  &--small {
+    height: 170px;
+    width: 170px;
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+
   &--right {
     position: absolute;
     right: 0;

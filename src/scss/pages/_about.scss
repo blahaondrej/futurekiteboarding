@@ -6,14 +6,23 @@
     flex-direction: column;
     justify-content: center;
     height: 700px;
-    @include phone {
+    @include tablet-landscape {
       padding: 0 25px;
+    }
+    &--text {
+      @include phone {
+        height: 100%;
+        padding: 80px 0;
+      }
     }
   }
   &__wrapper {
     padding: 30px 0;
     z-index: 5;
     position: relative;
+    @include phone {
+      padding: 15px 0;
+    }
     &:before {
       content: '';
       height: 120px;
@@ -22,6 +31,10 @@
       background-color: $color-red;
       left: 0;
       top: -120px;
+      @include phone {
+        height: 60px;
+        top: -60px;
+      }
     }
     &:after {
       content: '';
@@ -31,6 +44,10 @@
       background-color: $color-red;
       left: 0;
       bottom: -120px;
+      @include phone {
+        height: 60px;
+        bottom: -60px;
+      }
     }
   }
   &__title {
@@ -40,6 +57,10 @@
     letter-spacing: 0.56px;
     line-height: 66px;
     color: $color-red2;
+    @include phone {
+      font-size: 36px;
+      line-height: 50px;
+    }
   }
   &__subtitle {
     font-size: 36px;
@@ -49,6 +70,10 @@
     line-height: 44px;
     color: $color-black2;
     text-transform: uppercase;
+    @include phone {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   &__text {
     font-size: 14px;

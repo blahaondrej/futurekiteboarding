@@ -9,6 +9,9 @@
     height: 50vh;
     z-index: 5;
     background-color: $color-white;
+    @include phone {
+      max-height: 400px;
+    }
   }
   &__inner {
     width: 100%;
@@ -90,11 +93,15 @@
     }
   }
   &__bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     &--contact {
       background-image: url(./assets/images/contact/contact_top_large.jpg);
       @include phone {

@@ -68,8 +68,8 @@ $(document).ready(function () {
     $('.product-description__colors div').on('click', function () {
         $('.product-description__colors div').removeClass('active');
         $(this).addClass('active');
-        $('.product-gallery__inner').removeClass('active');
-        $(`.product-gallery__inner[data-color=${$(this).data('color')}]`).addClass('active');
+        $('.product-gallery').removeClass('active');
+        $(`.product-gallery[data-color=${$(this).data('color')}]`).addClass('active');
     });
 
 });

@@ -86,8 +86,10 @@
     }
   }
   &__image {
-    height: 350px;
+    height: auto;
+    max-height: 350px;
     width: 350px;
+    max-width: 100%;
     margin: 5px;
     img {
       object-fit: cover;
