@@ -44,10 +44,10 @@ require 'phpmailer/src/SMTP.php';
 
 	$subject = "FUTURE kiteboarding - kontaktní formulář";
 
-		$body = "Kontaktní formulář z webu Forest Resort: <br><br><br>";
-		$body .= "Jméno: " . $name . "<br><br>";
-    	$body .= "E-mail: " . $email . "<br><br>";
-    	$body .= "Zpráva: " . $comment . "<br><br><br>";
+		$body = "Kontaktní formulář z webu futurekiteboarding.com: <br><br><br>";
+		$body .= "Jméno: " . $name . "<br>";
+    	$body .= "E-mail: " . $email . "<br>";
+    	$body .= "Zpráva: " . $comment . "<br><br>";
 
 $mail = new PHPMailer(true);
 

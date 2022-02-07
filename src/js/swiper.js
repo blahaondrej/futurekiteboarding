@@ -1,27 +1,37 @@
 import Swiper from "swiper/swiper-bundle";
 
 $(document).ready(function () {
-    var homepageSwiper = new Swiper('.homepage-swiper', {
-        loop: true,
+
+    var homepageSwiperText = new Swiper('.homepage-swiper-text', {
         effect: 'fade',
         autoplay: {
-            delay: 2000
+            delay: 3000,
+            disableOnInteraction: false,
         },
-        speed: 1000,
+        allowTouchMove: false
+    });
+
+    var homepageSwiper = new Swiper('.homepage-swiper', {
+        effect: 'fade',
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        paginationClickable: true,
+        watchSlidesProgress: true,
         pagination: {
             el: '.top-pagination',
             type: 'bullets',
             clickable: true
         },
+        on: {
+            slideChange: function () {
+                homepageSwiperText.slideTo(this.activeIndex);
+            }
+        }
     });
 
-    var homepageSwiperText = new Swiper('.homepage-swiper-text', {
-        effect: 'fade',
-        speed: 200,
-    });
 
-    homepageSwiper.controller.control = homepageSwiperText;
-    homepageSwiperText.controller.control = homepageSwiper;
 
     var wakeboardSwiper = new Swiper('.wakeboard-swiper', {
         loop: true,
@@ -37,11 +47,11 @@ $(document).ready(function () {
         },
     });
 
-    var homepageSwiper = new Swiper('.detail-swiper', {
+    var detailSwiper = new Swiper('.detail-swiper', {
         loop: true,
         effect: 'fade',
         autoplay: {
-            delay: 9999999
+            delay: 3000
         },
         speed: 1000,
         pagination: {
