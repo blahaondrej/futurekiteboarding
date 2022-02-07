@@ -42,12 +42,12 @@ require 'phpmailer/src/SMTP.php';
 	// Set e-mail
 	$recipients = "info@futurekiteboarding.com";
 
-	$subject = "FUTURE kiteboarding - kontaktní formulář";
+	$subject = "FUTURE kiteboarding - contact form";
 
-		$body = "Kontaktní formulář z webu futurekiteboarding.com: <br><br><br>";
-		$body .= "Jméno: " . $name . "<br>";
-    	$body .= "E-mail: " . $email . "<br>";
-    	$body .= "Zpráva: " . $comment . "<br><br>";
+		$body = "Your message from the FUTUREkiteboarding.com website: <br><br><br>";
+		$body .= "Your name: " . $name . "<br>";
+    	$body .= "Your e-mail: " . $email . "<br>";
+    	$body .= "Message: " . $comment . "<br><br>";
 
 $mail = new PHPMailer(true);
 
@@ -76,7 +76,7 @@ try {
     $mail->addAddress(trim($email));
 
     $mail->isHTML();
-    $mail->Subject = 'FUTURE kiteboarding - kontaktní formulář';
+    $mail->Subject = 'FUTURE kiteboarding - contact form';
     $mail->Body    = $body;
 
     $mail->send();

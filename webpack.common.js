@@ -149,8 +149,56 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
-            template: 'src/templates/detail.html', // Cesta k templatu
-            filename: 'detail.html', // Cilovy soubor
+            template: 'src/templates/mucho.html', // Cesta k templatu
+            filename: 'mucho.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/boss.html', // Cesta k templatu
+            filename: 'boss.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/boss-carbon.html', // Cesta k templatu
+            filename: 'boss-carbon.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/oraculum-carbon.html', // Cesta k templatu
+            filename: 'oraculum-carbon.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/jiggy.html', // Cesta k templatu
+            filename: 'jiggy.html', // Cilovy soubor
         }),
 
         new MiniCssExtractPlugin({

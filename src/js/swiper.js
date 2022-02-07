@@ -171,7 +171,7 @@ $(document).ready(function () {
 
     // swiper tech text
 
-    var techNames = ['01', '02', '03', '04', '05', '06'];
+    var techNames = ['01', '02', '03', '04', '05', '06', '07'];
     var techSwiper = new Swiper('.tech-swiper', {
         // If we need pagination
         effect: 'fade',
@@ -195,14 +195,14 @@ $(document).ready(function () {
         }
     });
 
-    var galleryThumbsMuchoRed = new Swiper('.gallery-thumbs-mucho-red', {
+    var galleryThumbsMuchoRed = new Swiper('.gallery-thumbs-1', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true
     });
 
-    var galleryTopMuchoRed = new Swiper('.gallery-top-mucho-red', {
+    var galleryTopMuchoRed = new Swiper('.gallery-top-1', {
         spaceBetween: 10,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -213,14 +213,14 @@ $(document).ready(function () {
         }
     });
 
-    var galleryThumbsMuchoBlue = new Swiper('.gallery-thumbs-mucho-blue', {
+    var galleryThumbsMuchoBlue = new Swiper('.gallery-thumbs-2', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true
     });
 
-    var galleryTopMuchoBlue = new Swiper('.gallery-top-mucho-blue', {
+    var galleryTopMuchoBlue = new Swiper('.gallery-top-2', {
         spaceBetween: 10,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -231,14 +231,32 @@ $(document).ready(function () {
         }
     });
 
-    var galleryThumbsMuchoYellow = new Swiper('.gallery-thumbs-mucho-yellow', {
+    var galleryThumbsMuchoYellow = new Swiper('.gallery-thumbs-3', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true
     });
 
-    var galleryTopMuchoYellow = new Swiper('.gallery-top-mucho-yellow', {
+    var galleryTopMuchoYellow = new Swiper('.gallery-top-3', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: galleryThumbsMuchoYellow,
+        }
+    });
+
+    var galleryThumbsMuchoYellow = new Swiper('.gallery-thumbs-4', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true
+    });
+
+    var galleryTopMuchoYellow = new Swiper('.gallery-top-4', {
         spaceBetween: 10,
         navigation: {
             nextEl: ".swiper-button-next",
