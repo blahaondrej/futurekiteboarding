@@ -91,6 +91,14 @@
       height: 750px;
       width: 620px;
       padding: 200px 100px 100px;
+      &.active {
+        right: -200px;
+      }
+    }
+    @include phonexs {
+      &.active {
+        right: -220px;
+      }
     }
   }
   nav {

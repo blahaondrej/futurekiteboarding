@@ -1,7 +1,13 @@
 .contact {
   padding: 100px 0 80px;
+  @include phone {
+    padding: 50px 0 0;
+  }
   .subtitle {
     margin-bottom: 15px;
+    @include phone {
+      margin-top: 30px;
+    }
   }
   .title {
     margin-bottom: 20px;
@@ -49,6 +55,15 @@
   &__form {
     margin-top: 100px;
     font-family: $font;
+    @include phone {
+      margin-top: 50px;
+    }
+    .flex-wrapper {
+      display: flex;
+      @include phone {
+        flex-direction: column;
+      }
+    }
     .title {
       margin-bottom: 50px;
       @include phone {
@@ -69,7 +84,7 @@
       margin-right: 40px;
       @include phone {
         width: 100%;
-        margin-right: 0;
+        margin: 15px 0;
       }
     }
     textarea {
@@ -112,6 +127,10 @@
       text-transform: uppercase;
       font-family: $font;
       @include animation();
+      @include phone {
+        max-width: 100%;
+        margin-top: 30px;
+      }
       &:hover {
         color: $color-white;
         background: $color-black;

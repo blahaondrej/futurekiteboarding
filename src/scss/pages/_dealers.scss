@@ -23,6 +23,10 @@
     letter-spacing: 0.56px;
     line-height: 66px;
     text-transform: uppercase;
+    @include phone {
+      font-size: 36px;
+      line-height: 50px;
+    }
   }
 
   &__state {
