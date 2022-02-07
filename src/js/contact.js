@@ -23,7 +23,7 @@ $(document).ready(function () {
         });
     });
 
-    // formulář footer
+    // formulář get in touch
 
     $('.js-request-form-contact').on('submit', function (e) {
         e.preventDefault();
