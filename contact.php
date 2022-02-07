@@ -35,27 +35,19 @@ require 'phpmailer/src/SMTP.php';
         	}
 
 	// Get and validate values
-        $arrival = check_input( $_POST['formArrival'] );
-        $departure = check_input( $_POST['formDeparture'] );
-	    $amount = check_input( $_POST['formAmount'] );
-	    $contact = check_input( $_POST['formContact'] );
-    	$email = check_input( $_POST['formMail'] );
-    	$phone = check_input( $_POST['formPhone'] );
-    	$notes = check_input( $_POST['formNotes'] );
+        $name = check_input( $_POST['name'] );
+    	$email = check_input( $_POST['email'] );
+        $comment =check_input( $_POST['comment'] );
 
 	// Set e-mail
-	$recipients = "hello@forestresort.cz";
+	$recipients = "info@futurekiteboarding.com";
 
-	$subject = "FOREST RESORT - poptávkový formulář";
+	$subject = "FUTURE kiteboarding - kontaktní formulář";
 
-		$body = "Poptávkový formulář z webu Forest Resort: <br><br><br>";
-		$body .= "Datum příjezdu: " . $arrival . "<br><br>";
-		$body .= "Datum odjezdu: " . $departure . "<br><br><br>";
-		$body .= "Počet osob: " . $amount . "<br><br>";
-		$body .= "Kontaktní osoba: " . $contact . "<br><br><br>";
+		$body = "Kontaktní formulář z webu Forest Resort: <br><br><br>";
+		$body .= "Jméno: " . $name . "<br><br>";
     	$body .= "E-mail: " . $email . "<br><br>";
-    	$body .= "Telefon: " . $phone . "<br><br><br>";
-    	$body .= "Poznámky: " . $notes . "<br><br>";
+    	$body .= "Zpráva: " . $comment . "<br><br><br>";
 
 $mail = new PHPMailer(true);
 
@@ -63,10 +55,10 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_OFF;
     $mail->isSMTP();
-    $mail->Host       = 'smtp.office365.com';
+    $mail->Host       = 'smtp.forpsi.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'system@forestresort.cz';
-    $mail->Password   = 'Wax11088';
+    $mail->Username   = 'info@futurekiteboarding.com';
+    $mail->Password   = 'Jedembomby2022!';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     $mail->CharSet = 'UTF-8';
@@ -79,12 +71,12 @@ try {
     ];
 
     //Recipients
-    $mail->setFrom('system@forestresort.cz');
-    $mail->addAddress('hello@forestresort.cz');
+    $mail->setFrom('info@futurekiteboarding.com');
+    $mail->addAddress('info@futurekiteboarding.com');
     $mail->addAddress(trim($email));
 
     $mail->isHTML();
-    $mail->Subject = 'FOREST RESORT - poptávkový formulář';
+    $mail->Subject = 'FUTURE kiteboarding - kontaktní formulář';
     $mail->Body    = $body;
 
     $mail->send();

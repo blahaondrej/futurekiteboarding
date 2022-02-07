@@ -18,7 +18,7 @@
       padding-top: 100px;
       display: flex;
       justify-content: center;
-      @include animation(1s);
+      @include animation(.8s);
       @include tablet-portrait {
         padding-top: 50px;
         @include animation(.5s);
@@ -36,11 +36,9 @@
       display: block;
       opacity: 0;
       visibility: hidden;
-      @include animation(1s);
       @include tablet-portrait {
         width: 300px;
         height: 300px;
-        @include animation(.5s);
       }
       &:after {
         content: '';
@@ -65,7 +63,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      @include animation();
       @include tablet-portrait {
         width: 300px;
         height: 300px;
@@ -83,27 +80,22 @@
       opacity: 0;
       visibility: hidden;
       display: block;
-      @include animation(1s);
       @include tablet-portrait {
         font-size: 28px;
         line-height: 34px;
         margin-bottom: 50px;
-        @include animation(.5s);
       }
     }
     &__image {
       top: -180px;
       position: absolute;
       z-index: 10;
-      @include animation(1s);
       img {
         width: 130px;
         height: auto;
         display: none;
-        @include animation();
         @include tablet-portrait {
           width: 100px;
-          @include animation(.5s);
         }
         @include phone {
           width: 80px;
@@ -122,7 +114,8 @@
       z-index: 15;
       sup {
         vertical-align: super;
-        font-size: 24px;
+        font-size: 18px;
+        text-transform: none;
       }
       @include tablet-portrait {
         font-size: 28px;

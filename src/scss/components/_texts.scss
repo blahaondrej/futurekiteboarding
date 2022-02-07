@@ -24,6 +24,10 @@
   span {
     font-weight: 300;
   }
+  sup {
+    vertical-align: super;
+    font-size: 18px;
+  }
   @include tablet-portrait {
     font-size: 28px;
     line-height: 34px;

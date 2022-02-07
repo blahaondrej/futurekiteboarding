@@ -15,6 +15,14 @@ $(document).ready(function () {
         },
     });
 
+    var homepageSwiperText = new Swiper('.homepage-swiper-text', {
+        effect: 'fade',
+        speed: 200,
+    });
+
+    homepageSwiper.controller.control = homepageSwiperText;
+    homepageSwiperText.controller.control = homepageSwiper;
+
     var wakeboardSwiper = new Swiper('.wakeboard-swiper', {
         loop: true,
         effect: 'fade',
@@ -118,18 +126,18 @@ $(document).ready(function () {
             768: {
                 slidesPerView: 1.8,
                 spaceBetween: 30,
-                speed: 2000
+                speed: 1800
             },
             // when window width is >= 640px
             1200: {
                 slidesPerView: 2.5,
                 spaceBetween: 40,
-                speed: 2500
+                speed: 1800
             },
             1500: {
                 slidesPerView: 3,
                 spaceBetween: 40,
-                speed: 2500
+                speed: 1800
             }
         },
         spaceBetween: 30,
@@ -145,7 +153,7 @@ $(document).ready(function () {
     var techSwiperText = new Swiper('.tech-text-swiper', {
         effect: 'fade',
         autoplay: {
-            delay: 5000,
+            delay: 6000,
             disableOnInteraction: false,
         },
         allowTouchMove: false
@@ -158,7 +166,7 @@ $(document).ready(function () {
         // If we need pagination
         effect: 'fade',
         autoplay: {
-            delay: 5000,
+            delay: 6000,
             disableOnInteraction: false,
         },
         paginationClickable: true,

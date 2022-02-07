@@ -60,6 +60,33 @@
         padding: 10px 0;
       }
     }
+    a {
+      position: relative;
+      display: inline-block;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $color-red;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.3s transform;
+      }
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+    .swiper-slide {
+      opacity: 0 !important;
+    }
+    .swiper-slide-active {
+      opacity: 1 !important;
+    }
     .swiper-pagination {
       bottom: unset;
       left: 0;
@@ -126,6 +153,15 @@
     @include tablet-portrait {
       margin-bottom: 20px;
     }
+  }
+  .binding-price {
+    color: $color-black2;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    line-height: 21px;
+    margin-top: 10px;
   }
   .background__image {
     @include phone {

@@ -4,7 +4,7 @@
     align-items: center;
   }
   .swiper-slide {
-    @include animation(1s);
+    @include animation(.8s);
     @include tablet-portrait {
       @include animation(.5s);
     }
@@ -15,7 +15,7 @@
   }
   .swiper-slide-prev, .swiper-slide-next {
     transform: scale(.85);
-    @include animation(1s);
+    @include animation(.8s);
     @include tablet-portrait {
       @include animation(.5s);
     }
@@ -26,7 +26,7 @@
   }
   .swiper-slide-active {
     transform: scale(1);
-    @include animation(1s);
+    @include animation(.8s);
     animation-delay: 1s;
     @include tablet-portrait {
       @include animation(.5s);
@@ -50,6 +50,7 @@
   position: relative;
   background: none;
   margin: 0 2px !important;
+  outline: 0;
   &:after {
     content: '';
     position: absolute;
