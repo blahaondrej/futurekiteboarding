@@ -60,6 +60,10 @@
   &--black {
     color: $color-button;
   }
+  sup {
+    vertical-align: super;
+    font-size: 12px;
+  }
   @include tablet-portrait {
     font-size: 16px;
     &--medium {
