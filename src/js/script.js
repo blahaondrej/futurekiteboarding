@@ -26,12 +26,12 @@ if (hasTouch()) { // remove all :hover stylesheets
 
 $(document).ready(function () {
 
-    setTimeout(function () {
+/*    setTimeout(function () {
         $("body").addClass("loaded");
-    }, 1000);
+    }, 1000);*/
 
 
-/*    function preloader() {
+    function preloader() {
         setTimeout(function(){
             $('body').addClass('loaded');
         }, 2000);
@@ -41,7 +41,7 @@ $(document).ready(function () {
         preloader();
     } else {
         $ ('.loader').hide();
-    }*/
+    }
 
 
     $(".header__open").click(function() {
