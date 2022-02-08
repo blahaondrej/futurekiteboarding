@@ -10,12 +10,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 3000;
-  opacity: 1;
   visibility: visible;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0, 1) 0.5s, visibility 0s 1.2s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0, 1) 0.5s;
   padding: 0 100px;
-  @include phone {
-    padding: 0 50px;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0, 1) 0.5s, visibility 0s 1.2s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0, 1) 0.5s;
+  @include tablet-portrait {
+    background-image: url(./assets/images/intro_mob.svg);
+    align-items: flex-start;
+    padding: 50px;
   }
   & img {
     width: 200px;
@@ -36,6 +37,9 @@
       display: block;
       font-weight: 500;
     }
+    @include tablet-portrait {
+      font-size: 28px;
+    }
   }
 
   &--loaded {
@@ -47,7 +51,6 @@
 .loaded .loader {
   transform: translate3d(0, -100%, 0);
   visibility: hidden !important;
-  opacity: 0 !important;
 }
 
 .loader__wrapper {

@@ -26,12 +26,12 @@ if (hasTouch()) { // remove all :hover stylesheets
 
 $(document).ready(function () {
 
-    setTimeout(function () {
+/*    setTimeout(function () {
         $("body").addClass("loaded");
-    }, 1000);
+    }, 1000);*/
 
 
-/*    function preloader() {
+    function preloader() {
         setTimeout(function(){
             $('body').addClass('loaded');
         }, 2000);
@@ -40,8 +40,8 @@ $(document).ready(function () {
         sessionStorage.setItem( 'doNotShow', true );
         preloader();
     } else {
-        $ ('.loader').hide();
-    }*/
+        $ ('.loader').hide(0);
+    }
 
 
     $(".header__open").click(function() {
