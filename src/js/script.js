@@ -34,6 +34,7 @@ $(document).ready(function () {
     function preloader() {
         setTimeout(function(){
             $('body').addClass('loaded');
+            $('body').removeClass('no-scroll');
         }, 2000);
     }
     if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
@@ -41,6 +42,7 @@ $(document).ready(function () {
         preloader();
     } else {
         $ ('.loader').hide(0);
+        $('body').removeClass('no-scroll');
     }
 
 

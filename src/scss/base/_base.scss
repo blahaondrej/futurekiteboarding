@@ -38,6 +38,9 @@ body {
   &.loaded {
     overflow: auto;
   }
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 // Placeholder
