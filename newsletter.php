@@ -50,6 +50,20 @@ $body .= "E-mail: " . $email . "<br><br>";
 $mail = new PHPMailer(true);
 
 try {
+
+
+    try {
+        $conn = new PDO("mysql:host=a045um.forpsi.com;dbname=f156054", 'f156054', 'kite22future');
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = "INSERT INTO newsletters (email, createts) VALUES (?,?)";
+        $stmt= $conn->prepare($sql);
+        $stmt->execute([trim($email),(new DateTime())->format('Y-m-d H:i:s')]);
+
+    } catch(PDOException $e) {
+    }
+
+
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_OFF;
     $mail->isSMTP();
