@@ -85,10 +85,9 @@ try {
     //Recipients
     $mail->setFrom('info@futurekiteboarding.com');
     $mail->addAddress('info@futurekiteboarding.com');
-    $mail->addAddress(trim($email));
 
     $mail->isHTML();
-    $mail->Subject = 'FUTURE kiteboarding - přihlášení k newsletteru';
+    $mail->Subject = 'FUTURE kiteboarding - newsletter subscription';
     $mail->Body    = $body;
 
     $mail->send();
