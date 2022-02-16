@@ -153,6 +153,9 @@
     @include tablet-portrait {
       margin-bottom: 20px;
     }
+    sup {
+      text-transform: lowercase;
+    }
   }
   .binding-price {
     color: $color-black2;
