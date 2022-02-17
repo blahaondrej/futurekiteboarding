@@ -1,3 +1,4 @@
 src/scss/vendor/**
 src/scss/utilities/_fonts.scss
 src/scss/components/_slider.scss
+src/scss/components/_cookie.scss
