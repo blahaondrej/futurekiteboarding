@@ -123,6 +123,11 @@ module.exports = merge(common, {
         }]),
 
         new CopyWebpackPlugin([{
+            from: './wholesale-pricelist-2022',
+            to: 'wholesale-pricelist-2022'
+        }]),
+
+        new CopyWebpackPlugin([{
             from: './contact.php',
             to: '.'
         }]),
