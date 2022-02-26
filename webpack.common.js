@@ -201,6 +201,18 @@ module.exports = {
             filename: 'jiggy.html', // Cilovy soubor
         }),
 
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/wholesale-pricelist-2022.html', // Cesta k templatu
+            filename: 'wholesale-pricelist-2022.html', // Cilovy soubor
+        }),
+
         new MiniCssExtractPlugin({
             filename: "style.[contenthash].css"
         }),
