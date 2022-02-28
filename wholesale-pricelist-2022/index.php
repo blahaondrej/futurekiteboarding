@@ -1,8 +1,7 @@
 <?php
 
 if(empty($_POST['password']) || trim($_POST['password']) !== 'PREMIUM2022RETAILER!'){
-    echo '<p>You do not have permission to access this section!</p>';
-    header('Refresh: 5; URL=https://futurekiteboarding.com/');
+    header('URL=https://futurekiteboarding.com/wholesale-pricelist-2022.html?login=false');
 }else{
     ?>
 <html xmlns="http://www.w3.org/1999/xhtml"

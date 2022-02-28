@@ -10,8 +10,33 @@ ${require('./include/header.html')}
                     <div class="subtitle subtitle--white">PREMIUM RETAILER PROGRAM</div>
                     <h2 class="title title--medium title--white">private section</h2>
                     <input type="password" id="pass" name="password" minlength="8" class="required js-required" required placeholder="PASSWORD">
+                    <span id="wrongPass" class="text--red mt-4">Wrong password</span>
                     <button type="submit" class="btn">Log in</button>
                 </form>
+
+                <script>
+                    document.getElementById("wrongPass").style.display = 'none';
+                    function getParams() {
+                        var result = {};
+                        var tmp = [];
+
+                        location.search
+                            .substr(1)
+                            .split("&")
+                            .forEach(function (item) {
+                                tmp = item.split("=");
+                                result [tmp[0]] = decodeURIComponent(tmp[1]);
+                            });
+
+                        return result;
+                    }
+
+                    location.getParams = getParams;
+
+                    if (location.getParams()['login'] !== undefined) {
+                        document.getElementById("wrongPass").style.display = 'block';
+                    }
+                </script>
             </div>
         </div>
     </div>
