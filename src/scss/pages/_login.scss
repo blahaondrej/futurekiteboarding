@@ -74,4 +74,10 @@
     width: 300px;
     max-width: 90%;
   }
+  &__error {
+    display: none;
+    color: $color-red;
+    font-size: 14px;
+    padding: 10px 0;
+  }
 }
