@@ -1,6 +1,6 @@
 <?php
 
-if(empty($_POST['password']) || trim($_POST['password']) !== 'PREMIUM2022RETAILER!'){
+if(empty($_POST['password']) || trim($_POST['password']) !== 'PREMIUM2022RETAILER'){
     header('Location: https://futurekiteboarding.com/wholesale-pricelist-2022.html?login=false');
 }else{
     ?>
