@@ -27,6 +27,21 @@
         padding-top: 0;
       }
     }
+    &__badge {
+      position: absolute;
+      top: 0;
+      right: -90px;
+      width: 70px;
+      height: 70px;
+      @include animation();
+      svg {
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
     &__hexagon {
       position: absolute;
       width: 400px;

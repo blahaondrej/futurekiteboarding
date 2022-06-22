@@ -137,11 +137,13 @@
     letter-spacing: 0.48px;
     line-height: 21px;
     margin-top: 20px;
+    position: relative;
   }
   &__colors {
     margin: 20px 0 30px;
     z-index: 10;
     display: flex;
+    position: relative;
     div {
       height: 30px;
       width: 30px;
@@ -229,6 +231,7 @@
     font-weight: 500;
     letter-spacing: 0.48px;
     line-height: 21px;
+    position: relative;
     span {
       display: block;
       font-weight: 300;
@@ -242,6 +245,21 @@
     z-index: 2;
     @include tablet-portrait {
       margin-bottom: 50px;
+    }
+  }
+  .detail-badge {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-bottom: 20px;
+    @include animation();
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }
