@@ -30,8 +30,9 @@ $(document).ready(function () {
         $("body").addClass("loaded");
     }, 1000);*/
 
+    // Preloader
 
-    function preloader() {
+/*    function preloader() {
         setTimeout(function(){
             $('body').addClass('loaded');
             $('body').removeClass('no-scroll');
@@ -43,8 +44,14 @@ $(document).ready(function () {
     } else {
         $ ('.loader').hide(0);
         $('body').removeClass('no-scroll');
-    }
+    }*/
 
+    // Select currency
+
+    $(".currency__button").click(function() {
+        $("body").removeClass("active");
+        $(".currency").addClass("hidden");
+    });
 
     $(".header__open").click(function() {
         var menuButtonText = $('.header__open span').text();
