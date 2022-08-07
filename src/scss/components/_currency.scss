@@ -1,5 +1,5 @@
 .currency {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(10, 10, 10, .5);
   height: 100vh;
@@ -7,6 +7,7 @@
   z-index: 10;
   opacity: 1;
   visibility: visible;
+  overflow: hidden;
   @include animation();
   &.hidden {
     visibility: hidden;
@@ -35,9 +36,9 @@
     transform: translate(-50%, -50%);
     left: 50%;
     @include phone {
-      width: 350px;
-      height: 350px;
-      padding: 60px 40px;
+      width: 550px;
+      height: 550px;
+      padding: 40px;
     }
     &:after {
       content: '';
@@ -73,6 +74,9 @@
     margin: 30px 0;
     display: flex;
     flex-direction: column;
+    @include phone {
+      margin: 20px 0;
+    }
   }
   &__button {
     width: 300px;

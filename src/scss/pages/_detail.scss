@@ -114,7 +114,20 @@
     letter-spacing: 0.96px;
     sup {
       vertical-align: super;
+      text-transform: none;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: -0.18px;
+      line-height: 14px;
+      strong {
+        font-size: 18px;
+        letter-spacing: -0.12px;
+      }
+    }
+    .model {
       font-size: 18px;
+      font-weight: 500;
     }
   }
   &__desc {
@@ -235,6 +248,76 @@
     span {
       display: block;
       font-weight: 300;
+    }
+  }
+  &__title {
+    color: $color-black;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    line-height: 39px;
+    text-transform: uppercase;
+  }
+  &__note {
+    color: $color-red2;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    line-height: 33px;
+    margin: 10px 0;
+  }
+  &__text {
+    color: $color-black;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.37px;
+    line-height: 17px;
+  }
+  &__vat {
+    color: $color-black;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.32px;
+    line-height: 14px;
+    margin: 20px 0;
+  }
+  &__sizes {
+    position: relative;
+    display: flex;
+    div {
+      position: relative;
+      height: 55px;
+      width: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px 5px 5px;
+      color: $color-white;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.32px;
+      cursor: pointer;
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.65);
+        clip-path: $hexagon;
+        transform: $rotate;
+        display: block;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+      &.active {
+        &:after {
+          background-color: rgba(0, 0, 0, 1);
+        }
+      }
     }
   }
 }

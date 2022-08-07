@@ -49,8 +49,15 @@ $(document).ready(function () {
     // Select currency
 
     $(".currency__button").click(function() {
-        $("body").removeClass("active");
+        $("body").removeClass("no-scroll");
         $(".currency").addClass("hidden");
+        $("body").addClass("loaded");
+    });
+
+    // Detail - select cize
+    $(".product-description__sizes div").click(function() {
+        $(".product-description__sizes div").removeClass("active");
+        $(this).addClass("active");
     });
 
     $(".header__open").click(function() {
