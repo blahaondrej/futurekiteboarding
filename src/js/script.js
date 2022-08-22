@@ -50,9 +50,20 @@ $(document).ready(function () {
 
     $(".currency__button").click(function() {
         $("body").removeClass("no-scroll");
+        $(".currency").removeClass("active");
         $(".currency").addClass("hidden");
         $("body").addClass("loaded");
+        localStorage.setItem("selectedCurrency",  $(this).data("currency"));
+        console.log(localStorage);
     });
+
+    if (localStorage.getItem("selectedCurrency") === null) {
+        $(".currency").addClass("active");
+    } else {
+        $(".currency").removeClass("active");
+        $("body").removeClass("no-scroll");
+        $("body").addClass("loaded");
+    }
 
     // Detail - select cize
     $(".product-description__sizes div").click(function() {

@@ -1,0 +1,61 @@
+.benefits {
+  padding: 50px 0;
+  background-color: $color-white;
+  position: relative;
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include phone {
+      flex-direction: column;
+    }
+    .icon-block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 20px;
+      width: 25%;
+      @include tablet-landscape {
+        width: 50%;
+        padding: 15px 0;
+      }
+      @include phone {
+        width: 100%;
+      }
+      img {
+        height: 65px;
+        width: auto;
+        @include tablet-portrait {
+          height: 40px;
+        }
+      }
+      .name {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 0.43px;
+        line-height: 20px;
+        position: relative;
+        text-transform: uppercase;
+        color: $color-black;
+        padding-left: 25px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          height: 100%;
+          width: 2px;
+          background-color: $color-black;
+        }
+        @include tablet-portrait {
+          font-size: 14px;
+          line-height: 16px;
+          padding-left: 20px;
+        }
+        @include phone {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+}
