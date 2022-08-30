@@ -157,6 +157,10 @@
       letter-spacing: 0.37px;
       line-height: 21px;
       color: $color-red;
+      .old-price {
+        text-decoration: line-through;
+        text-decoration-color: $color-black;
+      }
     }
     &__colors {
       margin: 20px 0;

@@ -153,8 +153,10 @@ ${require('./include/header.html')}
                 </div>
                 <h1 class="product-description__name">
                     BOSS <sup class="model">carbon</sup>
-                    <sup><strong>899 €</strong> (delivery - EU)</sup>
-                    <sup><strong>743 €</strong> (delivery - outside the EU)</sup>
+                    <div class="product-description__prices">
+                        <sup><strong>899 €</strong> (EU delivery)</sup>
+                        <sup><strong>743 €</strong> (delivery outside EU)</sup>
+                    </div>
                     <!--<sup>146.43</sup>
                     <sup>141.42</sup>
                     <sup>137.41</sup>
@@ -169,7 +171,7 @@ ${require('./include/header.html')}
                 <div class="row">
                     <div class="col-12 col-sm-6">
                         <div class="product-description__title">
-                            select a color:
+                            SELECT COLOUR
                         </div>
                         <div class="product-description__colors">
                             <div class="product-description__red active" data-color="red"></div>
@@ -223,13 +225,13 @@ ${require('./include/header.html')}
                     </div>
                 </div>
                 <div class="product-description__note">
-                    soon available from August 23, 2022
+                    <span class="product-description__note--soon">soon available from August 23, 2022</span>
                 </div>
-                <a href="#" class="product-description__button">
+                <a href="#" class="product-description__button product-description__button--notify">
                     Notify me
                 </a>
                 <p class="product-description__vat">
-                    All orders delivered outside the EU will be extempted from the VAT deduction (21%). You will be obliged to pay only import duties and customs fees.
+                    All deliveries outside the EU are exempt from VAT (-21%). You will only be obliged to pay import and customs fees as applicable.
                 </p>
                 ${require('./include/benefits-detail.html')}
             </div>

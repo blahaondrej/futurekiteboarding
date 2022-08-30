@@ -112,6 +112,7 @@
     font-style: italic;
     font-weight: 500;
     letter-spacing: 0.96px;
+    display: flex;
     sup {
       vertical-align: super;
       text-transform: none;
@@ -128,6 +129,7 @@
     .model {
       font-size: 18px;
       font-weight: 500;
+      margin-left: 10px;
     }
   }
   &__desc {
@@ -232,9 +234,30 @@
     font-weight: bold;
     letter-spacing: 0.48px;
     text-transform: uppercase;
+    position: relative;
     &:hover {
       background: $color-button;
       color: $color-white;
+    }
+    &--notify {
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: url(./assets/images/icons/notify_me.svg);
+        background-size: 20px;
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 80px;
+        @include animation();
+      }
+      &:hover {
+        &:after {
+          background-image: url(./assets/images/icons/notify_me-white.svg);
+        }
+      }
     }
   }
   &__price {
@@ -260,13 +283,24 @@
     text-transform: uppercase;
   }
   &__note {
-    color: $color-red2;
     font-size: 14px;
     font-style: italic;
     font-weight: 500;
     letter-spacing: 0.48px;
     line-height: 33px;
     margin: 10px 0;
+    &--instock {
+      color: $color-green;
+    }
+    &--outstock {
+      color: $color-red2;
+    }
+    &--soon {
+      color: $color-green;
+    }
+    &--preorder {
+      color: $color-green;
+    }
   }
   &__text {
     color: $color-black;
@@ -319,6 +353,11 @@
         }
       }
     }
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
   }
 }
 
