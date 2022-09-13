@@ -209,6 +209,90 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/crash-replacement.html', // Cesta k templatu
+            filename: 'crash-replacement.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/free-shipping-worldwide.html', // Cesta k templatu
+            filename: 'free-shipping-worldwide.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/no-vat-for-non-eu-customers.html', // Cesta k templatu
+            filename: 'no-vat-for-non-eu-customers.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/terms-and-conditions.html', // Cesta k templatu
+            filename: 'terms-and-conditions.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/2-years-warranty.html', // Cesta k templatu
+            filename: '2-years-warranty.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/returns.html', // Cesta k templatu
+            filename: 'returns.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
+            template: 'src/templates/support/privacy-policy.html', // Cesta k templatu
+            filename: 'privacy-policy.html', // Cilovy soubor
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: "body",
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            chunks: ['main','vendor'], // Js soubory z entry
             template: 'src/templates/wholesale-pricelist-2022.html', // Cesta k templatu
             filename: 'wholesale-pricelist-2022.html', // Cilovy soubor
         }),
