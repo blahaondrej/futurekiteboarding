@@ -54,12 +54,15 @@ $(document).ready(function () {
         $(".currency").addClass("hidden");
         $("body").addClass("loaded");
         localStorage.setItem("selectedCurrency",  $(this).data("currency"));
+        // cartComponent.setCurrency($(this).data("currency"));
         console.log(localStorage);
     });
 
-    if (localStorage.getItem("selectedCurrency") === null) {
+    const selectedCurrency = localStorage.getItem("selectedCurrency");
+    if (!selectedCurrency) {
         $(".currency").addClass("active");
     } else {
+        // cartComponent.setCurrency(selectedCurrency);
         $(".currency").removeClass("active");
         $("body").removeClass("no-scroll");
         $("body").addClass("loaded");
