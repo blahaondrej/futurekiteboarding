@@ -2,27 +2,34 @@
   padding: 150px 0 100px 0;
   max-width: 800px;
   &__title {
-    color: $color-black;
+    color: $color-black2;
     font-family: $font;
-    font-size: 60px;
-    letter-spacing: -0.6px;
-    line-height: 72px;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 44px;
+    text-transform: uppercase;
     margin-bottom: 50px;
   }
   &__subtitle {
-    color: $color-black;
+    color: $color-black2;
     font-family: $font;
-    font-size: 36px;
-    letter-spacing: -0.36px;
-    line-height: 44px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 24px;
     margin-bottom: 30px;
   }
   &__text {
-    color: $color-black;
+    color: $color-black2;
     font-family: $font;
-    font-size: 18px;
-    letter-spacing: -0.18px;
-    line-height: 22px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.37px;
+    line-height: 24px;
     margin: 20px 0;
     a {
       color: $color-red;
@@ -35,11 +42,13 @@
     list-style-type: disc;
     padding-left: 25px;
     li {
-      color: $color-black;
+      color: $color-black2;
       font-family: $font;
-      font-size: 18px;
-      letter-spacing: -0.18px;
-      line-height: 22px;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.37px;
+      line-height: 24px;
       margin: 10px 0;
       a {
         color: $color-red;
