@@ -48,6 +48,11 @@ $(document).ready(function () {
 
     // Select currency
 
+    $(".product-description__button--addToCart").click(function() {
+        // cartComponent.addToCart($(this).data('product-code'));
+    });
+
+
     $(".currency__button").click(function() {
         $("body").removeClass("no-scroll");
         $(".currency").removeClass("active");
