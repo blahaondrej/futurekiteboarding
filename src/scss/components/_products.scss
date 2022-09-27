@@ -27,19 +27,40 @@
         padding-top: 0;
       }
     }
-    &__badge {
+    &__badges {
       position: absolute;
       top: 0;
       right: -90px;
-      width: 70px;
-      height: 70px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      color: $color-white;
+      margin-bottom: 5px;
+      font-size: 10px;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 0.27px;
+      padding: 0 12px;
       @include animation();
-      svg {
-        width: 100%;
-        height: auto;
-      }
       &:hover {
         transform: scale(1.05);
+      }
+      &--tested {
+        background-color: #00c3ff;
+      }
+      &--new {
+        background-color: #f71106;
+      }
+      &--soon {
+        background-color: #000;
+      }
+      &--free {
+        background-color: #4ab208;
       }
     }
     &__hexagon {
@@ -160,6 +181,10 @@
       .old-price {
         text-decoration: line-through;
         text-decoration-color: $color-black;
+        color: $color-black;
+      }
+      .destination {
+        color: $color-black;
       }
     }
     &__colors {

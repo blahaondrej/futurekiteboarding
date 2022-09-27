@@ -1,15 +1,17 @@
-<div class="currency js-newsletter-popup">
-    <div class="currency__banner">
-        <div class="currency__inner">
-            <p class="currency__subtitle">Hello!</p>
-            <h2 class="currency__title">NEWSLETTER</h2>
-            <div class="currency__buttons">
-                <form name="contact-bottom" method="post" class="js-request-form-newsletter" id="newsletterForm-bottom">
-                    <input type="email" name="email" id="email" class="form-control js-input" placeholder="Enter your email" required>
-                    <button type="submit" class="submit__button">Submit</button>
-                </form>
-            </div>
-            <p class="currency__private">Lorem ipsum</p>
+<div class="newsletter-popup">
+    <div class="newsletter-popup__close">
+        <span>Close</span>
+    </div>
+    <div class="newsletter-popup__banner">
+        <div class="newsletter-popup__inner">
+            <h2 class="newsletter-popup__title">GET THE LATEST NEWS</h2>
+            <p class="newsletter-popup__subtitle">The membership you shouldn’t miss out on.</p>
+            <p class="newsletter-popup__subtitle">You will be the first to learn about all the news, exclusive offers and get a 5% discount on your next purchase.</p>
+            <form name="newsletter-popup-popup" method="post" class="js-request-form-notify" id="notifyForm">
+                <input type="email" name="email" id="email" class="form-control js-input" placeholder="Your email" required>
+                <button type="submit" class="newsletter-popup__button">JOIN THE FUTURE</button>
+                <p class="newsletter-popup__private">By signing up you are agreeing to the terms and conditions. Read our Privacy Policy.</p>
+            </form>
         </div>
     </div>
 </div>

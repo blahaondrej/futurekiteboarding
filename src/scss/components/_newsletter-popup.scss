@@ -1,0 +1,190 @@
+.newsletter-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, .8);
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  @include animation();
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__close {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    @include animation();
+    span {
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 0.37px;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: $color-black;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__inner {
+    z-index: 30;
+    position: relative;
+  }
+  &__banner {
+    position: absolute;
+    z-index: 20;
+    height: 690px;
+    width: 690px;
+    padding: 20px 140px 80px 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    @include phone {
+      width: 550px;
+      height: 550px;
+      padding: 40px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.65);
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.37px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.16px;
+    line-height: 19px;
+    color: $color-white;
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    width: 300px;
+    height: 60px;
+    background-color: $color-red2;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .15);
+    color: $color-white;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.48px;
+    line-height: 66px;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include animation();
+    &:hover {
+      color: $color-black;
+      background-color: $color-white;
+    }
+  }
+  &__private {
+    color: $color-white;
+    font-size: 8px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.21px;
+    line-height: 15px;
+    margin: 20px 0;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+  }
+  form {
+    input {
+      border: none;
+      color: $color-white;
+      border-bottom: 2px solid $color-white;
+      max-width: 300px;
+      width: 100%;
+      height: 66px;
+      line-height: 66px;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 0.48px;
+      padding: 0 10px;
+      background-color: transparent;
+      margin: 20px 0 40px;
+      text-transform: uppercase;
+    }
+    label {
+      color: $color-grey;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 18px;
+      margin-left: 10px;
+    }
+    input[type='checkbox'] {
+      height: 18px;
+      width: 18px;
+      border: 2px solid $color-white;
+      margin: 0;
+      line-height: 18px;
+      padding: 0;
+    }
+    ::placeholder {
+      color: $color-white;
+    }
+  }
+}

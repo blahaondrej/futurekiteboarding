@@ -60,7 +60,34 @@ $(document).ready(function () {
         $("body").addClass("loaded");
         localStorage.setItem("selectedCurrency",  $(this).data("currency"));
         // cartComponent.setCurrency($(this).data("currency"));
-        console.log(localStorage);
+    });
+
+    // Notify me
+
+    $(".product-description__button--notify").click(function() {
+        $("body").removeClass("no-scroll");
+        $(".notifyme").addClass("active");
+        $(".notifyme").removeClass("hidden");
+        $("body").addClass("loaded");
+    });
+
+    $(".notifyme__close").click(function() {
+        $(".notifyme").removeClass("active");
+        $("body").addClass("loaded");
+    });
+
+    // Notify me
+
+/*    $(".product-description__button--notify").click(function() {
+        $("body").removeClass("no-scroll");
+        $(".notifyme").addClass("active");
+        $(".notifyme").removeClass("hidden");
+        $("body").addClass("loaded");
+    });*/
+
+    $(".newsletter-popup__close").click(function() {
+        $(".newsletter-popup").removeClass("active");
+        $("body").addClass("loaded");
     });
 
     const selectedCurrency = localStorage.getItem("selectedCurrency");
