@@ -36,9 +36,9 @@ if(empty($_POST['password']) || trim($_POST['password']) !== 'PREMIUM2022RETAILE
 
     <script type="text/javascript" src="mobile/javascript/config.js"></script>
 
+    <script type="text/javascript" src="http://test23.kitelementshop.com/shop-cart-app.js"></script>
 
     <script type="text/javascript">
-
 
         var sendvisitinfo = function(type,page){};
 
