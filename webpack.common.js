@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 
 const path = require('path');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -306,6 +307,12 @@ module.exports = {
             jQuery: 'jquery',
             "window.jQuery": "jquery"
         }),
+
+        new CopyWebpackPlugin([{
+            from: './src/js/kshop-cart',
+            to: 'kshop-cart'
+        }]),
+
     ],
     performance: {
         hints: false

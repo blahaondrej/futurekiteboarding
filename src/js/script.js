@@ -53,15 +53,6 @@ $(document).ready(function () {
     });
 
 
-    $(".currency__button").click(function() {
-        $("body").removeClass("no-scroll");
-        $(".currency").removeClass("active");
-        $(".currency").addClass("hidden");
-        $("body").addClass("loaded");
-        localStorage.setItem("selectedCurrency",  $(this).data("currency"));
-        // cartComponent.setCurrency($(this).data("currency"));
-    });
-
     // Notify me
 
     $(".product-description__button--notify").click(function() {
@@ -90,15 +81,7 @@ $(document).ready(function () {
         $("body").addClass("loaded");
     });
 
-    const selectedCurrency = localStorage.getItem("selectedCurrency");
-    if (!selectedCurrency) {
-        $(".currency").addClass("active");
-    } else {
-        // cartComponent.setCurrency(selectedCurrency);
-        $(".currency").removeClass("active");
-        $("body").removeClass("no-scroll");
-        $("body").addClass("loaded");
-    }
+
 
     // Detail - select cize
     $(".product-description__sizes div").click(function() {
