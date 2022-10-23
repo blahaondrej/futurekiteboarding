@@ -101,13 +101,7 @@ $(document).ready(function () {
     }
 
 
-    // zmena obrazku podle tlacitka barvy
-    $('.product__colors div').on('mouseover', function () {
-        $('.product__colors div').removeClass('active');
-        $(this).addClass('active');
-        $(this).parents('.product__content').find('.product__image img').removeClass('active');
-        $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
-    });
+
 
     // zmena obrazku podle tlacitka barvy - detail produktu
     $('.product-description__colors div').on('click', function () {

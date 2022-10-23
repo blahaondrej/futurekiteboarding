@@ -2,5 +2,26 @@
   &__button {
     margin-right: 40px;
     cursor: pointer;
+    position: relative;
+    padding: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: #b2b2b2;
+      clip-path: $hexagon;
+      transform: $rotate;
+      display: block;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      &:after {
+        opacity: .3;
+      }
+    }
   }
 }

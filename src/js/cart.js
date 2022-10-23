@@ -1,5 +1,6 @@
 let products = [];
 let settings = {};
+let selectedCurrency;
 
 function fetchEshopSettings() {
     return fetch('https://www.kitelementshop.com/admin/api/products/', {
@@ -21,7 +22,7 @@ window.onload = () => {
 
     // CURRENCY
     const handleCurrency = () => {
-        let selectedCurrency = localStorage.getItem("selectedCurrency");
+        selectedCurrency = localStorage.getItem("selectedCurrency");
         if (!selectedCurrency) {
             $(".currency").addClass("active");
         } else {
@@ -53,16 +54,52 @@ window.onload = () => {
     };
     //
 
+    const setProductInSwiperFromElement = (element) => {
+        const $element = $(element);
+        const finalCode = getProductCodeFromElement($element);
+        const product = products.find(p => p.code === finalCode);
+        const currencySymbol = selectedCurrency === 'usd' ? '$' : '€';
+        if (!product) {
+            console.error(`Product with code ${finalCode} not found!`);
+            return;
+        }
+        $element.find('.product__price--inside-eu .current-price').html(`${product[selectedCurrency].price} ${currencySymbol}`);
+        $element.find('.product__price--outside-eu .current-price').html(`${product[selectedCurrency].priceNoTax} ${currencySymbol}`);
+        if (product[selectedCurrency]['priceStrike']) {
+            $element.find('.product__price--inside-eu .old-price').html(`${product[selectedCurrency]['priceStrike']} ${currencySymbol}`);
+            $element.find('.product__price--outside-eu .old-price').html(`${product[selectedCurrency]['priceStrike']} ${currencySymbol}`);
+        }
+        setProductBadges($element, product);
+    };
+
+    const getProductCodeFromElement = ($element) => {
+        const productCode = $element.data('product-code');
+        const colorCode = $element.find('.product__colors .active').data('color');
+        const firstSizeCode = $element.find('.product__size span').data('size');
+        return `${productCode}_${colorCode}_${firstSizeCode}`;
+    };
+
+    const setProductBadges = ($element, product) => {
+        let badgesHtml = '';
+        for (const tag of product.tags) {
+            badgesHtml += `<div class="product__badge" style="background-color: ${tag.color};">${tag.label}</div>`;
+        }
+        $element.find('.product__badges').html(badgesHtml);
+    };
+
     // Products swiper
     const handleProductsSwiper = () => {
         $('section.products .product').each((index, element) => {
-            const $element = $(element);
-            const productCode = $element.data('product-code');
-            const colorCode = $element.find('.product__colors .active').data('color');
-            const firstSizeCode = $element.find('.product__size span').data('size');
-            const finalCode = `${productCode}_${colorCode}_${firstSizeCode}`;
-            console.log('---');
-            console.log('finalCode', finalCode);
+            setProductInSwiperFromElement(element);
+        });
+
+        // zmena obrazku podle tlacitka barvy
+        $('.product__colors div').on('mouseover', function () {
+            $('.product__colors div.active').removeClass('active');
+            $(this).addClass('active');
+            $(this).parents('.product__content').find('.product__image img').removeClass('active');
+            $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
+            setProductInSwiperFromElement($(this).parents('.product'));
         });
     };
 

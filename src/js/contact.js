@@ -9,17 +9,27 @@ $(document).ready(function () {
     $('.js-request-form-bottom').on('submit', function (e) {
         e.preventDefault();
 
-        $.post('./newsletter.php', $(this).serialize(), function (response) {
-            if (response == 1) {
-                $('.form__wrapper--thankyou').show();
-                $(".submit__button").attr("disabled", true);
+        $.post('https://www.kitelementshop.com/admin/api/newsletter/', $(this).serialize(), function (response) {
+            const $submitButton = $(".submit__button");
+            if (response.status) {
+                const $thankYou = $('.form__wrapper--thankyou');
+                $thankYou.fadeIn(500);
+                $submitButton.attr("disabled", true);
+                setTimeout(() => {
+                    $submitButton.attr("disabled", false);
+                    $thankYou.fadeOut(500);
+                }, 5000);
                 $('#contactForm-bottom')[0].reset();
                 clearForm();
-
-            } else {
-                $('.form__wrapper--error').show();
             }
-
+        }).fail(function (error) {
+            const $submitButton = $(".submit__button");
+            const $error = $('.form__wrapper--error');
+            $error.fadeIn(500);
+            setTimeout(() => {
+                $submitButton.attr("disabled", false);
+                $error.fadeOut(500);
+            }, 5000);
         });
     });
 
