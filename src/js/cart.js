@@ -24,6 +24,7 @@ window.onload = () => {
     const handleCurrency = () => {
         selectedCurrency = localStorage.getItem("selectedCurrency");
         if (!selectedCurrency) {
+            cartComponent.setCurrency('eur');
             $(".currency").addClass("active");
         } else {
             cartComponent.setCurrency(selectedCurrency);
@@ -58,16 +59,17 @@ window.onload = () => {
         const $element = $(element);
         const finalCode = getProductCodeFromElement($element);
         const product = products.find(p => p.code === finalCode);
-        const currencySymbol = selectedCurrency === 'usd' ? '$' : '€';
+        const currencyString = selectedCurrency || 'eur';
+        const currencySymbol = currencyString === 'usd' ? '$' : '€';
         if (!product) {
             console.error(`Product with code ${finalCode} not found!`);
             return;
         }
-        $element.find('.product__price--inside-eu .current-price').html(`${product[selectedCurrency].price} ${currencySymbol}`);
-        $element.find('.product__price--outside-eu .current-price').html(`${product[selectedCurrency].priceNoTax} ${currencySymbol}`);
-        if (product[selectedCurrency]['priceStrike']) {
-            $element.find('.product__price--inside-eu .old-price').html(`${product[selectedCurrency]['priceStrike']} ${currencySymbol}`);
-            $element.find('.product__price--outside-eu .old-price').html(`${product[selectedCurrency]['priceStrike']} ${currencySymbol}`);
+        $element.find('.product__price--inside-eu .current-price').html(`${product[currencyString].price} ${currencySymbol}`);
+        $element.find('.product__price--outside-eu .current-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
+        if (product[currencyString]['priceStrike']) {
+            $element.find('.product__price--inside-eu .old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
+            $element.find('.product__price--outside-eu .old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
         }
         setProductBadges($element, product);
     };
