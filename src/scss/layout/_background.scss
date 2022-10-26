@@ -54,6 +54,13 @@
   }
 }
 
+.homepage__slide4 {
+  background-image: url(./assets/images/homepage/homepage_top4_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top4_mobile.jpg);
+  }
+}
+
 .boss-detail__slide1 {
   background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
   @include tablet-portrait {
@@ -86,6 +93,20 @@
   background-image: url(./assets/images/detail/slider/boss/boss5_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss5_mobile.jpg);
+  }
+}
+
+.boss-detail-bottom__slide1 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom1_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom1_mobile.jpg);
+  }
+}
+
+.boss-detail-bottom__slide2 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom2_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom2_mobile.jpg);
   }
 }
 
@@ -180,6 +201,41 @@
   }
 }
 
+.oraculum-detail-bottom__slide1 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_mobile.jpg);
+  }
+}
+
+.oraculum-detail-bottom__slide2 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom2_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom2_mobile.jpg);
+  }
+}
+
+.oraculum-detail-bottom__slide3 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_mobile.jpg);
+  }
+}
+
+.oraculum-detail-bottom__slide4 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom4_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom4_mobile.jpg);
+  }
+}
+
+.oraculum-detail-bottom__slide5 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom5_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom5_mobile.jpg);
+  }
+}
+
 .tech__slide1 {
   background-image: url(./assets/images/detail/tech/tech_1.jpg);
 }
@@ -262,6 +318,10 @@
 
 .wake__4 {
   background-image: url(./assets/images/wake/wake_4.jpg);
+}
+
+.iksurfmag__1 {
+  background-image: url(./assets/images/iksurmag/iksurmag_1.jpg);
 }
 
 .ambassadors__1 {

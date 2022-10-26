@@ -61,6 +61,20 @@ $(document).ready(function () {
         },
     });
 
+    var detailSwiperBottom = new Swiper('.detail-swiper-bottom', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 3000
+        },
+        speed: 1000,
+        pagination: {
+            el: '.detail-pagination-bottom',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
     var ambassadorsSwiper = new Swiper('.ambassadors-swiper', {
         loop: true,
         effect: 'fade',
