@@ -18,9 +18,15 @@ function fetchEshopSettings() {
 
 
 window.onload = () => {
+    /**
+     * Angular web component for shopping cart
+     */
     const cartComponent = document.getElementsByTagName('app-kshop-cart')[0];
 
-    // CURRENCY
+    /**
+     *  Currency
+     */
+
     const handleCurrency = () => {
         selectedCurrency = localStorage.getItem("selectedCurrency");
         if (!selectedCurrency) {
@@ -53,57 +59,161 @@ window.onload = () => {
             .removeClass("no-scroll")
             .addClass("loaded");
     };
-    //
 
-    const setProductInSwiperFromElement = (element) => {
-        const $element = $(element);
-        const finalCode = getProductCodeFromElement($element);
-        const product = products.find(p => p.code === finalCode);
+    /**
+     *  Products shared
+     */
+    const getProductCodeFromElement = ($element, firstSize = false) => {
+        const productCode = $element.data('product-code');
+        const colorCode = $element.find('.product__colors .active').data('color');
+        let sizeCode;
+        if (firstSize) {
+            sizeCode = $element.find('.product__size > span').data('size');
+        } else {
+            sizeCode = $element.find('.product__size > div.active').data('size');
+        }
+        console.log(firstSize, `${productCode}_${colorCode}_${sizeCode}`);
+        return `${productCode}_${colorCode}_${sizeCode}`;
+    };
+
+    const getProduct = (finalCode) => {
+        return products.find(p => p.code === finalCode);
+    };
+
+    /**
+     *  Products swiper
+     */
+
+    const handleProductsSwiper = () => {
+        $('section.products .product').each((index, element) => {
+            setProductInSwiperFromElement($(element));
+        });
+    };
+
+    // zmena obrazku podle tlacitka barvy
+    $('body').on('mouseover', '.products .product__colors div', function () {
+        $('.product__colors div.active').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.product__content').find('.product__image img').removeClass('active');
+        $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
+        setProductInSwiperFromElement($(this).parents('.product'));
+    });
+
+    const setProductInSwiperFromElement = ($element) => {
+        const finalCode = getProductCodeFromElement($element, true);
+        const product = getProduct(finalCode);
         const currencyString = selectedCurrency || 'eur';
         const currencySymbol = currencyString === 'usd' ? '$' : '€';
         if (!product) {
-            console.error(`Product with code ${finalCode} not found!`);
+            console.error(`Product swiper! Product with code ${finalCode} not found!`);
             return;
         }
         $element.find('.product__price--inside-eu .current-price').html(`${product[currencyString].price} ${currencySymbol}`);
         $element.find('.product__price--outside-eu .current-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
         if (product[currencyString]['priceStrike']) {
             $element.find('.product__price--inside-eu .old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
-            $element.find('.product__price--outside-eu .old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
+            $element.find('.product__price--outside-eu .old-price').html(`${product[currencyString]['priceNoTaxStrike']} ${currencySymbol}`);
         }
         setProductBadges($element, product);
     };
 
-    const getProductCodeFromElement = ($element) => {
-        const productCode = $element.data('product-code');
-        const colorCode = $element.find('.product__colors .active').data('color');
-        const firstSizeCode = $element.find('.product__size span').data('size');
-        return `${productCode}_${colorCode}_${firstSizeCode}`;
-    };
 
-    const setProductBadges = ($element, product) => {
+    const setProductBadges = ($element, {tags}) => {
         let badgesHtml = '';
-        for (const tag of product.tags) {
+        for (const tag of tags) {
             badgesHtml += `<div class="product__badge" style="background-color: ${tag.color};">${tag.label}</div>`;
         }
         $element.find('.product__badges').html(badgesHtml);
     };
 
-    // Products swiper
-    const handleProductsSwiper = () => {
-        $('section.products .product').each((index, element) => {
-            setProductInSwiperFromElement(element);
+
+    /**
+     *  Products detail
+     */
+    // Detail - select size
+    $("body").on('click', '.product-detail .product-description__sizes div', function () {
+        $(".product-description__sizes div").removeClass("active");
+        $(this).addClass("active");
+        setProductInDetailFromElement($(this).parents('.product-detail'));
+    });
+
+    // zmena obrazku podle tlacitka barvy - detail produktu
+    $('body').on('click', '.product-description__colors div', function () {
+        $('.product-description__colors div').removeClass('active');
+        $(this).addClass('active');
+        $('.product-gallery').removeClass('active');
+        $(`.product-gallery[data-color=${$(this).data('color')}]`).addClass('active');
+        setProductInDetailFromElement($(this).parents('.product-detail'));
+    });
+
+    const availabilityList = {
+        onStock: 'instock',
+        outOfStock: 'outstock',
+        soon: 'soon',
+        preOrder: 'preorder',
+    };
+
+    const getProductDescriptionNoteClassSuffix = (availability) => {
+        return availabilityList[availability];
+    };
+
+    const setProductDetailButtons = ($element, {availability}) => {
+        $element.find('.product-description__button--addToCart').hide();
+        $element.find('.product-description__button--notify').hide();
+        switch (availability) {
+            case 'onStock':
+            case 'preOrder':
+                $element.find('.product-description__button--addToCart').show();
+                break;
+            case 'soon':
+                $element.find('.product-description__button--notify').show();
+                break;
+            case 'outOfStock':
+                break;
+            default:
+                break;
+        }
+    };
+
+    const setProductInDetailFromElement = ($element) => {
+        const finalCode = getProductCodeFromElement($element);
+        const product = getProduct(finalCode);
+        const currencyString = selectedCurrency || 'eur';
+        const currencySymbol = currencyString === 'usd' ? '$' : '€';
+        if (!product) {
+            console.error(`Product Detail! Product with code ${finalCode} not found!`);
+            return;
+        }
+        console.log('PRODUKTE', product);
+        $element.find('.product-description__prices--eu .product-new-price').html(`${product[currencyString].price} ${currencySymbol}`);
+        $element.find('.product-description__prices--world .product-new-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
+        if (product[currencyString]['priceStrike']) {
+            $element.find('.product-description__prices--eu .product-old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
+            $element.find('.product-description__prices--world .product-old-price').html(`${product[currencyString]['priceNoTaxStrike']} ${currencySymbol}`);
+        }
+        if (product['actionDescription']) {
+            $element.find('.sale-until').html(product['actionDescription']);
+        }
+
+        if (product['availabilityNote']) {
+            $element.find('.product-description__note').html(`
+                <span class="product-description__note--${getProductDescriptionNoteClassSuffix(product['availability'])}">${product['availabilityNote']}</span>
+            `);
+        }
+        setProductBadges($element, product);
+        setProductDetailButtons($element, product);
+    };
+
+    const handleProductDetail = () => {
+        $('.product-detail').each((index, element) => {
+            setProductInDetailFromElement($(element));
         });
 
-        // zmena obrazku podle tlacitka barvy
-        $('.product__colors div').on('mouseover', function () {
-            $('.product__colors div.active').removeClass('active');
-            $(this).addClass('active');
-            $(this).parents('.product__content').find('.product__image img').removeClass('active');
-            $(this).parents('.product__content').find(`.product__image img[data-color=${$(this).data('color')}]`).addClass('active');
-            setProductInSwiperFromElement($(this).parents('.product'));
-        });
+        $('.product-description__button--addToCart').on('click', function () {
+            cartComponent.addProductToCart(getProductCodeFromElement($(this).parents('.product-detail')));
+        })
     };
+
 
     fetchEshopSettings().then(() => {
 
@@ -123,6 +233,7 @@ window.onload = () => {
 
         handleCurrency();
         handleProductsSwiper();
+        handleProductDetail();
     });
 
 

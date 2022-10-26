@@ -83,12 +83,6 @@ $(document).ready(function () {
 
 
 
-    // Detail - select cize
-    $(".product-description__sizes div").click(function() {
-        $(".product-description__sizes div").removeClass("active");
-        $(this).addClass("active");
-    });
-
     $(".header__open").click(function() {
         var menuButtonText = $('.header__open span').text();
         $(".header__menu").toggleClass("active");
@@ -103,13 +97,6 @@ $(document).ready(function () {
 
 
 
-    // zmena obrazku podle tlacitka barvy - detail produktu
-    $('.product-description__colors div').on('click', function () {
-        $('.product-description__colors div').removeClass('active');
-        $(this).addClass('active');
-        $('.product-gallery').removeClass('active');
-        $(`.product-gallery[data-color=${$(this).data('color')}]`).addClass('active');
-    });
 
 });
 

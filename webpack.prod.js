@@ -87,8 +87,8 @@ module.exports = merge(common, {
             src: './index.html',
             dest: './index.html',
             inline: true,
-            minify: true,
-            extract: true,
+            minify: false,
+            extract: false,
             width: 2560,
             height: 1440,
             penthouse: {
