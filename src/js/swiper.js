@@ -166,10 +166,10 @@ $(document).ready(function () {
         },
         spaceBetween: 30,
         centeredSlides: true,
-        autoplay: {
+/*        autoplay: {
             delay: 3000
         },
-        speed: 1200
+        speed: 1200*/
     });
 
     // swiper tech photo
