@@ -55,12 +55,14 @@ $(document).ready(function () {
 
     // Notify me
 
+/*
     $(".product-description__button--notify").click(function() {
         $("body").removeClass("no-scroll");
         $(".notifyme").addClass("active");
         $(".notifyme").removeClass("hidden");
         $("body").addClass("loaded");
     });
+*/
 
     $(".notifyme__close").click(function() {
         $(".notifyme").removeClass("active");

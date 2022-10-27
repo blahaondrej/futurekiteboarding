@@ -72,7 +72,6 @@ window.onload = () => {
         } else {
             sizeCode = $element.find('.product__size > div.active').data('size');
         }
-        console.log(firstSize, `${productCode}_${colorCode}_${sizeCode}`);
         return `${productCode}_${colorCode}_${sizeCode}`;
     };
 
@@ -146,6 +145,38 @@ window.onload = () => {
         setProductInDetailFromElement($(this).parents('.product-detail'));
     });
 
+    $('.product-description__button--addToCart').on('click', function () {
+        cartComponent.addProductToCart(getProductCodeFromElement($(this).parents('.product-detail')));
+    })
+
+    $(".product-description__button--notify").on('click', function () {
+        $("body").removeClass("no-scroll").addClass("loaded");
+        $(".notifyme").addClass("active").removeClass("hidden").find('#product').val(getProductCodeFromElement($(this).parents('.product-detail')));
+    });
+
+    $("#notifyForm").on('submit', function (e) {
+        const $element = $(this);
+        e.preventDefault();
+        $.post('https://www.kitelementshop.com/admin/api/notify-me/', $(this).serialize(), function (response) {
+            if (response.status) {
+                const $thankYou = $element.find('.thankyou');
+                $thankYou.fadeIn(500);
+                setTimeout(() => {
+                    $thankYou.fadeOut(500);
+                    $(".notifyme").removeClass("active");
+                    $("body").addClass("loaded");
+                }, 2000);
+            }
+        }).fail(function (error) {
+            const $error = $element.find('.error');
+            $error.html(error['responseJSON'].message);
+            $error.fadeIn(500);
+            setTimeout(() => {
+                $error.fadeOut(500);
+            }, 5000);
+        });
+    });
+
     const availabilityList = {
         onStock: 'instock',
         outOfStock: 'outstock',
@@ -184,7 +215,6 @@ window.onload = () => {
             console.error(`Product Detail! Product with code ${finalCode} not found!`);
             return;
         }
-        console.log('PRODUKTE', product);
         $element.find('.product-description__prices--eu .product-new-price').html(`${product[currencyString].price} ${currencySymbol}`);
         $element.find('.product-description__prices--world .product-new-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
         if (product[currencyString]['priceStrike']) {
@@ -208,10 +238,6 @@ window.onload = () => {
         $('.product-detail').each((index, element) => {
             setProductInDetailFromElement($(element));
         });
-
-        $('.product-description__button--addToCart').on('click', function () {
-            cartComponent.addProductToCart(getProductCodeFromElement($(this).parents('.product-detail')));
-        })
     };
 
 
@@ -238,13 +264,11 @@ window.onload = () => {
 
 
     const toggleCartButton = document.getElementById('toggle-cart');
-    console.log(toggleCartButton);
     toggleCartButton.onclick = () => {
         cartComponent.toggleIsOpened();
     }
 
     cartComponent.addEventListener('toggleEvent', ({detail}) => {
-        console.log('toggleEvent', detail);
         if (detail.isOpened) {
             toggleCartButton.classList.add('active');
         } else {
@@ -253,7 +277,6 @@ window.onload = () => {
     });
 
     cartComponent.addEventListener('productCountEvent', ({detail}) => {
-        console.log('productCountEvent', detail);
         const productsCountElements = document.getElementsByClassName('products-count');
         for (const element of productsCountElements) {
             element.innerText = detail.count;
