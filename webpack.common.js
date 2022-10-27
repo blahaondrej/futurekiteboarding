@@ -298,6 +298,11 @@ module.exports = {
             filename: 'wholesale-pricelist-2022.html', // Cilovy soubor
         }),
 
+        new CopyWebpackPlugin([{
+            from: './src/js/kshop-cart',
+            to: 'kshop-cart'
+        }]),
+
         new MiniCssExtractPlugin({
             filename: "style.[contenthash].css"
         }),
@@ -307,11 +312,6 @@ module.exports = {
             jQuery: 'jquery',
             "window.jQuery": "jquery"
         }),
-
-        new CopyWebpackPlugin([{
-            from: './src/js/kshop-cart',
-            to: 'kshop-cart'
-        }]),
 
     ],
     performance: {
