@@ -196,7 +196,6 @@
       padding-left: 0;
     }
     @include phone {
-      flex-direction: column;
       height: 100%;
     }
     img {
