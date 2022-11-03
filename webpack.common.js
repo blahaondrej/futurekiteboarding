@@ -258,8 +258,8 @@ module.exports = {
                 removeComments: true
             },
             chunks: ['main','vendor'], // Js soubory z entry
-            template: 'src/templates/support/2-years-warranty.html', // Cesta k templatu
-            filename: '2-years-warranty.html', // Cilovy soubor
+            template: 'src/templates/support/2-year-warranty.html', // Cesta k templatu
+            filename: '2-year-warranty.html', // Cilovy soubor
         }),
 
         new HtmlWebpackPlugin({

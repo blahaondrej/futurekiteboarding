@@ -3,8 +3,8 @@
   background-color: $color-white;
   position: relative;
   &__hexagon {
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 55px;
     position: relative;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@
     &:after {
       content: '';
       position: absolute;
-      background: $color-grey-hexagon;
+      background: #A4FF6B;
       clip-path: $hexagon;
       transform: $rotate;
       display: block;
@@ -30,7 +30,7 @@
       flex-direction: row;
       align-items: center;
       margin-right: 20px;
-      min-width: 100px;
+      min-width: 130px;
       cursor: pointer;
       @include animation();
       @include phone {
