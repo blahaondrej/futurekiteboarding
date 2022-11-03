@@ -236,13 +236,26 @@
         z-index: -1;
         background: $color-black;
       }
+      span {
+        position: absolute;
+        bottom: -25px;
+        opacity: 0;
+        visibility: hidden;
+        width: 100px;
+        @include animation();
+      }
       &.active {
         &:before {
           display: block;
           top: -2px;
           left: -2px;
         }
+        span {
+          opacity: 1;
+          visibility: visible;
+        }
       }
+
     }
   }
   &__red {
@@ -448,7 +461,7 @@
 .product-detail {
   padding: 100px 0;
   @include tablet-portrait {
-   padding: 100px 0 0 0;
+    padding: 100px 0 0 0;
   }
   &__description {
     z-index: 2;
