@@ -44,7 +44,7 @@ require 'phpmailer/src/SMTP.php';
 
 	$subject = "FUTURE kiteboarding - contact form";
 
-		$body = '
+	$body = '
 <!DOCTYPE html>
 <html>
 <head>
