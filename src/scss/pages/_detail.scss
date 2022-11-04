@@ -242,6 +242,7 @@
         opacity: 0;
         visibility: hidden;
         width: 100px;
+        text-transform: uppercase;
         @include animation();
       }
       &.active {
