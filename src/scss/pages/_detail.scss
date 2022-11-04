@@ -263,20 +263,32 @@
     &:after {
       background: $color-red-hexagon;
     }
+    span {
+      color: $color-red-hexagon;
+    }
   }
   &__blue {
     &:after {
       background: $color-blue-hexagon;
+    }
+    span {
+      color: $color-blue-hexagon;
     }
   }
   &__yellow {
     &:after {
       background: $color-yellow-hexagon;
     }
+    span {
+      color: $color-yellow-hexagon;
+    }
   }
   &__green {
     &:after {
       background: $color-green-hexagon;
+    }
+    span {
+      color: $color-green-hexagon;
     }
   }
   &__button {
