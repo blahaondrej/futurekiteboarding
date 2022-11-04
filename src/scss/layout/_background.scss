@@ -61,6 +61,13 @@
   }
 }
 
+.homepage__black-friday {
+  background-image: url(./assets/images/homepage/black_friday_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/black_friday_mobile.jpg);
+  }
+}
+
 .boss-detail__slide1 {
   background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
   @include tablet-portrait {
@@ -107,6 +114,20 @@
   background-image: url(./assets/images/detail/slider/boss/boss-bottom2_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss-bottom2_mobile.jpg);
+  }
+}
+
+.boss-detail-bottom__slide3 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom3_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom3_large.jpg);
+  }
+}
+
+.boss-detail-bottom__slide4 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom4_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom4_large.jpg);
   }
 }
 
