@@ -117,20 +117,6 @@
   }
 }
 
-.boss-detail-bottom__slide3 {
-  background-image: url(./assets/images/detail/slider/boss/boss-bottom3_large.jpg);
-  @include tablet-portrait {
-    background-image: url(./assets/images/detail/slider/boss/boss-bottom3_large.jpg);
-  }
-}
-
-.boss-detail-bottom__slide4 {
-  background-image: url(./assets/images/detail/slider/boss/boss-bottom4_large.jpg);
-  @include tablet-portrait {
-    background-image: url(./assets/images/detail/slider/boss/boss-bottom4_large.jpg);
-  }
-}
-
 .jiggy-detail__slide1 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy1_large.jpg);
   @include tablet-portrait {
