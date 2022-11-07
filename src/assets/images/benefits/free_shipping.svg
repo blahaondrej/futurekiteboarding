@@ -1,0 +1,14 @@
+<svg width="76px" height="82px" viewBox="0 0 76 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-269.000000, -1086.000000)" fill-rule="nonzero">
+            <g transform="translate(269.234557, 1084.000000)">
+                <g transform="translate(0.000000, 2.498159)">
+                    <polygon fill="#ED0105" transform="translate(37.388710, 40.501841) rotate(-345.000000) translate(-37.388710, -40.501841) " points="7.79134166 23.5018407 7.79134166 57.5018407 37.388581 74.5018407 66.9860784 57.5018407 66.9860784 23.5018407 37.388581 6.50184072"></polygon>
+                    <g transform="translate(27.765443, 30.501841)" fill="#FFFFFF">
+                        <path d="M11,6.94699996 L19,12 L19,14 L11,11.474 L11,16.834 L14,18.5 L14,20 L9.5,19 L5,20 L5,18.5 L8,16.833 L8,11.473 L0,14 L0,12 L8,6.94699996 L8,1.5 C8,0.671572848 8.67157289,0 9.5,0 C10.3284271,0 11,0.671572848 11,1.5 L11,6.94699996 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
