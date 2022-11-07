@@ -111,20 +111,30 @@ window.onload = () => {
         $element.find('.product__price--outside-eu .current-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
         if (product[currencyString]['priceStrike']) {
             $element.find('.product__price--inside-eu .old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
+        } else {
+            $element.find('.product__price--inside-eu .old-price').html(``);
+        }
+
+        if (product[currencyString]['priceNoTaxStrike']) {
             $element.find('.product__price--outside-eu .old-price').html(`${product[currencyString]['priceNoTaxStrike']} ${currencySymbol}`);
+        } else {
+            $element.find('.product__price--outside-eu .old-price').html(``);
         }
         setProductBadges($element, product);
     };
 
 
-    const setProductBadges = ($element, {tags}) => {
+    const setProductBadges = ($element, {tags, iksTag}) => {
         let badgesHtml = '';
+        iksTag = true;
+        if (iksTag) {
+            badgesHtml += `<div class="product__badge" style="background-color: #00c3ff;"><span>TESTED BY</span> <img class="iksurfmag" src="./images/iksurfmag.png" alt="iksurfmag"></div>`;
+        }
         for (const tag of tags) {
             badgesHtml += `<div class="product__badge" style="background-color: ${tag.color};">${tag.label}</div>`;
         }
         $element.find('.product__badges').html(badgesHtml);
     };
-
 
     /**
      *  Products detail
@@ -184,8 +194,19 @@ window.onload = () => {
         preOrder: 'preorder',
     };
 
+    const availabilityListLabel = {
+        onStock: 'IN STOCK',
+        outOfStock: 'OUT OF STOCK',
+        soon: 'SOON',
+        preOrder: 'PRE-ORDER',
+    };
+
     const getProductDescriptionNoteClassSuffix = (availability) => {
         return availabilityList[availability];
+    };
+
+    const getProductDescriptionNoteLabel = (availability) => {
+        return availabilityListLabel[availability];
     };
 
     const setProductDetailButtons = ($element, {availability}) => {
@@ -215,20 +236,34 @@ window.onload = () => {
             console.error(`Product Detail! Product with code ${finalCode} not found!`);
             return;
         }
+
         $element.find('.product-description__prices--eu .product-new-price').html(`${product[currencyString].price} ${currencySymbol}`);
         $element.find('.product-description__prices--world .product-new-price').html(`${product[currencyString].priceNoTax} ${currencySymbol}`);
+
         if (product[currencyString]['priceStrike']) {
             $element.find('.product-description__prices--eu .product-old-price').html(`${product[currencyString]['priceStrike']} ${currencySymbol}`);
-            $element.find('.product-description__prices--world .product-old-price').html(`${product[currencyString]['priceNoTaxStrike']} ${currencySymbol}`);
-        }
-        if (product['actionDescription']) {
-            $element.find('.sale-until').html(product['actionDescription']);
+        } else {
+            $element.find('.product-description__prices--eu .product-old-price').html(``);
         }
 
-        if (product['availabilityNote']) {
+        if (product[currencyString]['priceNoTaxStrike']) {
+            $element.find('.product-description__prices--world .product-old-price').html(`${product[currencyString]['priceNoTaxStrike']} ${currencySymbol}`);
+        } else {
+            $element.find('.product-description__prices--world .product-old-price').html(``);
+        }
+
+        if (product['actionDescription']) {
+            $element.find('.sale-until').html(product['actionDescription']);
+        } else {
+            $element.find('.sale-until').html('');
+        }
+
+        if (product['availability']) {
             $element.find('.product-description__note').html(`
-                <span class="product-description__note--${getProductDescriptionNoteClassSuffix(product['availability'])}">${product['availabilityNote']}</span>
+                <span class="product-description__note--${getProductDescriptionNoteClassSuffix(product['availability'])}">${getProductDescriptionNoteLabel(product['availability'])} ${product['availabilityNote'] || ''}</span>
             `);
+        } else {
+            $element.find('.product-description__note').html(``);
         }
         setProductBadges($element, product);
         setProductDetailButtons($element, product);

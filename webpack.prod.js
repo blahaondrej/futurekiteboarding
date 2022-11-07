@@ -113,6 +113,12 @@ module.exports = merge(common, {
         }]),
 
         new CopyWebpackPlugin([{
+            from: './src/assets/images/tags/iksurfmag.png',
+            to: 'images'
+        }]),
+
+
+        new CopyWebpackPlugin([{
             from: './sitemap.xml',
             to: '.'
         }]),

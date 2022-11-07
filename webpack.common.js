@@ -303,6 +303,11 @@ module.exports = {
             to: 'kshop-cart'
         }]),
 
+        new CopyWebpackPlugin([{
+            from: './src/assets/images/tags/iksurfmag.png',
+            to: 'images'
+        }]),
+
         new MiniCssExtractPlugin({
             filename: "style.[contenthash].css"
         }),

@@ -6,9 +6,11 @@
   overflow: hidden;
   display: none;
   position: relative;
+
   &.active {
     display: block;
   }
+
   .swiper-container {
     width: 100%;
     height: 300px;
@@ -26,6 +28,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
     a {
       position: relative;
       height: 100%;
@@ -34,14 +37,17 @@
       align-items: center;
       justify-content: center;
     }
+
     .product-tall {
       height: 100%;
       width: auto;
     }
+
     .product-wide {
       height: auto;
       width: 100%;
     }
+
     img {
       height: 70%;
       width: auto;
@@ -52,41 +58,51 @@
     height: 500px;
     width: 100%;
   }
+
   .gallery-thumbs {
     height: 100px;
     box-sizing: border-box;
     padding: 10px 0;
   }
+
   .gallery-thumbs .swiper-slide {
     width: 20%;
     height: 100%;
     opacity: 0.4;
     cursor: pointer;
+
     img {
       height: 100%;
       width: auto;
     }
   }
+
   .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
   }
+
   .swiper-button-next, .swiper-button-prev {
     bottom: 50%;
   }
+
   .swiper-button-next {
     right: 30px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z'/%3E%3C/svg%3E");
+
     &:after {
       content: none;
     }
   }
+
   .swiper-button-prev {
     left: 30px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z'/%3E%3C/svg%3E");
+
     &:after {
       content: none;
     }
   }
+
   .product__badges {
     position: absolute;
     top: 0;
@@ -96,6 +112,7 @@
     align-items: flex-start;
     z-index: 20;
   }
+
   .product__badge {
     display: flex;
     align-items: center;
@@ -109,18 +126,23 @@
     letter-spacing: 0.27px;
     padding: 0 12px;
     @include animation();
+
     &:hover {
       transform: scale(1.05);
     }
+
     &--tested {
       background-color: #00c3ff;
     }
+
     &--new {
       background-color: #f71106;
     }
+
     &--soon {
       background-color: #000;
     }
+
     &--free {
       background-color: #4ab208;
     }
@@ -142,6 +164,7 @@
       margin-left: unset;
     }
   }
+
   &__name {
     color: $color-black2;
     font-size: 36px;
@@ -153,6 +176,7 @@
       flex-direction: column;
       display: none;
     }
+
     &--gallery {
       display: none;
       @include phone {
@@ -160,6 +184,7 @@
         margin-bottom: 30px;
       }
     }
+
     sup {
       vertical-align: super;
       text-transform: none;
@@ -168,17 +193,20 @@
       font-weight: 500;
       letter-spacing: -0.18px;
       line-height: 14px;
+
       strong {
         font-size: 18px;
         letter-spacing: -0.12px;
       }
     }
+
     .model {
       font-size: 18px;
       font-weight: 500;
       margin-left: 10px;
     }
   }
+
   &__desc {
     p {
       color: $color-black2;
@@ -190,6 +218,7 @@
       line-height: 17px;
     }
   }
+
   &__select {
     color: $color-black2;
     font-size: 18px;
@@ -200,17 +229,20 @@
     margin-top: 20px;
     position: relative;
   }
+
   &__colors {
     margin: 20px 0 30px;
     z-index: 10;
     display: flex;
     position: relative;
+
     div {
       height: 30px;
       width: 30px;
       position: relative;
       margin: 0 3px;
       cursor: pointer;
+
       &:after {
         content: '';
         position: absolute;
@@ -222,6 +254,7 @@
         pointer-events: none;
         z-index: -1;
       }
+
       &:before {
         display: none;
         height: 34px;
@@ -236,6 +269,7 @@
         z-index: -1;
         background: $color-black;
       }
+
       span {
         position: absolute;
         bottom: -25px;
@@ -245,12 +279,14 @@
         text-transform: uppercase;
         @include animation();
       }
+
       &.active {
         &:before {
           display: block;
           top: -2px;
           left: -2px;
         }
+
         span {
           opacity: 1;
           visibility: visible;
@@ -259,38 +295,47 @@
 
     }
   }
+
   &__red {
     &:after {
       background: $color-red-hexagon;
     }
+
     span {
       color: $color-red-hexagon;
     }
   }
+
   &__blue {
     &:after {
       background: $color-blue-hexagon;
     }
+
     span {
       color: $color-blue-hexagon;
     }
   }
+
   &__yellow {
     &:after {
       background: $color-yellow-hexagon;
     }
+
     span {
       color: $color-yellow-hexagon;
     }
   }
+
   &__green {
     &:after {
       background: $color-green-hexagon;
     }
+
     span {
       color: $color-green-hexagon;
     }
   }
+
   &__button {
     margin-top: 0;
     border: $border;
@@ -307,10 +352,12 @@
     letter-spacing: 0.48px;
     text-transform: uppercase;
     position: relative;
+
     &:hover {
       background: $color-button;
       color: $color-white;
     }
+
     &--notify {
       &:after {
         content: '';
@@ -325,6 +372,7 @@
         right: 80px;
         @include animation();
       }
+
       &:hover {
         &:after {
           background-image: url(./assets/images/icons/notify_me-white.svg);
@@ -332,6 +380,7 @@
       }
     }
   }
+
   &__price {
     color: $color-black2;
     font-size: 18px;
@@ -340,11 +389,13 @@
     letter-spacing: 0.48px;
     line-height: 21px;
     position: relative;
+
     span {
       display: block;
       font-weight: 300;
     }
   }
+
   &__title {
     color: $color-black;
     font-size: 18px;
@@ -354,6 +405,7 @@
     line-height: 39px;
     text-transform: uppercase;
   }
+
   &__note {
     font-size: 14px;
     font-style: italic;
@@ -361,19 +413,24 @@
     letter-spacing: 0.48px;
     line-height: 33px;
     margin: 10px 0;
+
     &--instock {
-      color: $color-green;
+      color: #13d413;
     }
+
     &--outstock {
       color: $color-red2;
     }
+
     &--soon {
-      color: $color-green;
+      color: #13d413;
     }
+
     &--preorder {
-      color: $color-green;
+      color: #13d413;
     }
   }
+
   &__text {
     color: $color-black;
     font-size: 14px;
@@ -382,6 +439,7 @@
     letter-spacing: 0.37px;
     line-height: 17px;
   }
+
   &__vat {
     color: $color-black;
     font-size: 12px;
@@ -391,9 +449,11 @@
     line-height: 14px;
     margin: 20px 0;
   }
+
   &__sizes {
     position: relative;
     display: flex;
+
     div {
       position: relative;
       height: 55px;
@@ -408,6 +468,7 @@
       font-weight: 500;
       letter-spacing: 0.32px;
       cursor: pointer;
+
       &:after {
         content: '';
         position: absolute;
@@ -419,6 +480,7 @@
         pointer-events: none;
         z-index: -1;
       }
+
       &.active {
         &:after {
           background-color: rgba(0, 0, 0, 1);
@@ -426,13 +488,16 @@
       }
     }
   }
+
   &__prices {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+
     &--eu {
       margin: 5px 0;
     }
+
     .sale-until {
       margin-top: 20px;
       color: $color-red;
@@ -442,6 +507,7 @@
       letter-spacing: 0.37px;
       line-height: 17px;
     }
+
     .product-old-price {
       color: $color-black;
       font-size: 18px;
@@ -451,6 +517,7 @@
       line-height: 14px;
       text-decoration: line-through;
     }
+
     .product-new-price {
       color: $color-red;
       font-size: 18px;
@@ -460,6 +527,7 @@
       line-height: 14px;
       margin-right: 10px;
     }
+
     .product-delivery-destination {
       color: $color-black;
       font-size: 12px;
@@ -476,12 +544,14 @@
   @include tablet-portrait {
     padding: 100px 0 0 0;
   }
+
   &__description {
     z-index: 2;
     @include tablet-portrait {
       margin-bottom: 50px;
     }
   }
+
   .detail-badge {
     position: relative;
     width: 60px;
@@ -489,10 +559,12 @@
     display: block;
     margin-bottom: 20px;
     @include animation();
+
     svg {
       width: 100%;
       height: auto;
     }
+
     &:hover {
       transform: scale(1.05);
     }
@@ -505,27 +577,33 @@
 
 .detail-tech {
   height: 100vh;
+
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     max-width: 450px;
+
     &--right {
       margin-left: 150px;
       @include phone {
         margin-left: 0;
       }
     }
+
     .btn {
       margin-top: 50px;
     }
+
     &--center {
       margin: 0 auto;
     }
   }
+
   .title {
     margin-bottom: 30px;
+
     sup {
       vertical-align: super;
       font-size: 18px;
@@ -535,12 +613,15 @@
 
 .tech-pagination {
   margin-bottom: 30px;
+
   .swiper-pagination-bullet {
     outline: 0;
+
     &:after {
       content: none;
     }
   }
+
   &__number {
     color: $color-grey;
     font-size: 36px;
@@ -555,6 +636,7 @@
     display: inline-block;
     width: 80px;
     outline: 0;
+
     &:before {
       content: "";
       position: absolute;
@@ -566,8 +648,10 @@
       transform: scaleX(0);
       transform-origin: left;
     }
+
     &.swiper-pagination-bullet-active {
       color: $color-red;
+
       &:before {
         transition: 12s transform;
         background: $color-red;
@@ -582,10 +666,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   .swiper-slide {
     opacity: 0 !important;
   }
+
   .swiper-slide-active {
     opacity: 1 !important;
   }
+}
+
+html body {
+  .products {
+    .product__image img.iksurfmag {
+      display: block !important;
+      width: auto;
+      margin-left: 5px;
+      height: 60%;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+}
+
+.product-detail .product__badges .iksurfmag {
+  display: block !important;
+  width: auto;
+  margin-left: 5px;
+  height: 60%;
+  position: relative;
+  bottom: 2px;
 }
