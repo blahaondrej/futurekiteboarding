@@ -231,7 +231,7 @@
   }
 
   &__colors {
-    margin: 20px 0 30px;
+    margin: 10px 0 30px;
     z-index: 10;
     display: flex;
     position: relative;
@@ -407,7 +407,7 @@
   }
 
   &__note {
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 500;
     letter-spacing: 0.48px;
@@ -438,6 +438,7 @@
     font-weight: 300;
     letter-spacing: 0.37px;
     line-height: 17px;
+    margin: 10px 0 30px;
   }
 
   &__vat {
@@ -453,7 +454,7 @@
   &__sizes {
     position: relative;
     display: flex;
-
+    margin: 10px 0;
     div {
       position: relative;
       height: 55px;
@@ -472,7 +473,7 @@
       &:after {
         content: '';
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.65);
+        background-color: rgba(0, 0, 0, 0.3);
         clip-path: $hexagon;
         transform: $rotate;
         display: block;
