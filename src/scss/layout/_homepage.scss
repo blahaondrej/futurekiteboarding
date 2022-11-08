@@ -12,7 +12,7 @@
     left: 100px;
     height: 500px;
     width: 500px;
-    padding: 80px 60px;
+    padding: 100px 60px;
     @include phone {
       width: 350px;
       height: 350px;
@@ -33,7 +33,7 @@
     }
     h2 {
       color: $color-black;
-      font-size: 36px;
+      font-size: 30px;
       font-style: italic;
       font-weight: 300;
       letter-spacing: 0.96px;
