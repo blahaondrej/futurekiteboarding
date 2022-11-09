@@ -4,6 +4,15 @@
     cursor: pointer;
     position: relative;
     padding: 15px;
+    align-items: center;
+    display: flex;
+
+    .products-count {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 5px;
+    }
 
     &:after {
       content: '';

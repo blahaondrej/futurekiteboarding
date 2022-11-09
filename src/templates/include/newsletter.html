@@ -7,8 +7,10 @@
             <h2 class="newsletter-popup__title">GET THE LATEST NEWS</h2>
             <p class="newsletter-popup__subtitle">The membership you shouldn’t miss out on.</p>
             <p class="newsletter-popup__subtitle">You will be the first to learn about all the news and exclusive offers.</p>
-            <form name="newsletter-popup-popup" method="post" class="js-request-form-notify" id="notifyForm">
+            <form name="newsletter-popup-popup" method="post" class="js-request-form-notify" id="newsletterForm">
                 <input type="email" name="email" id="email" class="form-control js-input" placeholder="Your email" required>
+                <div class="form-message thankyou" style="display: none;">Your email has been sent successfully.</div>
+                <div class="form-message error" style="display: none;">This email is already registered.</div>
                 <button type="submit" class="newsletter-popup__button">JOIN THE FUTURE</button>
                 <p class="newsletter-popup__private">By signing up you are agreeing to the terms and conditions. Read our Privacy Policy.</p>
             </form>

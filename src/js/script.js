@@ -78,11 +78,13 @@ $(document).ready(function () {
         $("body").addClass("loaded");
     });*/
 
+/*
     $(".newsletter-popup__close").click(function() {
         $(".newsletter-popup").removeClass("active");
         $("body").addClass("loaded");
     });
 
+*/
 
 
     $(".header__open").click(function() {

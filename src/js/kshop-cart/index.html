@@ -43,12 +43,17 @@
         whatsapp: 'https://wa.me/420775526626',
         logo: 'future.svg',
         shop: 'FUTURE Kiteboarding',
-        // style: 'kitelement',
         style: 'future',
         stepBarDelimiter: '–',
+        urls: {
+          homepage: 'https://futurekiteboarding.com/',
+          termsAndConditions: 'https://futurekiteboarding.com/terms-and-conditions',
+          privacyPolicy: 'https://futurekiteboarding.com/privacy-policy'
+        },
         products,
         settings
       });
+
     });
 
     const toggleCartButton = document.getElementById('toggle-cart');
@@ -58,7 +63,7 @@
     }
 
     cartComponent.addEventListener('toggleEvent', function ({detail}) {
-      console.log('toggleEvent', detail);
+      // console.log('toggleEvent', detail);
       if (detail.isOpened) {
         toggleCartButton.classList.add('active');
       } else {
@@ -67,7 +72,7 @@
     });
 
     cartComponent.addEventListener('productCountEvent', function ({detail}) {
-      console.log('productCountEvent', detail);
+      // console.log('productCountEvent', detail);
       const productsCountElements = document.getElementsByClassName('products-count');
       for (const element of productsCountElements) {
         element.innerText = detail.count;
@@ -75,7 +80,7 @@
     });
 
     cartComponent.addEventListener('productAddEvent', function ({detail}) {
-      console.log('productAddEvent', detail);
+      // console.log('productAddEvent', detail);
     });
   }
 </script></head>
