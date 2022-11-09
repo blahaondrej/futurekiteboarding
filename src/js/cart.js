@@ -119,6 +119,7 @@ window.onload = () => {
 
     $('.product-description__button--addToCart').on('click', function () {
         cartComponent.addProductToCart(getProductCodeFromElement($(this).parents('.product-detail')));
+        cartComponent.toggleIsOpened(true);
     })
 
     $(".product-description__button--notify").on('click', function () {
