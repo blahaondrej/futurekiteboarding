@@ -279,9 +279,6 @@ window.onload = () => {
         handleCurrency();
         handleProductsSwiper();
         handleProductDetail();
-        setTimeout(() => {
-            handleNewsletterDialog();
-        }, 5000);
     });
 
 
@@ -322,6 +319,9 @@ window.onload = () => {
         } else {
             cartComponent.setCurrency(selectedCurrency);
             hideCurrencyDialog();
+            setTimeout(() => {
+                handleNewsletterDialog();
+            }, 10000);
         }
         $('.currency__button').on('click', function () {
             hideCurrencyDialog();
@@ -329,6 +329,9 @@ window.onload = () => {
             cartComponent.setCurrency(selectedCurrency);
             localStorage.setItem("selectedCurrency", selectedCurrency);
             handleProductsSwiper();
+            setTimeout(() => {
+                handleNewsletterDialog();
+            }, 10000);
         });
     };
 
