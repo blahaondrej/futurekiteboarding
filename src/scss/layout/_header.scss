@@ -13,7 +13,7 @@
   }
   &__actions {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
   &__logo {
     img {
@@ -55,6 +55,9 @@
     }
     &:hover {
       transform: scale(1.02);
+      &:after {
+        background-color: $color-red2;
+      }
     }
   }
   &__menu {
