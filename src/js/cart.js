@@ -248,13 +248,13 @@ window.onload = () => {
         window.history.pushState({}, document.title, window.location.pathname);
         if (color) {
             $element.find(`.product-description__colors .active`).removeClass('active');
-            $element.find(`.product-description__colors *[data-color=${color}]`).addClass('active');
+            $element.find(`.product-description__colors *[data-color*=${CSS.escape(color)}]`).addClass('active');
             $('.product-gallery').removeClass('active');
             $(`.product-gallery[data-color=${color}]`).addClass('active');
         }
         if (size) {
             $element.find(`.product-description__sizes .active`).removeClass('active');
-            $element.find(`.product-description__sizes *[data-size=${size}]`).addClass('active');
+            $element.find(`.product-description__sizes *[data-size*=${CSS.escape(size)}]`).addClass('active');
         }
     };
 
