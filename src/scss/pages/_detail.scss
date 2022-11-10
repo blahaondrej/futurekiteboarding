@@ -111,6 +111,9 @@
     flex-direction: column;
     align-items: flex-start;
     z-index: 20;
+    @include phone {
+      top: 100px;
+    }
   }
 
   .product__badge {
