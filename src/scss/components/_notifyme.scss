@@ -168,7 +168,7 @@
       font-weight: 500;
       letter-spacing: 0;
       line-height: 18px;
-      margin-left: 10px;
+      margin-left: 5px;
     }
     input[type='checkbox'] {
       height: 18px;
@@ -177,6 +177,7 @@
       margin: 0;
       line-height: 18px;
       padding: 0;
+      all: revert;
     }
     ::placeholder {
       color: $color-white;
