@@ -130,6 +130,7 @@ window.onload = () => {
     $("#notifyForm").on('submit', function (e) {
         const $element = $(this);
         e.preventDefault();
+        console.log($(this).serialize());
         $.post('https://www.kitelementshop.com/admin/api/notify-me/', $(this).serialize(), function (response) {
             if (response.status) {
                 const $thankYou = $element.find('.thankyou');
