@@ -108,7 +108,7 @@ module.exports = merge(common, {
         }),
 
         new CopyWebpackPlugin([{
-            from: './src/assets/fb/fb.jpg',
+            from: './src/assets/fb',
             to: 'images'
         }]),
 
