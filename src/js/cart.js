@@ -352,6 +352,10 @@ window.onload = () => {
      */
 
     const handleNewsletterDialog = () => {
+        if ($('main').hasClass('homepage')) {
+            return;
+        }
+
         const newsletterDialogShown = localStorage.getItem("newsletterDialogShown");
         if (!newsletterDialogShown) {
             $('.newsletter-popup').addClass('active');
