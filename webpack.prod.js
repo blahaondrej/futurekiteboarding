@@ -49,7 +49,7 @@ module.exports = merge(common, {
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                            mozjpeg: {
+                            /*mozjpeg: {
                                 progressive: true,
                                 quality: 100
                             },
@@ -62,7 +62,7 @@ module.exports = merge(common, {
                             },
                             gifsicle: {
                                 interlaced: false,
-                            },
+                            },*/
                         }
                     }
                 ]
