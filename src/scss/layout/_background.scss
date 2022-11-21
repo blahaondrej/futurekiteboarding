@@ -40,10 +40,24 @@
   }
 }
 
+.webp .homepage__slide1 {
+  background-image: url(./assets/images/homepage/homepage_top1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top1_mobile.webp);
+  }
+}
+
 .homepage__slide2 {
   background-image: url(./assets/images/homepage/homepage_top2_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/homepage/homepage_top2_mobile.jpg);
+  }
+}
+
+.webp .homepage__slide2 {
+  background-image: url(./assets/images/homepage/homepage_top2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top2_mobile.webp);
   }
 }
 
@@ -54,10 +68,24 @@
   }
 }
 
+.webp .homepage__slide3 {
+  background-image: url(./assets/images/homepage/homepage_top3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top3_mobile.webp);
+  }
+}
+
 .homepage__slide4 {
   background-image: url(./assets/images/homepage/homepage_top4_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/homepage/homepage_top4_mobile.jpg);
+  }
+}
+
+.webp .homepage__slide4 {
+  background-image: url(./assets/images/homepage/homepage_top4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top4_mobile.webp);
   }
 }
 
@@ -68,10 +96,24 @@
   }
 }
 
+.webp .homepage__black-friday {
+  background-image: url(./assets/images/homepage/black_friday_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/black_friday_mobile.webp);
+  }
+}
+
 .boss-detail__slide1 {
   background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss1_mobile.jpg);
+  }
+}
+
+.webp .boss-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/boss/boss1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss1_mobile.webp);
   }
 }
 
@@ -82,10 +124,24 @@
   }
 }
 
+.webp .boss-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/boss/boss2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss2_mobile.webp);
+  }
+}
+
 .boss-detail__slide3 {
   background-image: url(./assets/images/detail/slider/boss/boss3_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss3_mobile.jpg);
+  }
+}
+
+.webp .boss-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/boss/boss3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss3_mobile.webp);
   }
 }
 
@@ -96,10 +152,24 @@
   }
 }
 
+.webp .boss-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/boss/boss4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss4_mobile.webp);
+  }
+}
+
 .boss-detail__slide5 {
   background-image: url(./assets/images/detail/slider/boss/boss5_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss5_mobile.jpg);
+  }
+}
+
+.webp .boss-detail__slide5 {
+  background-image: url(./assets/images/detail/slider/boss/boss5_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss5_mobile.webp);
   }
 }
 
@@ -110,10 +180,24 @@
   }
 }
 
+.webp .boss-detail-bottom__slide1 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom1_mobile.webp);
+  }
+}
+
 .boss-detail-bottom__slide2 {
   background-image: url(./assets/images/detail/slider/boss/boss-bottom2_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/boss/boss-bottom2_mobile.jpg);
+  }
+}
+
+.webp .boss-detail-bottom__slide2 {
+  background-image: url(./assets/images/detail/slider/boss/boss-bottom2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/boss/boss-bottom2_mobile.webp);
   }
 }
 
@@ -124,10 +208,24 @@
   }
 }
 
+.webp .jiggy-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy1_mobile.webp);
+  }
+}
+
 .jiggy-detail__slide2 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy2_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy2_mobile.jpg);
+  }
+}
+
+.webp .jiggy-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy2_mobile.webp);
   }
 }
 
@@ -138,10 +236,24 @@
   }
 }
 
+.webp .jiggy-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy3_mobile.webp);
+  }
+}
+
 .jiggy-detail__slide4 {
   background-image: url(./assets/images/detail/slider/jiggy/jiggy4_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/jiggy/jiggy4_mobile.jpg);
+  }
+}
+
+.webp .jiggy-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/jiggy/jiggy4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/jiggy/jiggy4_mobile.webp);
   }
 }
 
@@ -152,10 +264,24 @@
   }
 }
 
+.webp .mucho-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/mucho/mucho1_mobile.webp);
+  }
+}
+
 .mucho-detail__slide2 {
   background-image: url(./assets/images/detail/slider/mucho/mucho2_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho2_mobile.jpg);
+  }
+}
+
+.webp .mucho-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/mucho/mucho2_mobile.webp);
   }
 }
 
@@ -166,10 +292,24 @@
   }
 }
 
+.webp .mucho-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/mucho/mucho3_mobile.webp);
+  }
+}
+
 .mucho-detail__slide4 {
   background-image: url(./assets/images/detail/slider/mucho/mucho4_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/mucho/mucho4_mobile.jpg);
+  }
+}
+
+.webp .mucho-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/mucho/mucho4_mobile.webp);
   }
 }
 
@@ -180,10 +320,24 @@
   }
 }
 
+.webp .mucho-detail__slide5 {
+  background-image: url(./assets/images/detail/slider/mucho/mucho5_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/mucho/mucho5_mobile.webp);
+  }
+}
+
 .oraculum-detail__slide1 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum1_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum1_mobile.jpg);
+  }
+}
+
+.webp .oraculum-detail__slide1 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum1_mobile.webp);
   }
 }
 
@@ -194,10 +348,24 @@
   }
 }
 
+.webp .oraculum-detail__slide2 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum2_mobile.webp);
+  }
+}
+
 .oraculum-detail__slide3 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum3_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum3_mobile.jpg);
+  }
+}
+
+.webp .oraculum-detail__slide3 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum3_mobile.webp);
   }
 }
 
@@ -208,10 +376,24 @@
   }
 }
 
+.webp .oraculum-detail__slide4 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum4_mobile.webp);
+  }
+}
+
 .oraculum-detail-bottom__slide1 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_mobile.jpg);
+  }
+}
+
+.webp .oraculum-detail-bottom__slide1 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom1_mobile.webp);
   }
 }
 
@@ -222,10 +404,24 @@
   }
 }
 
+.webp .oraculum-detail-bottom__slide2 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom2_mobile.webp);
+  }
+}
+
 .oraculum-detail-bottom__slide3 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_large.jpg);
   @include tablet-portrait {
     background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_mobile.jpg);
+  }
+}
+
+.webp .oraculum-detail-bottom__slide3 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom3_mobile.webp);
   }
 }
 
@@ -236,6 +432,13 @@
   }
 }
 
+.webp .oraculum-detail-bottom__slide4 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom4_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom4_mobile.webp);
+  }
+}
+
 .oraculum-detail-bottom__slide5 {
   background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom5_large.jpg);
   @include tablet-portrait {
@@ -243,286 +446,577 @@
   }
 }
 
+.webp .oraculum-detail-bottom__slide5 {
+  background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom5_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/detail/slider/oraculum/oraculum-bottom5_mobile.webp);
+  }
+}
+
 .tech__slide1 {
   background-image: url(./assets/images/detail/tech/tech_1.jpg);
+}
+
+.webp .tech__slide1 {
+  background-image: url(./assets/images/detail/tech/tech_1.webp);
 }
 
 .tech__slide2 {
   background-image: url(./assets/images/detail/tech/tech_2.jpg);
 }
 
+.webp .tech__slide2 {
+  background-image: url(./assets/images/detail/tech/tech_2.webp);
+}
+
 .tech__slide3 {
   background-image: url(./assets/images/detail/tech/tech_3.jpg);
+}
+
+.webp .tech__slide3 {
+  background-image: url(./assets/images/detail/tech/tech_3.webp);
 }
 
 .tech__slide4 {
   background-image: url(./assets/images/detail/tech/tech_4.jpg);
 }
 
+.webp .tech__slide4 {
+  background-image: url(./assets/images/detail/tech/tech_4.webp);
+}
+
 .tech__slide5 {
   background-image: url(./assets/images/detail/tech/tech_5.jpg);
+}
+
+.webp .tech__slide5 {
+  background-image: url(./assets/images/detail/tech/tech_5.webp);
 }
 
 .tech__slide6 {
   background-image: url(./assets/images/detail/tech/tech_6.jpg);
 }
 
+.webp .tech__slide6 {
+  background-image: url(./assets/images/detail/tech/tech_6.webp);
+}
+
 .tech__slide7 {
   background-image: url(./assets/images/detail/tech/tech_7.jpg);
+}
+
+.webp .tech__slide7 {
+  background-image: url(./assets/images/detail/tech/tech_7.webp);
 }
 
 .tech__slide8 {
   background-image: url(./assets/images/detail/tech/tech_8.jpg);
 }
 
+.webp .tech__slide8 {
+  background-image: url(./assets/images/detail/tech/tech_8.webp);
+}
+
 .tech__slide9 {
   background-image: url(./assets/images/detail/tech/tech_9.jpg);
+}
+
+.webp .tech__slide9 {
+  background-image: url(./assets/images/detail/tech/tech_9.webp);
 }
 
 .tech__slide10 {
   background-image: url(./assets/images/detail/tech/tech_10.jpg);
 }
 
+.webp .tech__slide10 {
+  background-image: url(./assets/images/detail/tech/tech_10.webp);
+}
+
 .vazani__slide1 {
   background-image: url(./assets/images/detail/vazani/vazani_1.jpg);
+}
+
+.webp .vazani__slide1 {
+  background-image: url(./assets/images/detail/vazani/vazani_1.webp);
 }
 
 .vazani__slide2 {
   background-image: url(./assets/images/detail/vazani/vazani_2.jpg);
 }
 
+.webp .vazani__slide2 {
+  background-image: url(./assets/images/detail/vazani/vazani_2.webp);
+}
+
 .vazani__slide3 {
   background-image: url(./assets/images/detail/vazani/vazani_3.jpg);
+}
+
+.webp .vazani__slide3 {
+  background-image: url(./assets/images/detail/vazani/vazani_3.webp);
 }
 
 .vazani__slide4 {
   background-image: url(./assets/images/detail/vazani/vazani_4.jpg);
 }
 
+.webp .vazani__slide4 {
+  background-image: url(./assets/images/detail/vazani/vazani_4.webp);
+}
+
 .vazani__slide5 {
   background-image: url(./assets/images/detail/vazani/vazani_5.jpg);
+}
+
+.webp .vazani__slide5 {
+  background-image: url(./assets/images/detail/vazani/vazani_5.webp);
 }
 
 .vazani__slide6 {
   background-image: url(./assets/images/detail/vazani/vazani_6.jpg);
 }
 
+.webp .vazani__slide6 {
+  background-image: url(./assets/images/detail/vazani/vazani_6.webp);
+}
+
 .about__1 {
   background-image: url(./assets/images/detail/tech/tech_1.jpg);
+}
+
+.webp .about__1 {
+  background-image: url(./assets/images/detail/tech/tech_1.webp);
 }
 
 .wake__1 {
   background-image: url(./assets/images/wake/wake_1.jpg);
 }
 
+.webp .wake__1 {
+  background-image: url(./assets/images/wake/wake_1.webp);
+}
+
 .wake__2 {
   background-image: url(./assets/images/wake/wake_2.jpg);
+}
+
+.webp .wake__2 {
+  background-image: url(./assets/images/wake/wake_2.webp);
 }
 
 .wake__3 {
   background-image: url(./assets/images/wake/wake_3.jpg);
 }
 
+.webp .wake__3 {
+  background-image: url(./assets/images/wake/wake_3.webp);
+}
+
 .wake__4 {
   background-image: url(./assets/images/wake/wake_4.jpg);
+}
+
+.webp .wake__4 {
+  background-image: url(./assets/images/wake/wake_4.webp);
 }
 
 .iksurfmag__1 {
   background-image: url(./assets/images/iksurmag/iksurmag_1.jpg);
 }
 
+.webp .iksurfmag__1 {
+  background-image: url(./assets/images/iksurmag/iksurmag_1.webp);
+}
+
 .ambassadors__1 {
   background-image: url(./assets/images/ambassadors/ambassadors_1.jpg);
+}
+
+.webp .ambassadors__1 {
+  background-image: url(./assets/images/ambassadors/ambassadors_1.webp);
 }
 
 .ambassadors__2 {
   background-image: url(./assets/images/ambassadors/ambassadors_2.jpg);
 }
 
+.webp .ambassadors__2 {
+  background-image: url(./assets/images/ambassadors/ambassadors_2.webp);
+}
+
 .ambassadors__3 {
   background-image: url(./assets/images/ambassadors/ambassadors_3.jpg);
+}
+
+.webp .ambassadors__3 {
+  background-image: url(./assets/images/ambassadors/ambassadors_3.webp);
 }
 
 .ambassadors__4 {
   background-image: url(./assets/images/ambassadors/ambassadors_4.jpg);
 }
 
+.webp .ambassadors__4 {
+  background-image: url(./assets/images/ambassadors/ambassadors_4.webp);
+}
+
 .brand__1 {
   background-image: url(./assets/images/brand/brand_1.jpg);
+}
+
+.webp .brand__1 {
+  background-image: url(./assets/images/brand/brand_1.webp);
 }
 
 .brand__2 {
   background-image: url(./assets/images/brand/brand_2.jpg);
 }
 
+.webp .brand__2 {
+  background-image: url(./assets/images/brand/brand_2.webp);
+}
+
 .history__2005 {
   background-image: url(./assets/images/history/2005.jpg);
+}
+
+.webp .history__2005 {
+  background-image: url(./assets/images/history/2005.webp);
 }
 
 .history__2006 {
   background-image: url(./assets/images/history/2006.jpg);
 }
 
+.webp .history__2006 {
+  background-image: url(./assets/images/history/2006.webp);
+}
+
 .history__2008-1 {
   background-image: url(./assets/images/history/2008_1.jpg);
+}
+
+.webp .history__2008-1 {
+  background-image: url(./assets/images/history/2008_1.webp);
 }
 
 .history__2008-2 {
   background-image: url(./assets/images/history/2008_2.jpg);
 }
 
+.webp .history__2008-2 {
+  background-image: url(./assets/images/history/2008_2.webp);
+}
+
 .history__2009 {
   background-image: url(./assets/images/history/2009.jpg);
+}
+
+.webp .history__2009 {
+  background-image: url(./assets/images/history/2009.webp);
 }
 
 .history__2010 {
   background-image: url(./assets/images/history/2010.jpg);
 }
 
+.webp .history__2010 {
+  background-image: url(./assets/images/history/2010.webp);
+}
+
 .history__2013-1 {
   background-image: url(./assets/images/history/2013_1.jpg);
+}
+
+.webp .history__2013-1 {
+  background-image: url(./assets/images/history/2013_1.webp);
 }
 
 .history__2013-2 {
   background-image: url(./assets/images/history/2013_2.jpg);
 }
 
+.webp .history__2013-2 {
+  background-image: url(./assets/images/history/2013_2.webp);
+}
+
 .history__2015 {
   background-image: url(./assets/images/history/2015.jpg);
+}
+
+.webp .history__2015 {
+  background-image: url(./assets/images/history/2015.webp);
 }
 
 .history__2017 {
   background-image: url(./assets/images/history/2017.jpg);
 }
 
+.webp .history__2017 {
+  background-image: url(./assets/images/history/2017.webp);
+}
+
 .history__2019 {
   background-image: url(./assets/images/history/2019.jpg);
+}
+
+.webp .history__2019 {
+  background-image: url(./assets/images/history/2019.webp);
 }
 
 .history__2021 {
   background-image: url(./assets/images/history/2021.jpg);
 }
 
+.webp .history__2021 {
+  background-image: url(./assets/images/history/2021.webp);
+}
+
 .kiteboards-1 {
   background-image: url(./assets/images/kiteboards/kiteboards_1.jpg);
+}
+
+.webp .kiteboards-1 {
+  background-image: url(./assets/images/kiteboards/kiteboards_1.webp);
 }
 
 .kiteboards-2 {
   background-image: url(./assets/images/kiteboards/kiteboards_2.jpg);
 }
 
+.webp .kiteboards-2 {
+  background-image: url(./assets/images/kiteboards/kiteboards_2.webp);
+}
+
 .mucho-tech-fish-belly {
   background-image: url(./assets/images/detail/tech/mucho/fish-belly.jpg);
+}
+
+.webp .mucho-tech-fish-belly {
+  background-image: url(./assets/images/detail/tech/mucho/fish-belly.webp);
 }
 
 .mucho-tech-sword-technology {
   background-image: url(./assets/images/detail/tech/mucho/sword-technology.jpg);
 }
 
+.webp .mucho-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/mucho/sword-technology.webp);
+}
+
 .mucho-tech-polyurethane-edges {
   background-image: url(./assets/images/detail/tech/mucho/polyurethane-edges.jpg);
+}
+
+.webp .mucho-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/mucho/polyurethane-edges.webp);
 }
 
 .mucho-tech-basalt {
   background-image: url(./assets/images/detail/tech/mucho/basalt.jpg);
 }
 
+.webp .mucho-tech-basalt {
+  background-image: url(./assets/images/detail/tech/mucho/basalt.webp);
+}
+
 .mucho-tech-cnc-shaped-wood-core {
   background-image: url(./assets/images/detail/tech/mucho/cnc-shaped-wood-core.jpg);
+}
+
+.webp .mucho-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/mucho/cnc-shaped-wood-core.webp);
 }
 
 .mucho-tech-hardened-protective-foil {
   background-image: url(./assets/images/detail/tech/mucho/hardened-protective-foil.jpg);
 }
 
+.webp .mucho-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/mucho/hardened-protective-foil.webp);
+}
+
 .oraculum-nail-shaped-tips {
   background-image: url(./assets/images/detail/tech/oraculum/nail-shaped-tips.jpg);
+}
+
+.webp .oraculum-nail-shaped-tips {
+  background-image: url(./assets/images/detail/tech/oraculum/nail-shaped-tips.webp);
 }
 
 .oraculum-tech-sword-technology {
   background-image: url(./assets/images/detail/tech/oraculum/sword-technology.jpg);
 }
 
+.webp .oraculum-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/oraculum/sword-technology.webp);
+}
+
 .oraculum-tech-midsection-channel {
   background-image: url(./assets/images/detail/tech/oraculum/midsection-channel.jpg);
+}
+
+.webp .oraculum-tech-midsection-channel {
+  background-image: url(./assets/images/detail/tech/oraculum/midsection-channel.webp);
 }
 
 .oraculum-tech-polyurethane-edges {
   background-image: url(./assets/images/detail/tech/oraculum/polyurethane-edges.jpg);
 }
 
+.webp .oraculum-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/oraculum/polyurethane-edges.webp);
+}
+
 .oraculum-tech-carbon-fabric {
   background-image: url(./assets/images/detail/tech/oraculum/carbon-fabric.jpg);
+}
+
+.webp .oraculum-tech-carbon-fabric {
+  background-image: url(./assets/images/detail/tech/oraculum/carbon-fabric.webp);
 }
 
 .oraculum-tech-cnc-shaped-wood-core {
   background-image: url(./assets/images/detail/tech/oraculum/cnc-shaped-wood-core.jpg);
 }
 
+.webp .oraculum-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/oraculum/cnc-shaped-wood-core.webp);
+}
+
 .oraculum-tech-hardened-protective-foil {
   background-image: url(./assets/images/detail/tech/oraculum/hardened-protective-foil.jpg);
+}
+
+.webp .oraculum-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/oraculum/hardened-protective-foil.webp);
 }
 
 .boss-carbon-tech-sword-technology {
   background-image: url(./assets/images/detail/tech/boss-carbon/sword-technology.jpg);
 }
 
+.webp .boss-carbon-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/boss-carbon/sword-technology.webp);
+}
+
 .boss-carbon-tech-eight-longitudinal-channels {
   background-image: url(./assets/images/detail/tech/boss-carbon/eight-longitudinal-channels.jpg);
+}
+
+.webp .boss-carbon-tech-eight-longitudinal-channels {
+  background-image: url(./assets/images/detail/tech/boss-carbon/eight-longitudinal-channels.webp);
 }
 
 .boss-carbon-tech-polyurethane-edges {
   background-image: url(./assets/images/detail/tech/boss-carbon/polyurethane-edges.jpg);
 }
 
+.webp .boss-carbon-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/boss-carbon/polyurethane-edges.webp);
+}
+
 .boss-carbon-tech-carbon-fabric {
   background-image: url(./assets/images/detail/tech/boss-carbon/carbon-fabric.jpg);
+}
+
+.webp .boss-carbon-tech-carbon-fabric {
+  background-image: url(./assets/images/detail/tech/boss-carbon/carbon-fabric.webp);
 }
 
 .boss-carbon-tech-cnc-shaped-wood-core {
   background-image: url(./assets/images/detail/tech/boss-carbon/cnc-shaped-wood-core.jpg);
 }
 
+.webp .boss-carbon-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/boss-carbon/cnc-shaped-wood-core.webp);
+}
+
 .boss-carbon-tech-hardened-protective-foil {
   background-image: url(./assets/images/detail/tech/boss-carbon/hardened-protective-foil.jpg);
+}
+
+.webp .boss-carbon-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/boss-carbon/hardened-protective-foil.webp);
 }
 
 .boss-tech-sword-technology {
   background-image: url(./assets/images/detail/tech/boss/sword-technology.jpg);
 }
 
+.webp .boss-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/boss/sword-technology.webp);
+}
+
 .boss-tech-eight-longitudinal-channels {
   background-image: url(./assets/images/detail/tech/boss/eight-longitudinal-channels.jpg);
+}
+
+.webp .boss-tech-eight-longitudinal-channels {
+  background-image: url(./assets/images/detail/tech/boss/eight-longitudinal-channels.webp);
 }
 
 .boss-tech-polyurethane-edges {
   background-image: url(./assets/images/detail/tech/boss/polyurethane-edges.jpg);
 }
 
+.webp .boss-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/boss/polyurethane-edges.webp);
+}
+
 .boss-tech-cnc-shaped-wood-core {
   background-image: url(./assets/images/detail/tech/boss/cnc-shaped-wood-core.jpg);
+}
+
+.webp .boss-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/boss/cnc-shaped-wood-core.webp);
 }
 
 .boss-tech-hardened-protective-foil {
   background-image: url(./assets/images/detail/tech/boss/hardened-protective-foil.jpg);
 }
 
+.webp .boss-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/boss/hardened-protective-foil.webp);
+}
+
 .jiggy-tech-sword-technology {
   background-image: url(./assets/images/detail/tech/jiggy/sword-technology.jpg);
+}
+
+.webp .jiggy-tech-sword-technology {
+  background-image: url(./assets/images/detail/tech/jiggy/sword-technology.webp);
 }
 
 .jiggy-tech-two-longitudinal-channels {
   background-image: url(./assets/images/detail/tech/jiggy/two-longitudinal-channels.jpg);
 }
 
+.webp .jiggy-tech-two-longitudinal-channels {
+  background-image: url(./assets/images/detail/tech/jiggy/two-longitudinal-channels.webp);
+}
+
 .jiggy-tech-polyurethane-edges {
   background-image: url(./assets/images/detail/tech/jiggy/polyurethane-edges.jpg);
+}
+
+.webp .jiggy-tech-polyurethane-edges {
+  background-image: url(./assets/images/detail/tech/jiggy/polyurethane-edges.webp);
 }
 
 .jiggy-tech-cnc-shaped-wood-core {
   background-image: url(./assets/images/detail/tech/jiggy/cnc-shaped-wood-core.jpg);
 }
 
+.webp .jiggy-tech-cnc-shaped-wood-core {
+  background-image: url(./assets/images/detail/tech/jiggy/cnc-shaped-wood-core.webp);
+}
+
 .jiggy-tech-hardened-protective-foil {
   background-image: url(./assets/images/detail/tech/jiggy/hardened-protective-foil.jpg);
+}
+
+.webp .jiggy-tech-hardened-protective-foil {
+  background-image: url(./assets/images/detail/tech/jiggy/hardened-protective-foil.webp);
 }

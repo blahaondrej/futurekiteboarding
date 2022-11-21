@@ -213,7 +213,8 @@ $(document).ready(function () {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
+        lazy: true
     });
 
     var galleryTopMuchoRed = new Swiper('.gallery-top-1', {
@@ -224,14 +225,16 @@ $(document).ready(function () {
         },
         thumbs: {
             swiper: galleryThumbsMuchoRed,
-        }
+        },
+        lazy: true
     });
 
     var galleryThumbsMuchoBlue = new Swiper('.gallery-thumbs-2', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
+        lazy: true
     });
 
     var galleryTopMuchoBlue = new Swiper('.gallery-top-2', {
@@ -242,14 +245,16 @@ $(document).ready(function () {
         },
         thumbs: {
             swiper: galleryThumbsMuchoBlue,
-        }
+        },
+        lazy: true
     });
 
     var galleryThumbsMuchoYellow = new Swiper('.gallery-thumbs-3', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
+        lazy: true
     });
 
     var galleryTopMuchoYellow = new Swiper('.gallery-top-3', {
@@ -260,14 +265,16 @@ $(document).ready(function () {
         },
         thumbs: {
             swiper: galleryThumbsMuchoYellow,
-        }
+        },
+        lazy: true
     });
 
     var galleryThumbsMuchoYellow = new Swiper('.gallery-thumbs-4', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
+        lazy: true
     });
 
     var galleryTopMuchoYellow = new Swiper('.gallery-top-4', {
@@ -278,6 +285,7 @@ $(document).ready(function () {
         },
         thumbs: {
             swiper: galleryThumbsMuchoYellow,
-        }
+        },
+        lazy: true
     });
 });

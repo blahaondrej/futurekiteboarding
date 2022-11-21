@@ -48,8 +48,8 @@
       width: 100%;
     }
 
-    img {
-      height: 70%;
+    picture, img {
+      height: 100%;
       width: auto;
     }
   }
@@ -71,7 +71,7 @@
     opacity: 0.4;
     cursor: pointer;
 
-    img {
+    picture, img {
       height: 100%;
       width: auto;
     }
