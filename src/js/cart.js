@@ -17,7 +17,7 @@ function fetchEshopSettings() {
 }
 
 
-window.onload = () => {
+$(document).ready(function () {
     /**
      * Angular web component for shopping cart
      */
@@ -409,5 +409,5 @@ window.onload = () => {
             .addClass("loaded");
     };
 
-}
+});
 
