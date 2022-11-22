@@ -12,6 +12,7 @@
     justify-content: center;
     flex-direction: column;
     z-index: 55;
+    transform-style: preserve-3d;
     @include phone {
       width: 470px;
       height: 470px;

@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transform-style: preserve-3d;
     @include phone {
       width: 350px;
       height: 350px;

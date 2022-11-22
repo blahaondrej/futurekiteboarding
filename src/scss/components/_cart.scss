@@ -6,7 +6,7 @@
     padding: 15px;
     align-items: center;
     display: flex;
-
+    transform-style: preserve-3d;
     .products-count {
       font-size: 14px;
       font-weight: 500;
@@ -21,6 +21,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transform-style: preserve-3d;
       &:after {
         content: '';
         position: absolute;

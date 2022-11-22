@@ -51,6 +51,7 @@
   background: none;
   margin: 0 2px !important;
   outline: 0;
+  transform-style: preserve-3d;
   &:after {
     content: '';
     position: absolute;

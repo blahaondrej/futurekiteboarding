@@ -13,6 +13,7 @@
     height: 500px;
     width: 500px;
     padding: 100px 60px;
+    transform-style: preserve-3d;
     @include phone {
       width: 350px;
       height: 350px;

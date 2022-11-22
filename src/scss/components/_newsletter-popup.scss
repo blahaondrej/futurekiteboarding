@@ -28,6 +28,7 @@
     position: absolute;
     top: 10px;
     right: 20px;
+    transform-style: preserve-3d;
     @include animation();
     span {
       font-size: 14px;
@@ -74,6 +75,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
+    transform-style: preserve-3d;
     @include phone {
       width: 550px;
       height: 550px;

@@ -38,6 +38,7 @@
   justify-content: center;
   position: relative;
   z-index: -1;
+  transform-style: preserve-3d;
   @include tablet-portrait {
     height: 300px;
     width: 300px;
@@ -98,6 +99,7 @@
     position: absolute;
     left: -200px;
     bottom: 20%;
+    transform-style: preserve-3d;
     &:after {
       content: '';
       position: absolute;
