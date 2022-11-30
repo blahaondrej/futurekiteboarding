@@ -105,7 +105,7 @@ $(document).ready(function () {
     $("body").on('click', '.product-detail .product-description__sizes div', function () {
         $(".product-description__sizes div").removeClass("active");
         $(this).addClass("active");
-        setProductInDetailFromElement($(this).parents('.product-detail'));
+        setProductInDetailFromElement($(this).parents('.product-detail'), false);
     });
 
     // zmena obrazku podle tlacitka barvy - detail produktu
@@ -114,7 +114,7 @@ $(document).ready(function () {
         $(this).addClass('active');
         $('.product-gallery').removeClass('active');
         $(`.product-gallery[data-color=${$(this).data('color')}]`).addClass('active');
-        setProductInDetailFromElement($(this).parents('.product-detail'));
+        setProductInDetailFromElement($(this).parents('.product-detail'), false);
     });
 
     $('.product-description__button--addToCart').on('click', function () {
@@ -191,10 +191,23 @@ $(document).ready(function () {
         }
     };
 
-    const setProductInDetailFromElement = ($element) => {
+    const setProductInDetailFromElement = ($element, findFirstInStock) => {
+        console.log('findFirstInStock', findFirstInStock);
         selectSizeAndColorFromQueryParams($element);
         const finalCode = getProductCodeFromElement($element);
         const product = getProduct(finalCode);
+        if (findFirstInStock && product['availability'] !== 'onStock') {
+            const previousElement = $element.find('.product__size > div.active').prev();
+            if (previousElement.length) {
+                $('.product__size > div.active').removeClass('active');
+                previousElement.addClass('active');
+                $('.product-detail').each((index, element) => {
+                    setProductInDetailFromElement($(element), true);
+                });
+                return;
+            }
+        }
+
         const currencyString = selectedCurrency || 'eur';
         const currencySymbol = currencyString === 'usd' ? '$' : '€';
         if (!product) {
@@ -237,7 +250,7 @@ $(document).ready(function () {
     const handleProductDetail = () => {
 
         $('.product-detail').each((index, element) => {
-            setProductInDetailFromElement($(element));
+            setProductInDetailFromElement($(element), true);
         });
     };
 
@@ -303,10 +316,12 @@ $(document).ready(function () {
         }
     });
 
-    cartComponent.addEventListener('productAddEvent', ({detail}) => {
-        // console.log('productAddEvent', detail);
+    cartComponent.addEventListener('currencyChanged', ({detail}) => {
+        selectedCurrency = detail.currency;
+        localStorage.setItem('selectedCurrency', selectedCurrency);
+        handleProductsSwiper();
+        handleProductDetail();
     });
-
 
     /**
      *  Currency
