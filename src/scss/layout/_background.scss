@@ -103,6 +103,34 @@
   }
 }
 
+.no-webp .homepage__christmass1 {
+  background-image: url(./assets/images/homepage/christmass1_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/christmass1_mobile.jpg);
+  }
+}
+
+.webp .homepage__christmass1 {
+  background-image: url(./assets/images/homepage/christmass1_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/christmass1_mobile.webp);
+  }
+}
+
+.no-webp .homepage__christmass2 {
+  background-image: url(./assets/images/homepage/christmass2_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/christmass2_mobile.jpg);
+  }
+}
+
+.webp .homepage__christmass2 {
+  background-image: url(./assets/images/homepage/christmass2_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/christmass2_mobile.webp);
+  }
+}
+
 .no-webp .boss-detail__slide1 {
   background-image: url(./assets/images/detail/slider/boss/boss1_large.jpg);
   @include tablet-portrait {
