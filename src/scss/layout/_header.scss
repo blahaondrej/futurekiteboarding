@@ -73,6 +73,7 @@
     right: -900px;
     padding: 250px;
     transform-style: preserve-3d;
+    pointer-events: all;
     @include animation();
     &.active {
       top: -170px;
