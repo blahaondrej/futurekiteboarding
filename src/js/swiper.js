@@ -5,7 +5,7 @@ $(document).ready(function () {
     var homepageSwiperText = new Swiper('.homepage-swiper-text', {
         effect: 'fade',
         autoplay: {
-            delay: 3000,
+            delay: 1000,
             disableOnInteraction: false,
         },
         allowTouchMove: false
@@ -14,7 +14,7 @@ $(document).ready(function () {
     var homepageSwiper = new Swiper('.homepage-swiper', {
         effect: 'fade',
         autoplay: {
-            delay: 3000,
+            delay: 1000,
             disableOnInteraction: false,
         },
         paginationClickable: true,
