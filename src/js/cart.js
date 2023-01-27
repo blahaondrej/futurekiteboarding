@@ -331,7 +331,10 @@ $(document).ready(function () {
         selectedCurrency = localStorage.getItem("selectedCurrency");
         if (!selectedCurrency) {
             cartComponent.setCurrency('eur');
-            $(".currency").addClass("active");
+            // $(".currency").addClass("active");
+            setTimeout(() => {
+                handleNewsletterDialog();
+            }, 10000);
         } else {
             cartComponent.setCurrency(selectedCurrency);
             hideCurrencyDialog();
