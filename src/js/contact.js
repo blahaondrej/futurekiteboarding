@@ -12,7 +12,7 @@ $(document).ready(function () {
         $submitButton.attr("disabled", true);
         const $element = $(this).parents('.newsletter');
         $.ajax({
-            url: 'https://www.kitelementshop.com/admin/api/newsletter/',
+            url: 'https://admin.kitelementshop.com/admin/api/newsletter/',
             type: "POST",
             headers: {
                 'able-origin': 'https://futurekiteboarding.com'
@@ -48,7 +48,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $.ajax({
-            url: 'https://www.kitelementshop.com/admin/api/contact-form/',
+            url: 'https://admin.kitelementshop.com/admin/api/contact-form/',
             type: "POST",
             headers: {
                 'able-origin': 'https://futurekiteboarding.com'

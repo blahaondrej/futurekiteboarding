@@ -3,7 +3,7 @@ let settings = {};
 let selectedCurrency;
 
 function fetchEshopSettings() {
-    return fetch('https://www.kitelementshop.com/admin/api/products/', {
+    return fetch('https://admin.kitelementshop.com/admin/api/products/', {
         headers: {
             'able-origin': 'https://futurekiteboarding.com'
         },
@@ -131,7 +131,7 @@ $(document).ready(function () {
         const $element = $(this);
         e.preventDefault();
         console.log($(this).serialize());
-        $.post('https://www.kitelementshop.com/admin/api/notify-me/', $(this).serialize(), function (response) {
+        $.post('https://admin.kitelementshop.com/admin/api/notify-me/', $(this).serialize(), function (response) {
             if (response.status) {
                 const $thankYou = $element.find('.thankyou');
                 $thankYou.fadeIn(500);
@@ -316,12 +316,11 @@ $(document).ready(function () {
         }
     });
 
-    cartComponent.addEventListener('currencyChanged', ({detail}) => {
-        selectedCurrency = detail.currency;
-        localStorage.setItem('selectedCurrency', selectedCurrency);
-        handleProductsSwiper();
-        handleProductDetail();
-    });
+
+
+
+
+
 
     /**
      *  Currency
@@ -387,7 +386,7 @@ $(document).ready(function () {
             e.preventDefault();
             const $element = $(this);
             $.ajax({
-                url: 'https://www.kitelementshop.com/admin/api/newsletter/',
+                url: 'https://admin.kitelementshop.com/admin/api/newsletter/',
                 type: "POST",
                 headers: {
                     'able-origin': 'https://futurekiteboarding.com'
