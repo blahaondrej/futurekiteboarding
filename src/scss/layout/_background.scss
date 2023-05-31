@@ -89,6 +89,20 @@
   }
 }
 
+.no-webp .homepage__slide5 {
+  background-image: url(./assets/images/homepage/homepage_top5_large.jpg);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top5_mobile.jpg);
+  }
+}
+
+.webp .homepage__slide5 {
+  background-image: url(./assets/images/homepage/homepage_top5_large.webp);
+  @include tablet-portrait {
+    background-image: url(./assets/images/homepage/homepage_top5_mobile.webp);
+  }
+}
+
 .no-webp .homepage__black-friday {
   background-image: url(./assets/images/homepage/black_friday_large.jpg);
   @include tablet-portrait {
