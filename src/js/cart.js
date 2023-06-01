@@ -280,7 +280,13 @@ $(document).ready(function () {
             logo: 'future.svg',
             shop: 'FUTURE Kiteboarding',
             style: 'future',
+            rootDirectory: '/kshop-cart',
+            newsletterCheckboxText: 'Join the FUTURE',
             stepBarDelimiter: '–',
+            completed: {
+                title: 'HOORAY!',
+                subtitle: 'Get ready for a wild ride!'
+            },
             urls: {
                 homepage: 'https://futurekiteboarding.com/',
                 termsAndConditions: 'https://futurekiteboarding.com/terms-and-conditions',
