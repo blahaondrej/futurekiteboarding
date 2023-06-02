@@ -91,9 +91,9 @@ module.exports = merge(common, {
             extract: false,
             width: 2560,
             height: 1440,
-            penthouse: {
+            /*penthouse: {
                 blockJSRequests: false,
-            }
+            }*/
         }),
 
         new WebappWebpackPlugin({
